@@ -1,0 +1,18 @@
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+
+  .title-card{
+    color: #284256;
+    font-size: 30px;
+
+  }
+
+  p{
+    color: rgba(40, 66, 86, 0.5);
+  }
+}

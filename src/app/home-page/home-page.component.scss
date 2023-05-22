@@ -1,0 +1,104 @@
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+app-main-presentation{
+
+  width: 90%;
+  align-self: center;
+  margin-bottom: 80px;
+}
+
+  .presentation{
+    background-image: url("/assets/grid-pattern.jpeg");
+    background-origin: padding-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    //position: relative;
+    flex-direction: column;
+    align-self: center;
+    border-radius: 20px;
+   // align-items: flex-end;
+    background-color: #e7f2f8;
+    width: 90%;
+    height: 340px;
+    margin-top: 80px;
+    margin-bottom: 220px;
+.introduction{
+  margin-left: 20px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  color: #284256;
+  p{
+    color: #707478;
+  }
+  h2{
+    color: #3A5CEE;
+  }
+
+  h1{
+    display: flex;
+    //justify-content: space-between;
+
+  }
+}
+
+
+    .list-card{
+     // position: absolute;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-self: flex-end;
+      margin-top: 20px;
+
+     // align-content: flex-end;
+
+
+    }
+
+
+  }
+}
+
+
+app-card-presentations{
+  align-self: flex-end;
+  margin-right: 20px;
+  border: 1px solid rgba(140, 201, 244, 0.5);
+//  margin-top: 120px;
+
+
+
+}
+
+.list-cardv2{
+
+  display: flex;
+  width: 80%;
+  align-self: center;
+  margin-bottom: 80px;
+  app-countries-presentations{
+    width: 100%;
+    height: 500px;
+    margin-left: 20px;
+  }
+}
+
+.title{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+  color: #284256 ;
+  font-size: 50px;
+  img{
+    width: 20%;
+    height: 10%;
+
+  }
+}

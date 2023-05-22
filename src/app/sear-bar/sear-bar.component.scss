@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Coda&family=Montserrat:wght@600&family=Poppins:wght@500&display=swap');
+
+*{
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins' , 'sans-serif' ;
+}
+
+.search-bar{
+  width: 1280px;
+  display: flex;
+  height: 120px;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 20px;
+
+  .category{
+    width: 180px;
+    height: 80px;
+    align-self: center;
+
+
+    .title{
+      margin-bottom: 10px;
+    }
+
+
+  }
+  select{
+    border: none;
+
+    background-color: white;
+    width: auto;
+    color: gray;
+    padding-right: 10px;
+
+
+
+    font-size: 20px;
+
+  }
+
+  select:after{
+    border: none;
+
+  }
+
+  select:before{
+    border: none;
+    background-color: white;
+  }
+
+  datalist{
+    background-color: aqua;
+  }
+
+  option{
+    border: none;
+    color: #919090;
+  }
+
+  .divide{
+    width: 1px;
+    height: 80px;
+    opacity: 0.3;
+    background-color: #0667ad;
+    align-self: center;
+
+  }
+
+  app-boutton{
+    align-self: center;
+    margin-left: 150px;
+
+  }
+
+ // @media screen and (max-width: 900px){
+ //   flex-direction: column;
+ //   background-color: white;
+ //   width: 280px;
+ //   align-self: center;
+ //   margin-left: 500px;
+ //.category{
+ //  margin-bottom: 50px;
+ //}
+ //   .divide{
+ //     width: 280px;
+ //     height: 1px;
+ //   }
+ // }
+
+}

@@ -1,0 +1,23 @@
+.cards{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-left: 20px;
+  height: 100%;
+ // background-color: rebeccapurple;
+  img{
+    border-radius: 20px;
+    width: 100%;
+    height: 80%;
+    align-self: center;
+  }
+  p{
+    align-self: center;
+  }
+}
+app-boutton{
+  //width: 50%;
+  align-self: center;
+  margin-top: 20px;
+}

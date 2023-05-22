@@ -1,0 +1,45 @@
+<main>
+  <app-main-presentation></app-main-presentation>
+
+<!--  <h1 class="title">-->
+<!--    <img src="assets/about-us.gif" alt="">-->
+<!--    What we do ?</h1>-->
+
+  <app-card-project-presentation [cardPresentation]="cardsProject1" ></app-card-project-presentation>
+  <div class="presentation">
+      <div class="introduction">
+        <h2>com on.</h2>
+        <h1>About  us ?</h1>
+        <p>oueuvre humanitaire lever de fond </p>
+      </div>
+
+
+   <div class="list-card">
+     <app-card-presentations [cardModel]="cardIdentity"></app-card-presentations>
+     <app-card-presentations [cardModel]="cardMission"></app-card-presentations>
+     <app-card-presentations [cardModel]="cardVision"></app-card-presentations>
+     <app-card-presentations [cardModel]="cardObjectif"></app-card-presentations>
+
+   </div>
+
+
+ </div>
+
+  <app-card-project-presentation [cardPresentation]="cardsProject2" ></app-card-project-presentation>
+
+<h1 class="title">Nous intervenons dans plusieur pays tels que :</h1>
+  <div class="list-cardv2">
+    <app-countries-presentations></app-countries-presentations>
+    <app-countries-presentations></app-countries-presentations>
+    <app-countries-presentations></app-countries-presentations>
+    <app-countries-presentations></app-countries-presentations>
+
+  </div>
+
+  <div class="title">
+
+<app-card-project-presentation [cardPresentation]="cardsProject" ></app-card-project-presentation>
+  </div>
+
+</main>
+

@@ -1,0 +1,29 @@
+
+.main-presentation{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ // width: 1780px;
+  width: 100%;
+  margin-top: 50px;
+  height: 580px;
+  background-image: url("../assets/building4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  align-self: center;
+  app-sear-bar{
+    align-self: center;
+  }
+h1{
+  font-size: 80px;
+  align-self: center;
+  //inline-size: 0px;
+  color: #284256;
+}
+  h2{
+    align-self: center;
+    color: #284256;
+  }
+}

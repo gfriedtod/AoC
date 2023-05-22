@@ -1,0 +1,3 @@
+[build]
+  publish = "dist/bureau-devellopemt-website-aoc"
+  command = "ng build"
