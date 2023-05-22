@@ -12,6 +12,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { CountriesPresentationsComponent } from './countries-presentations/countries-presentations.component';
 import { CardProjectPresentationComponent } from './card-project-presentation/card-project-presentation.component';
 import { CardProComponent } from './card-pro/card-pro.component';
+import { MiniSerachBarComponent } from './mini-serach-bar/mini-serach-bar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CardProComponent } from './card-pro/card-pro.component';
     HomePageComponent,
     CountriesPresentationsComponent,
     CardProjectPresentationComponent,
-    CardProComponent
+    CardProComponent,
+    MiniSerachBarComponent
   ],
     imports: [
         BrowserModule,
