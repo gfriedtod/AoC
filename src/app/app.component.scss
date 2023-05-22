@@ -2,7 +2,17 @@ main{
   display: flex;
 
   flex-direction: column;
+  app-menu-bar{
+    height: 20%;
+  }
+
+  app-footer{
+    height: 300px;
+  }
 }
+
+
+
 
 app-main-presentation{
 align-self: center;

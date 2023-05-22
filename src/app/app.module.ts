@@ -13,6 +13,7 @@ import { CountriesPresentationsComponent } from './countries-presentations/count
 import { CardProjectPresentationComponent } from './card-project-presentation/card-project-presentation.component';
 import { CardProComponent } from './card-pro/card-pro.component';
 import { MiniSerachBarComponent } from './mini-serach-bar/mini-serach-bar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MiniSerachBarComponent } from './mini-serach-bar/mini-serach-bar.compon
     CountriesPresentationsComponent,
     CardProjectPresentationComponent,
     CardProComponent,
-    MiniSerachBarComponent
+    MiniSerachBarComponent,
+    FooterComponent
   ],
     imports: [
         BrowserModule,
