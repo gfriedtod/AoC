@@ -77,14 +77,18 @@ app-card-presentations{
 
 .list-cardv2{
 
+  //background-image: url("/assets/grid-pattern.jpeg");
+
   display: flex;
   width: 80%;
+  height: 600px;
   align-self: center;
   margin-bottom: 80px;
   app-countries-presentations{
     width: 100%;
     height: 500px;
     margin-left: 20px;
+    align-self: center;
   }
 }
 
