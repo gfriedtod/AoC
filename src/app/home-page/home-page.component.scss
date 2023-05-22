@@ -106,3 +106,27 @@ app-card-presentations{
 
   }
 }
+
+.project{
+  background-image: url("/assets/grid-pattern.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  background-color: black;
+  width: 80%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+  app-card-pro{
+    width: 20%;
+    height: 300px;
+   // border:  1px solid rgba(140, 201, 244, 0.5);
+    margin-left: 20px;
+    //background-color: yellow;
+    align-self: center;
+
+  }
+}
+
+

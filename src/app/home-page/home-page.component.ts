@@ -4,6 +4,7 @@ import {CardProjectPresentationComponent} from "../card-project-presentation/car
 import {
   CardProjectPresentationModel
 } from "../card-project-presentation/CardProjectPresentationModel/CardProjectPresentationModel";
+import {CardProModel} from "../card-pro/CardProModel/CardProModel";
 
 @Component({
   selector: 'app-home-page',
@@ -20,6 +21,7 @@ export class HomePageComponent implements  OnInit{
   cardsProject1: any;
   cardsProject2: any;
 
+  cardPro! : CardProModel
   ngOnInit(): void {
 
     this.cardMission = new CardModel("mission.gif", "Mission")
@@ -30,5 +32,7 @@ export class HomePageComponent implements  OnInit{
 
     this.cardsProject1 =new CardProjectPresentationModel('/assets/about-us.gif', ' Qui somme nous ?', '')
     this.cardsProject2 =new CardProjectPresentationModel('/assets/countries.gif', 'Ou somme nous ?', '')
+
+    this.cardPro = new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont')
   }
 }

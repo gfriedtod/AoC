@@ -11,6 +11,7 @@ import { CardPresentationsComponent } from './home-page/card-presentations/card-
 import { HomePageComponent } from './home-page/home-page.component';
 import { CountriesPresentationsComponent } from './countries-presentations/countries-presentations.component';
 import { CardProjectPresentationComponent } from './card-project-presentation/card-project-presentation.component';
+import { CardProComponent } from './card-pro/card-pro.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CardProjectPresentationComponent } from './card-project-presentation/ca
     CardPresentationsComponent,
     HomePageComponent,
     CountriesPresentationsComponent,
-    CardProjectPresentationComponent
+    CardProjectPresentationComponent,
+    CardProComponent
   ],
     imports: [
         BrowserModule,
