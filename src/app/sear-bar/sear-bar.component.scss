@@ -17,9 +17,11 @@
   border-radius: 20px;
 
   .category{
-    width: 180px;
+    width: 80%;
     height: 80px;
     align-self: center;
+    margin-left: 10%;
+    position: relative;
 
 
     .title{
@@ -73,6 +75,7 @@
   app-boutton{
     align-self: center;
     margin-left: 150px;
+    margin-right: 20px;
 
   }
 
