@@ -1,7 +1,11 @@
 main{
   display: flex;
 
+
+
+
   flex-direction: column;
+  justify-content: space-between;
   app-menu-bar{
     height: 20%;
   }

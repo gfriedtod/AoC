@@ -14,6 +14,8 @@ import { CardProjectPresentationComponent } from './card-project-presentation/ca
 import { CardProComponent } from './card-pro/card-pro.component';
 import { MiniSerachBarComponent } from './mini-serach-bar/mini-serach-bar.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProjectPageComponent } from './project-page/project-page.component';
+import { ProjectIntroComponent } from './project-page/project-intro/project-intro.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { FooterComponent } from './footer/footer.component';
     CardProjectPresentationComponent,
     CardProComponent,
     MiniSerachBarComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectPageComponent,
+    ProjectIntroComponent
   ],
     imports: [
         BrowserModule,
