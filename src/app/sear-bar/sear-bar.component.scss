@@ -93,4 +93,21 @@
  //   }
  // }
 
+
+  @media screen  and (max-width: 1280px){
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+
+    app-boutton{
+      align-self: center;
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    .divide{
+      width: 280px;
+      height: 1px;
+    }
+
+  }
 }

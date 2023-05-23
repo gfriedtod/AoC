@@ -9,7 +9,7 @@ font-family: 'poppins' , 'sans-serif' ;
 }
 
 .nav-bar{
-  position: fixed;
+  //position: fixed;
   height: 80px;
   width: 100%;
   display: flex;
@@ -32,6 +32,10 @@ font-family: 'poppins' , 'sans-serif' ;
     justify-content: space-around;
 
     margin-left: 50px;
+    @media screen  and (max-width: 1280px){
+      display: none;
+
+    }
 
 
     li{
@@ -53,10 +57,23 @@ font-family: 'poppins' , 'sans-serif' ;
     display: flex;
     align-self: center;
     margin-right: 90px;
+    @media screen  and (max-width: 1280px){
+      display: none;
+
+    }
     app-boutton{
       margin-left: 30px;
     }
 
   }
 
+}
+
+app-burger-button{
+  display: none;
+
+  @media screen  and (max-width: 1280px) {
+    display: flex;
+
+  }
 }

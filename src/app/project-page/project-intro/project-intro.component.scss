@@ -1,0 +1,82 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.main-composant{
+  position: relative;
+  background-image: url("/assets/grid-pattern.jpeg");
+
+}
+.big-main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column-reverse;
+  flex-direction: column;
+  border: 1px solid;
+
+}
+.main-presentation{
+  display: flex;
+  width: 100%;
+  height: 80%;
+  z-index: 1;
+
+  @media screen  and (max-width: 1280px){
+    flex-direction: column;
+
+  }
+
+
+  //padding: 50px;
+
+
+
+}
+.description{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  padding: 50px;
+  margin-bottom: 30px;
+  h1{
+    font-size: 70px;
+    //inline-size: 1px;
+  }
+}
+img{
+  //position: relative;
+  display: flex;
+  //align-self: center;
+  width: 45%;
+  height: 680px;
+  z-index: 1;
+  //flex: 2;
+
+  @media screen  and (max-width: 1280px){
+    width: 100%;
+    height: 50%;
+
+  }
+
+}
+app-sear-bar{
+  width: 80%;
+  height: 20%;
+  align-self: center;
+  align-content: flex-end;
+  flex: 1;
+  position: absolute;
+  margin-top: 542px;
+  z-index: 2;
+  margin-bottom: 30px;
+
+  @media screen  and (max-width: 1280px){
+    width: 40%;
+    margin-top: 742px;
+
+  }
+
+}

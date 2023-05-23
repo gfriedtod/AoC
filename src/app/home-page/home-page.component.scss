@@ -56,16 +56,40 @@ app-main-presentation{
       margin-top: 20px;
 
      // align-content: flex-end;
+      @media screen  and (max-width: 1280px){
+        display: flex;
+        flex-direction: column;
+        align-self: center;
 
+
+        app-card-presentations{
+          width: 60%;
+          height: 400px;
+          //position: relative;
+          margin-top: 0;
+          margin-bottom: 30px;
+          align-self: center;
+        }
+      }
 
     }
+ @media screen and (max-width: 1280px){
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 80%;
+   height: 1800px;
 
+ }
 
   }
 }
 
 
 app-card-presentations{
+  width: 280px;
+  height: 300px;
+  position: relative;
   align-self: flex-end;
   margin-right: 20px;
   border: 1px solid rgba(140, 201, 244, 0.5);
@@ -89,6 +113,22 @@ app-card-presentations{
     height: 500px;
     margin-left: 20px;
     align-self: center;
+
+    @media screen  and (max-width: 1280px){
+      height: 800px;
+
+    }
+  }
+
+  @media screen  and (max-width: 1280px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 2800px;
+
+
+
   }
 }
 
@@ -147,19 +187,27 @@ app-card-presentations{
   .list-v4{
     display: flex;
     justify-content: center;
-    app-card-pro{
+    app-card-pro {
       width: 20%;
       height: 300px;
       // border:  1px solid rgba(140, 201, 244, 0.5);
       margin-left: 20px;
-     // margin-bottom: 250px;
+      // margin-bottom: 250px;
       //background-color: yellow;
 
       align-self: center;
 
+      @media screen and (max-width: 1280px) {
+        width: 180%;
+
+      }
     }
   }
 
+}
+
+h1{
+  align-self: center;
 }
 
 
