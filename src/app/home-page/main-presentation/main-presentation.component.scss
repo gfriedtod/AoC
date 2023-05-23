@@ -21,10 +21,18 @@ h1{
   font-size: 80px;
   align-self: center;
   //inline-size: 0px;
-  color: #284256;
+  //color: #284256;
+  color: white;
 }
   h2{
     align-self: center;
-    color: #284256;
+    //color: #284256;
+    color: white;
   }
+}
+app-mini-serach-bar{
+
+  height: 100px;
+  width: 50%;
+  align-self: center;
 }
