@@ -65,11 +65,13 @@ app-main-presentation{
         display: flex;
         flex-direction: column;
         align-self: center;
+        width: 100%;
 
 
         app-card-presentations{
-          width: 70%;
+          width: 80%;
           height: 400px;
+          margin-left: 0;
           //position: relative;
           margin-top: 0;
           margin-bottom: 30px;
@@ -82,7 +84,7 @@ app-main-presentation{
    display: flex;
    flex-direction: column;
    align-items: center;
-   width: 80%;
+   width: 100%;
    height: 1800px;
 
  }
