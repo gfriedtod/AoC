@@ -9,6 +9,11 @@ app-main-presentation{
   width: 90%;
   align-self: center;
   margin-bottom: 80px;
+  @media screen  and (max-width: 1280px) {
+
+    width: 100%;
+
+  }
 }
 
   .presentation{

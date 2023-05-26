@@ -7,7 +7,14 @@
   padding: 0;
 font-family: 'poppins' , 'sans-serif' ;
 }
+a{
+  all : unset;
+  transition: font-size ease-in-out 0.5s , color ease-in-out 0.5s , text-decoration ease-in-out 0.5s;
+}
 
+a:hover{
+  color: black;
+}
 .nav-bar{
   //position: fixed;
   height: 80px;
@@ -76,4 +83,11 @@ app-burger-button{
     display: flex;
 
   }
+}
+
+.active{
+
+  font-size: 20px;
+  text-decoration: underline 5px;
+  color: black;
 }
