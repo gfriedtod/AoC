@@ -55,5 +55,9 @@
     margin-left: 20px;
     align-self: center;
   }
-
+ @media screen  and (max-width: 1280px){
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+ }
 }
