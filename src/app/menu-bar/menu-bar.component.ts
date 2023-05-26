@@ -4,7 +4,8 @@ import {BouttonService} from "../boutton/bouttonService/BouttonService";
 @Component({
   selector: 'app-menu-bar',
   templateUrl: './menu-bar.component.html',
-  styleUrls: ['./menu-bar.component.scss']
+  styleUrls: ['./menu-bar.component.scss'],
+
 })
 export class MenuBarComponent implements  OnInit{
 

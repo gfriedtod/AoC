@@ -23,7 +23,7 @@
 
   <div class="rep-nav">
     <app-burger-button (click)="statechange()" ></app-burger-button>
-    <app-responsive-menu [ngClass]="{activated : stated }" ></app-responsive-menu>
+    <app-responsive-menu *ngIf="stated " ></app-responsive-menu>
   </div>
 
 </nav>

@@ -10,10 +10,18 @@ import {animate, animation, keyframes, style, transition, trigger} from "@angula
   animations: [ trigger('statechange', [
     transition(':enter', [
       animate('0.5s', keyframes([
-        style( {transform: 'translateX(-100%)' ,offset: 0}),
+        style( {transform: 'translateX(100%)' ,offset: 0}),
         style({transform: 'translateX(0)', offset: 1})
       ]))
+    ]) ,
+
+    transition(':leave', [
+      animate('0.5s', keyframes([
+        style( {transform: 'translateX(0)' ,offset: 0}),
+        style({transform: 'translateX(-100%)', offset: 1})
+      ]))
     ])
+
 
   ]) ]
 })
