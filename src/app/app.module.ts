@@ -14,7 +14,17 @@ import { CardProjectPresentationComponent } from './card-project-presentation/ca
 import { CardProComponent } from './card-pro/card-pro.component';
 import { MiniSerachBarComponent } from './mini-serach-bar/mini-serach-bar.component';
 import { FooterComponent } from './footer/footer.component';
+import {ProjectPageComponent} from "./project-page/project-page.component";
+import {ProjectIntroComponent} from "./project-page/project-intro/project-intro.component";
+import {BurgerButtonComponent} from "./menu-bar/burger-button/burger-button.component";
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
+import {RouterModule, RouterOutlet} from "@angular/router";
+import {pageRouteModule} from "./pageRouteModule";
 
+export function playerFactory() {
+  return player;
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,11 +38,20 @@ import { FooterComponent } from './footer/footer.component';
     CardProjectPresentationComponent,
     CardProComponent,
     MiniSerachBarComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectPageComponent,
+    ProjectIntroComponent,
+    BurgerButtonComponent
   ],
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+      LottieModule.forRoot({ player: playerFactory }),
+      RouterOutlet,
+      pageRouteModule,
+      RouterModule
+
+
     ],
   providers: [],
   bootstrap: [AppComponent]
