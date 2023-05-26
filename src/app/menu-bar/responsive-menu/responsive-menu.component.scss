@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Coda&family=Montserrat:wght@600&family=Poppins:wght@500&display=swap');
+
+*{
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins' , 'sans-serif' ;
+}
+.limk{
+  all : unset;
+  transition: font-size ease-in-out 0.5s , color ease-in-out 0.5s , text-decoration ease-in-out 0.5s;
+}
+
+.limk:hover{
+  color: black;
+}
+.resp-nav {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap : 20px;
+  flex-direction: column;
+  justify-content: center;
+  //align-content: center;
+  background-color: white;
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    margin-left: 50px;
+
+    li{
+      margin-right: 50px;
+      font-size-adjust: initial;
+      text-align: center;
+      align-self: center;
+      font-size: 50px;
+      color: #0b0a0a;
+      font-family: "Poppins" , "sans-serif";
+      //font-size: 10px;
+
+    }
+
+
+  }
+.boutton-login{
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  align-self: center;
+}
+}

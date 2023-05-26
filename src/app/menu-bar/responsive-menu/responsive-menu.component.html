@@ -1,0 +1,19 @@
+<nav class="resp-nav">
+
+  <ul class="items">
+    <li><a class="limk" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >Home </a></li>
+    <li><a class="limk"> About us</a></li>
+    <li><a class="limk" routerLink ="project" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >Products</a></li>
+    <li><a class="limk" >Services</a></li>
+
+  </ul>
+
+  <div class="boutton-login">
+
+    <!--    <button> Login </button>-->
+    <!--    <button> sing up </button>-->
+    <app-boutton [stateview]="stateviewSign" ></app-boutton>
+    <app-boutton  [stateview]="stateviewLogIn" ></app-boutton>
+
+  </div>
+</nav>
