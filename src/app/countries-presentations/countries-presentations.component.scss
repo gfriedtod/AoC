@@ -3,8 +3,11 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  margin-left: 20px;
+ // margin-left: 20px;
   height: 100%;
+  gap: 20px;
+ // border: 1px solid rgba(140, 201, 244, 0.5);
+  border-radius: 20px;
   //background-color: white;
  // background-color: rebeccapurple;
   img{
@@ -21,4 +24,5 @@ app-boutton{
   //width: 50%;
   align-self: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
