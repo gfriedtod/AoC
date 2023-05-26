@@ -91,3 +91,37 @@ app-burger-button{
   text-decoration: underline 5px;
   color: black;
 }
+
+
+.rep-nav{
+  display: none;
+  flex-direction: column;
+  position: relative;
+  width: 10%;
+  height: 100%;
+  align-self: center;
+  @media screen  and (max-width: 1280px) {
+
+    display: flex;
+
+  }
+
+  app-responsive-menu{
+    //display: none;
+    position: absolute;
+    width: 540px;
+    height: 640px;
+    margin-top: 100px;
+    align-self: center;
+    margin-right: 450px;
+
+
+
+  }
+
+}
+
+.activated{
+  display: none;
+  //flex-direction: column;
+}

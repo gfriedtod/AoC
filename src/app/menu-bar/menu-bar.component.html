@@ -1,4 +1,4 @@
-<nav class="nav-bar">
+<nav class="nav-bar" >
 <!--  <p class="icon">Cojecam</p>-->
   <img class="icon" src='/assets/logo%20Bureau%20developpement.png' alt="">
 
@@ -20,5 +20,12 @@
 
   </div>
 
-  <app-burger-button></app-burger-button>
+
+  <div class="rep-nav">
+    <app-burger-button (click)="statechange()" ></app-burger-button>
+    <app-responsive-menu [ngClass]="{activated : stated }" ></app-responsive-menu>
+  </div>
+
 </nav>
+
+

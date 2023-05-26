@@ -1,35 +1,35 @@
-<ng-form class="search-bar">
-<div class="category">
-  <div class="title">Location</div>
-  <select required>
-    <option>select your city</option>
-    <option>hy</option>
-  </select>
+<div  class="search-bar">
+<mat-form-field class="category">
+  <mat-label class="title">Location</mat-label>
+  <mat-select>
+    <mat-option value="one">select your city</mat-option>
+    <mat-option>hy</mat-option>
+  </mat-select>
 
 
-</div>
+</mat-form-field>
 
   <div class="divide"></div>
 
-  <div class="category">
-    <div class="title">Rating</div>
-    <select required>
-      <option>select your Rating</option>
-      <option>hy</option>
-    </select>
+  <mat-form-field class="category">
+    <mat-label class="title">Rating</mat-label>
+    <mat-select placeholder="select your country ">
+      <mat-option>select your Rating</mat-option>
+      <mat-option>hy</mat-option>
+    </mat-select>
 
 
-  </div>
+  </mat-form-field>
 <div class="divide"></div>
-  <div class="category">
-    <div class="title">Type</div>
-    <select required>
-      <option>select your Type</option>
-      <option>hy</option>
-    </select>
+  <mat-form-field class="category">
+    <mat-label class="title">Type</mat-label>
+    <mat-select>
+      <mat-option>select your Type</mat-option>
+      <mat-option>hy</mat-option>
+    </mat-select>
 
 
-  </div>
+  </mat-form-field>
 
   <app-boutton  [stateview]="submit" ></app-boutton>
-</ng-form>
+</div>

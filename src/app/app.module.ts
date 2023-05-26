@@ -21,6 +21,10 @@ import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import {RouterModule, RouterOutlet} from "@angular/router";
 import {pageRouteModule} from "./pageRouteModule";
+import { ResponsiveMenuComponent } from './menu-bar/responsive-menu/responsive-menu.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelect, MatSelectModule} from "@angular/material/select";
 
 export function playerFactory() {
   return player;
@@ -41,18 +45,23 @@ export function playerFactory() {
     FooterComponent,
     ProjectPageComponent,
     ProjectIntroComponent,
-    BurgerButtonComponent
+    BurgerButtonComponent,
+    ResponsiveMenuComponent
   ],
-    imports: [
-        BrowserModule,
-        FormsModule,
-      LottieModule.forRoot({ player: playerFactory }),
-      RouterOutlet,
-      pageRouteModule,
-      RouterModule
+  imports: [
+    BrowserModule,
+    FormsModule,
+    LottieModule.forRoot({player: playerFactory}),
+    RouterOutlet,
+    pageRouteModule,
+    RouterModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    BrowserAnimationsModule,
 
 
-    ],
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
