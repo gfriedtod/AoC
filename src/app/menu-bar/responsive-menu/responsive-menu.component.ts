@@ -35,4 +35,13 @@ export class ResponsiveMenuComponent implements  OnInit{
 
   }
 
+  protected readonly close = close;
+
+ ngDestroy() {
+
+ }
+
+  closedstate() {
+
+  }
 }

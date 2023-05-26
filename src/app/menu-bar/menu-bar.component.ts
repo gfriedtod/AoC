@@ -26,5 +26,6 @@ ngOnInit() {
 
   statechange() {
     this.stated = !this.stated
+    console.log(this.stated)
   }
 }

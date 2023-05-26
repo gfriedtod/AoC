@@ -6,7 +6,7 @@ import animationData from './burgger.json';
 @Component({
   selector: 'app-burger-button',
   templateUrl: './burger-button.component.html',
-  styleUrls: ['./burger-button.component.css']
+  styleUrls: ['./burger-button.component.scss']
 })
 export class BurgerButtonComponent {
   options: any;
