@@ -54,5 +54,9 @@
 app-boutton{
   align-items: center;
   align-self: flex-start;
+  @media screen  and (max-width: 1280px){
+    text-align: center;
+    align-self: center;
+  }
 
 }
