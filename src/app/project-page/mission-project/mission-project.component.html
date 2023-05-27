@@ -1,0 +1,36 @@
+
+  <div class="main-presentation">
+    <div class="description">
+      <h1>{{ name }}</h1>
+      <h2>{{ mission }}</h2>
+
+      <div class="key-List">
+
+        <app-key-handle [HandleKeyModel]="keyHand"></app-key-handle>
+        <app-key-handle [HandleKeyModel]="keyHand"></app-key-handle>
+        <app-key-handle [HandleKeyModel]="keyHand"></app-key-handle>
+        <app-key-handle [HandleKeyModel]="keyHand"></app-key-handle>
+
+      </div>
+      <app-boutton  [stateview]="stateview"></app-boutton>
+    </div>
+
+
+    <div class="image-comp">
+      <app-special-image></app-special-image>
+
+
+<!--      <img class="main-im" src="{{ image }}" alt="{{ name }}" />-->
+    </div>
+
+
+
+  </div>
+<!--  <img class="sub-image" src="{{ other }}" alt="">-->
+
+
+
+
+
+
+

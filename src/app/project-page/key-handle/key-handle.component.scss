@@ -1,0 +1,16 @@
+.key{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  h1{
+    color: #3A5CEE;
+    font-size: 50px;
+  }
+
+  p{
+    color: rgba(145, 144, 144, 0.8);
+  }
+}

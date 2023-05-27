@@ -1,0 +1,139 @@
+.main-presentation{
+  display: flex;
+  width: 100%;
+  height: 80%;
+  z-index: 1;
+
+  @media screen  and (max-width: 1280px){
+    flex-direction: column;
+
+  }
+
+
+  //padding: 50px;
+
+
+
+}
+.description{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  padding: 50px;
+  margin-bottom: 30px;
+
+  h1{
+    font-size: 70px;
+
+    @media screen and (max-width: 1280px){
+      font-size: 180%;
+
+    }
+    //inline-size: 1px;
+  }
+
+  h2{
+    color: rgba(145, 144, 144, 0.8);
+  }
+}
+
+.key-List{
+  //align-self: center;
+  display: flex;
+  width: 50%;
+  //flex-direction: column;
+  //flex-wrap: wrap;
+  gap: 20px;
+  flex-wrap: wrap;
+  app-key-handle{
+    width: 40%;
+    @media screen and (max-width: 1280px){
+      width: 100%;
+
+    }
+  }
+
+  @media screen and (max-width: 1280px){
+    flex-wrap: nowrap;
+    @media screen  and (max-width: 780px){
+      flex-direction: column;
+    }
+
+  }
+
+
+}
+app-boutton{
+  align-self: flex-start;
+}
+
+
+
+.image-comp{
+
+  position: relative;
+  display: flex;
+  //flex-direction: column;
+  width: 35%;
+  //overflow: hidden;
+
+
+
+  .main-im{
+    position: absolute;
+    //position: relative;
+   // display: flex;
+
+    border-radius: 20px;
+    //position: relative;
+
+    //align-self: center;
+    width: 100%;
+    height: 680px;
+    z-index: 1;
+
+    //flex: 2;
+
+    @media screen  and (max-width: 1280px){
+      width: 100%;
+      height: 50%;
+
+    }
+
+  }
+
+
+}
+
+.big-main{
+  position: relative;
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  .sub-image{
+    width: 20%;
+    border-radius: 20px;
+    box-shadow: 0 0 0 15px white;
+    position: absolute;
+    z-index: 2;
+    align-self: flex-end;
+
+    height: 500px;
+    margin-bottom: 150px;
+    margin-left: 50%;
+
+
+   // margin-right:250px;
+  }
+}
+
+app-special-image{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+}
