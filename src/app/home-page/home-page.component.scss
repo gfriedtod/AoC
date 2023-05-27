@@ -7,8 +7,11 @@ main{
 app-main-presentation{
 
   width: 90%;
+  height: 580px;
   align-self: center;
   margin-bottom: 80px;
+  border-radius: 20px;
+  //border : 2px solid;
   @media screen  and (max-width: 1280px) {
 
     width: 100%;

@@ -5,8 +5,11 @@
   <app-project-intro [Project]="Project"></app-project-intro>
   <app-card-project-presentation [cardPresentation]="cardpresentation" ></app-card-project-presentation>
 <app-identity-work [Identity]="identity"></app-identity-work>
-<app-mission-project [MissionWork]="mission"></app-mission-project>
+  <app-card-project-presentation [cardPresentation]="cardpresentationmission" ></app-card-project-presentation>
 
+
+  <app-mission-project [MissionWork]="mission"></app-mission-project>
+  <app-card-project-presentation [cardPresentation]="cardpresentationproject" ></app-card-project-presentation>
 <div class="project">
 
   <h1>Recently project
@@ -17,7 +20,12 @@
 
  </div>
 <app-boutton [stateview]="seeless" class="see-less" *ngIf="decrement" (click)="dicrement()"></app-boutton>
+
+
+
 </div>
+
+  <app-main-presentation></app-main-presentation>
 </main>
 
 

@@ -28,6 +28,8 @@ export class ProjectPageComponent implements  OnInit {
 
   seemore!:BouttonService
   seeless!:BouttonService
+  cardpresentationmission!: CardProjectPresentationModel;
+  cardpresentationproject!: CardProjectPresentationModel;
 
 
   ngOnInit(): void {
@@ -54,8 +56,8 @@ export class ProjectPageComponent implements  OnInit {
     this.seemore=new BouttonService( 'see more', )
     this.seeless=new BouttonService( 'see less', )
     this.subList = this.cardPro.slice( 0, this.number);
-
-
+    this.cardpresentationproject = new  CardProjectPresentationModel('assets/project-project.gif','Project','');
+    this.cardpresentationmission = new  CardProjectPresentationModel('assets/project-mission.gif','Mission','');
     this.Project = new WorkModel('LIBERMAN', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam iure nobis non odio officiis perferendis quae quis quod recusandae veritatis!', 'assets/building4.jpg');
     this.cardpresentation = new CardProjectPresentationModel( 'assets/project-identity.gif','identity','');
     this.identity = new IdentityModel('assets/building4.jpg', 'Lorem' , 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam iure nobis non odio officiis perferendis quae quis quod recusandae veritatis!');
