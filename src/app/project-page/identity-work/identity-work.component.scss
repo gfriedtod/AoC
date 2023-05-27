@@ -23,8 +23,13 @@
       //inline-size: 1px;
       @media screen and (max-width: 1280px){
         font-size: 180%;
+        text-align: center;
 
       }
+    }
+
+    @media screen  and (max-width: 780px){
+      text-align: center;
     }
 
   }

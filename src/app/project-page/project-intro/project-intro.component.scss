@@ -24,6 +24,7 @@
 
   @media screen  and (max-width: 1280px){
     flex-direction: column;
+    text-align: center;
 
   }
 
@@ -41,10 +42,14 @@
   justify-content: center;
   padding: 50px;
   margin-bottom: 30px;
+  @media screen  and (max-width: 780px){
+    text-align: center;
+  }
   h1{
     font-size: 70px;
     @media screen and (max-width: 1280px){
       font-size: 200%;
+      text-align: center;
 
     }
     //inline-size: 1px;
@@ -80,6 +85,7 @@ app-sear-bar{
   @media screen  and (max-width: 1280px){
     width: 40%;
     margin-top: 742px;
+    align-self: center;
 
     @media screen and (max-width: 780px){
       width: 90%;

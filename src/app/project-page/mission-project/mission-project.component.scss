@@ -23,7 +23,9 @@
   justify-content: center;
   padding: 50px;
   margin-bottom: 30px;
-
+  @media screen  and (max-width: 780px){
+    text-align: center;
+  }
   h1{
     font-size: 70px;
 
@@ -36,6 +38,9 @@
 
   h2{
     color: rgba(145, 144, 144, 0.8);
+    @media screen  and (max-width: 780px){
+      text-align: center;
+    }
   }
 }
 
