@@ -43,6 +43,10 @@
   margin-bottom: 30px;
   h1{
     font-size: 70px;
+    @media screen and (max-width: 1280px){
+      font-size: 200%;
+
+    }
     //inline-size: 1px;
   }
 }
@@ -76,6 +80,12 @@ app-sear-bar{
   @media screen  and (max-width: 1280px){
     width: 40%;
     margin-top: 742px;
+
+    @media screen and (max-width: 780px){
+      width: 90%;
+      align-self: center;
+
+    }
 
   }
 

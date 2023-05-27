@@ -1,9 +1,12 @@
 
 main{
 display: flex;
+
   flex-direction: column;
+  gap: 200px;
   height:  100%;
   width: 100%;
+  //align-items: center;
   //background-color: rgba(191, 191, 191, 0.3);
 
 
@@ -12,8 +15,93 @@ display: flex;
 
 app-project-intro{
   align-self: center;
-  width: 100%;
+  width: 90%;
   //background-color: rebeccapurple;
   height: 30%;
+  @media screen and (max-width: 1280px){
+    width: 100%;
 
+  }
+
+
+}
+
+app-identity-work{
+
+ width: 90%;
+  align-self: center;
+  @media screen and (max-width: 1280px){
+    width: 100%;
+
+  }
+}
+
+app-card-project-presentation{
+  align-self: center;
+  @media screen and (max-width: 1280px){
+    width: 100%;
+
+  }
+}
+
+app-mission-project{
+  align-self: center;
+  width: 90%;
+  @media screen and (max-width: 1280px){
+    width: 100%;
+
+  }
+}
+.project{
+  width: 90%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 20px;
+
+  gap: 20px;
+  background-image: url("/assets/grid-pattern.jpeg");
+
+  h1{
+    width: 100%;
+    font-size: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+
+    app-boutton{
+      font-size: 20px;
+    }
+  }
+ // height: 80%;
+  .list-project {
+    width: 100%;
+    //height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    overflow: hidden;
+
+    app-card-pro {
+      width: 20%;
+      height: 400px;
+
+
+    }
+    @media screen and (max-width: 1280px) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      overflow-y: scroll;
+    }
+  }
+}
+
+.see-less{
+  align-self: flex-end;
 }

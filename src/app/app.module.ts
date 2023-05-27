@@ -25,6 +25,11 @@ import { ResponsiveMenuComponent } from './menu-bar/responsive-menu/responsive-m
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelect, MatSelectModule} from "@angular/material/select";
+import { IdentityWorkComponent } from './project-page/identity-work/identity-work.component';
+import { MissionProjectComponent } from './project-page/mission-project/mission-project.component';
+import { KeyHandleComponent } from './project-page/key-handle/key-handle.component';
+import { SpecialImageComponent } from './project-page/mission-project/special-image/special-image.component';
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 export function playerFactory() {
   return player;
@@ -46,7 +51,11 @@ export function playerFactory() {
     ProjectPageComponent,
     ProjectIntroComponent,
     BurgerButtonComponent,
-    ResponsiveMenuComponent
+    ResponsiveMenuComponent,
+    IdentityWorkComponent,
+    MissionProjectComponent,
+    KeyHandleComponent,
+    SpecialImageComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +68,7 @@ export function playerFactory() {
     MatFormFieldModule,
     MatSelectModule,
     BrowserAnimationsModule,
+    MatPaginatorModule,
 
 
   ],
