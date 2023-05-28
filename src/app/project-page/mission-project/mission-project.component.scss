@@ -4,7 +4,7 @@
   height: 80%;
   z-index: 1;
 
-  @media screen  and (max-width: 1280px){
+  @media screen  and (max-width: 1225px){
     flex-direction: column;
 
   }
@@ -29,7 +29,7 @@
   h1{
     font-size: 70px;
 
-    @media screen and (max-width: 1280px){
+    @media screen and (max-width: 1225px){
       font-size: 180%;
 
     }
@@ -54,7 +54,7 @@
   flex-wrap: wrap;
   app-key-handle{
     width: 40%;
-    @media screen and (max-width: 1280px){
+    @media screen and (max-width: 1225px){
       width: 100%;
       align-self: center;
       text-align: center;
@@ -62,7 +62,7 @@
     }
   }
 
-  @media screen and (max-width: 1280px){
+  @media screen and (max-width: 1225px){
     flex-wrap: nowrap;
     width: 100%;
     @media screen  and (max-width: 780px){
@@ -75,7 +75,7 @@
 }
 app-boutton{
   align-self: flex-start;
-  @media screen  and (max-width: 1280px){
+  @media screen  and (max-width: 1225px){
     text-align: center;
     align-self: center;
   }
@@ -108,7 +108,7 @@ app-boutton{
 
     //flex: 2;
 
-    @media screen  and (max-width: 1280px){
+    @media screen  and (max-width: 1225px){
       width: 100%;
       height: 50%;
 

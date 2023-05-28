@@ -14,11 +14,12 @@ display: flex;
 }
 
 app-project-intro{
+
   align-self: center;
   width: 90%;
   //background-color: rebeccapurple;
   height: 30%;
-  @media screen and (max-width: 1280px){
+  @media screen and (max-width: 1225px){
     width: 100%;
 
   }
@@ -30,7 +31,7 @@ app-identity-work{
 
  width: 90%;
   align-self: center;
-  @media screen and (max-width: 1280px){
+  @media screen and (max-width: 1225px){
     width: 100%;
 
   }
@@ -38,7 +39,7 @@ app-identity-work{
 
 app-card-project-presentation{
   align-self: center;
-  @media screen and (max-width: 1280px){
+  @media screen and (max-width: 1225px){
   //  width: 100%;
     align-self: center;
 
@@ -48,7 +49,7 @@ app-card-project-presentation{
 app-mission-project{
   align-self: center;
   width: 90%;
-  @media screen and (max-width: 1280px){
+  @media screen and (max-width: 1225px){
     width: 100%;
 
   }
@@ -82,14 +83,14 @@ app-mission-project{
       margin-right: 230px;
 
 
-      @media screen and (max-width: 1280px) {
+      @media screen and (max-width: 1225px) {
         width: 80%;
         align-self: center;
       }
     }
 
 
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1225px) {
       width: 100%;
       height: 10%;
       display: flex;
@@ -117,7 +118,7 @@ app-mission-project{
       height: 400px;
       align-self: center;
 
-      @media screen and (max-width: 1280px) {
+      @media screen and (max-width: 1225px) {
         //width: 100%;
         //display: flex;
         //flex-direction: column;
@@ -133,7 +134,7 @@ app-mission-project{
       }
 
     }
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1225px) {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -148,6 +149,6 @@ app-mission-project{
 }
 app-main-presentation{
 
-  height: 1080px;
+  height: 1225px;
 
 }

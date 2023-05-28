@@ -30,6 +30,8 @@ import { MissionProjectComponent } from './project-page/mission-project/mission-
 import { KeyHandleComponent } from './project-page/key-handle/key-handle.component';
 import { SpecialImageComponent } from './project-page/mission-project/special-image/special-image.component';
 import {MatPaginatorModule} from "@angular/material/paginator";
+import { ChronoPageComponent } from './chrono-page/chrono-page.component';
+import { ChronoJesuiteComponent } from './chrono-page/chrono-jesuite/chrono-jesuite.component';
 
 export function playerFactory() {
   return player;
@@ -55,7 +57,9 @@ export function playerFactory() {
     IdentityWorkComponent,
     MissionProjectComponent,
     KeyHandleComponent,
-    SpecialImageComponent
+    SpecialImageComponent,
+    ChronoPageComponent,
+    ChronoJesuiteComponent
   ],
   imports: [
     BrowserModule,
