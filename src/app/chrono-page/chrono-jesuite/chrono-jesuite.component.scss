@@ -16,9 +16,9 @@ main{
     h1{
       width: 100%;
       font-size: 60px;
-      @media screen and (max-width: 1225px){
-        font-size: 180%;
-        text-align: center;
+      @media screen and (max-width: 1280px){
+        font-size: 280%;
+        //text-align: center;
       }
     }
   }
@@ -31,7 +31,7 @@ main{
 }
 
 .number{
-  position: absolute;
+  //position: absolute;
   font-size: 70px;
   color: rgba(11, 10, 10, 0.5);
   //align-self: flex-start;
