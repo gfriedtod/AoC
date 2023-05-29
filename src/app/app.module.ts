@@ -32,6 +32,27 @@ import { SpecialImageComponent } from './project-page/mission-project/special-im
 import {MatPaginatorModule} from "@angular/material/paginator";
 import { ChronoPageComponent } from './chrono-page/chrono-page.component';
 import { ChronoJesuiteComponent } from './chrono-page/chrono-jesuite/chrono-jesuite.component';
+import {AngularFireStorageModule} from "@angular/fire/compat/storage";
+import {AngularFireModule} from "@angular/fire/compat";
+import { CountriesPageComponent } from './countries-page/countries-page.component';
+//
+// import { AngularFireModule } from '@angular/fire';
+//
+// import { AngularFireStorageModule } from '@angular/fire/storage';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCLfs31OivqUUuj6e7GJqfwnFaxu5ALTb8",
+  authDomain: "bureau-devellopement-aoc.firebaseapp.com",
+  projectId: "bureau-devellopement-aoc",
+  storageBucket: "bureau-devellopement-aoc.appspot.com",
+  messagingSenderId: "369593279940",
+  appId: "1:369593279940:web:99f3c7e0bed0c76fd17091",
+  measurementId: "G-70FK6EYSED"
+};
 
 export function playerFactory() {
   return player;
@@ -59,10 +80,16 @@ export function playerFactory() {
     KeyHandleComponent,
     SpecialImageComponent,
     ChronoPageComponent,
-    ChronoJesuiteComponent
+    ChronoJesuiteComponent,
+    CountriesPageComponent
   ],
   imports: [
     BrowserModule,
+    // AngularFireModule,
+    // AngularFireModule.initializeApp(firebaseConfig),
+    // AngularFireStorageModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireStorageModule,
     FormsModule,
     LottieModule.forRoot({player: playerFactory}),
     RouterOutlet,

@@ -1,0 +1,39 @@
+<main>
+  <div class="main-presentations">
+    <h1>Germany <img src="/assets/germany.png" alt=""></h1>
+  </div>
+
+  <div class="details-countrues">'
+
+  <div class="first">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolor dolores ea esse facere laudantium mollitia porro. Aliquam, deserunt ullam?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, quae.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque fugiat harum impedit magnam optio repudiandae.lorem10</p>
+    <img src="/assets/building4.jpg" alt="">
+  </div>
+<div class="div">
+  <h1>Germany</h1>
+  <img src="assets/building4.jpg" alt="">
+</div>
+
+
+    <div class="second">
+      <img src="assets/building4.jpg" alt="">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad assumenda cumque ea explicabo fuga, fugiat inventore labore magni possimus quisquam, quod reiciendis rerum saepe, sequi sunt velit. Fugiat, quis?</p>
+    </div>
+  </div>
+
+  <div class="project">
+
+    <h1>Recently project
+      <app-boutton [stateview]="seemore" class="see-more" (click)="increment()"></app-boutton>
+    </h1>
+    <div class="list-project">
+      <app-card-pro *ngFor="let card of subList" [cardPresentation]="card"></app-card-pro>
+
+    </div>
+    <app-boutton [stateview]="seeless" class="see-less" *ngIf="decrement" (click)="dicrement()"></app-boutton>
+
+
+
+  </div>
+</main>

@@ -16,6 +16,8 @@ main{
     h1{
       width: 100%;
       font-size: 60px;
+      color: #284256 ;
+
       @media screen and (max-width: 1280px){
         font-size: 280%;
         //text-align: center;
@@ -37,4 +39,12 @@ main{
   //align-self: flex-start;
   margin-top: 10%;
 
+}
+.intro{
+  font-size: 20px;
+  color: #3A5CEE;
+}
+.des{
+  font-size: 25px;
+  color: rgb(78, 76, 76);
 }

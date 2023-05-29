@@ -52,6 +52,8 @@
     text-align: center;
   }
   h1{
+    color: #284256 ;
+
     font-size: 70px;
     @media screen and (max-width: 1453px){
       font-size: 280%;
@@ -62,6 +64,7 @@
     //inline-size: 1px;
   }
   h2{
+
     @media screen and (max-width: 1280px){
       font-size: 100%;
       text-align: center;

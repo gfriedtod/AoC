@@ -1,7 +1,7 @@
 .main-presentation{
   display: flex;
   width: 100%;
-  height: 80%;
+  height: 100%;
   z-index: 1;
   align-items: center;
 
@@ -20,6 +20,8 @@
     margin-bottom: 30px;
     h1{
       font-size: 70px;
+      color: #284256 ;
+
       //inline-size: 1px;
       @media screen and (max-width: 1225px){
         font-size: 180%;
@@ -27,7 +29,9 @@
 
       }
     }
-
+h2{
+  color: #919090;
+}
     @media screen  and (max-width: 780px){
       text-align: center;
     }
