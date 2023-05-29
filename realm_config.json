@@ -1,0 +1,8 @@
+{
+    "app_id": "devellopement-office-1-jfkan",
+    "config_version": 20210101,
+    "name": "devellopement-office-1",
+    "location": "DE-FF",
+    "provider_region": "gcp-europe-west1",
+    "deployment_model": "LOCAL"
+}
