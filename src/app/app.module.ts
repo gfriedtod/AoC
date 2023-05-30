@@ -35,6 +35,7 @@ import { ChronoJesuiteComponent } from './chrono-page/chrono-jesuite/chrono-jesu
 import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 import {AngularFireModule} from "@angular/fire/compat";
 import { CountriesPageComponent } from './countries-page/countries-page.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 //
 // import { AngularFireModule } from '@angular/fire';
 //
@@ -81,7 +82,8 @@ export function playerFactory() {
     SpecialImageComponent,
     ChronoPageComponent,
     ChronoJesuiteComponent,
-    CountriesPageComponent
+    CountriesPageComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
