@@ -7,6 +7,7 @@ import {CountriesPageComponent} from "./countries-page/countries-page.component"
 import {WebPageComponent} from "./web-page/web-page.component";
 import {CommonModule} from "@angular/common";
 import {BrowserModule} from "@angular/platform-browser";
+import {AdminPageComponent} from "./admin-page/admin-page.component";
 
 const routes: Routes = [
   //  { path: '', component: WebPageComponent },
@@ -23,6 +24,18 @@ const routes: Routes = [
         loadChildren : () => import('./web-page/web-page.module').then(m => m.WebPageModule)
       }
     ]
+  },
+
+  {
+    path:'',
+    component:AdminPageComponent,
+    children:[
+      {
+        path:'',
+        loadChildren:()=>import('./admin-page/admin-page.module').then(m=>m.AdminPageModule)
+      }
+    ]
+
   }
 ];
 
@@ -31,12 +44,10 @@ const routes: Routes = [
     imports: [
       CommonModule,
       BrowserModule,
-      RouterModule.forRoot(routes , {
-        useHash: true
-      })
+      RouterModule.forRoot(routes , {useHash: true})
     ],
     exports: [
-      RouterModule
+
     ]
   }
 )

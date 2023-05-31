@@ -1,0 +1,16 @@
+main{
+  display: flex;
+  background-color: #3A5CEE;
+  width: 2800px;
+  height: 100%;
+}
+
+app-side-bar{
+  width: 20%;
+  height: 100%;
+}
+
+router-outlet{
+  width: 80%;
+  height: 50%;
+}

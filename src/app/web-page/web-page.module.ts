@@ -63,28 +63,27 @@ import {playerFactory} from "../app.module";
     ChronoPageComponent,
     ChronoJesuiteComponent,
     CountriesPageComponent,
-    SideBarComponent,
+
 
   ],
   imports:[
 
     CommonModule,
     RouterModule.forChild(webPageRoutingModule),
-
-    RouterOutlet,
     LottieModule.forRoot({player: playerFactory}),
-    pageRouteModule,
-    RouterModule,
-    BrowserAnimationsModule,
+   // pageRouteModule,
+  //  RouterModule,
+
     MatFormFieldModule,
     MatSelectModule,
-    BrowserAnimationsModule,
+
     MatPaginatorModule,
     FormsModule,
   ],
   exports: [
     MenuBarComponent,
-    FooterComponent
+    FooterComponent,
+
 
 
   ],

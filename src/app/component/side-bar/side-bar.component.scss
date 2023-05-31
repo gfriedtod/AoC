@@ -1,0 +1,34 @@
+main{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  background-color: white;
+  align-items: center;
+  .list{
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
+    //align-items: center;
+
+    width: 80%;
+    // background-color: red;
+    gap: 20px;
+    app-boutton-icon{
+      width: 100%;
+      height: 100%;
+      align-self: center;
+    }
+  }
+
+}
+
+a{
+  all: unset;
+  width: 70%;
+  height: 50px;
+}

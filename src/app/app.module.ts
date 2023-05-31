@@ -39,6 +39,11 @@ import { SideBarComponent } from './component/side-bar/side-bar.component';
 import {WebPageComponent} from "./web-page/web-page.component";
 import {WebPageModule} from "./web-page/web-page.module";
 import {webPageRoutingModule} from "./web-page/web-page-routing-module";
+import {AdminPageModule} from "./admin-page/admin-page.module";
+import { DashbordComponent } from './dashbord/dashbord.component';
+import { UserManageComponent } from './user-manage/user-manage.component';
+import { BouttonIconComponent } from './boutton-icon/boutton-icon.component';
+import {AdminPageComponent} from "./admin-page/admin-page.component";
 
 //
 // import { AngularFireModule } from '@angular/fire';
@@ -68,6 +73,8 @@ export function playerFactory() {
 
     AppComponent,
     WebPageComponent,
+
+    AdminPageComponent
     // MenuBarComponent,
     // BouttonComponent,
     // SearBarComponent,
@@ -101,8 +108,9 @@ export function playerFactory() {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireStorageModule,
     FormsModule,
+    AdminPageModule,
     LottieModule.forRoot({player: playerFactory}),
-    RouterOutlet,
+
     pageRouteModule,
     RouterModule,
     BrowserAnimationsModule,
@@ -112,8 +120,7 @@ export function playerFactory() {
     MatPaginatorModule,
     WebPageModule,
 
-
-
+    // WebPageModule,
 
 
   ],
