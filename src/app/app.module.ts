@@ -2,26 +2,26 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { MenuBarComponent } from './menu-bar/menu-bar.component';
-import { BouttonComponent } from './boutton/boutton.component';
-import { SearBarComponent } from './sear-bar/sear-bar.component';
+import { MenuBarComponent } from './component/menu-bar/menu-bar.component';
+import { BouttonComponent } from './component/boutton/boutton.component';
+import { SearBarComponent } from './component/sear-bar/sear-bar.component';
 import {FormsModule} from "@angular/forms";
 import { MainPresentationComponent } from './home-page/main-presentation/main-presentation.component';
 import { CardPresentationsComponent } from './home-page/card-presentations/card-presentations.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CountriesPresentationsComponent } from './countries-presentations/countries-presentations.component';
 import { CardProjectPresentationComponent } from './card-project-presentation/card-project-presentation.component';
-import { CardProComponent } from './card-pro/card-pro.component';
-import { MiniSerachBarComponent } from './mini-serach-bar/mini-serach-bar.component';
-import { FooterComponent } from './footer/footer.component';
+import { CardProComponent } from './component/card-pro/card-pro.component';
+import { MiniSerachBarComponent } from './component/mini-serach-bar/mini-serach-bar.component';
+import { FooterComponent } from './component/footer/footer.component';
 import {ProjectPageComponent} from "./project-page/project-page.component";
 import {ProjectIntroComponent} from "./project-page/project-intro/project-intro.component";
-import {BurgerButtonComponent} from "./menu-bar/burger-button/burger-button.component";
+import {BurgerButtonComponent} from "./component/menu-bar/burger-button/burger-button.component";
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import {RouterModule, RouterOutlet} from "@angular/router";
 import {pageRouteModule} from "./pageRouteModule";
-import { ResponsiveMenuComponent } from './menu-bar/responsive-menu/responsive-menu.component';
+import { ResponsiveMenuComponent } from './component/menu-bar/responsive-menu/responsive-menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelect, MatSelectModule} from "@angular/material/select";
@@ -35,7 +35,11 @@ import { ChronoJesuiteComponent } from './chrono-page/chrono-jesuite/chrono-jesu
 import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 import {AngularFireModule} from "@angular/fire/compat";
 import { CountriesPageComponent } from './countries-page/countries-page.component';
-import { SideBarComponent } from './side-bar/side-bar.component';
+import { SideBarComponent } from './component/side-bar/side-bar.component';
+import {WebPageComponent} from "./web-page/web-page.component";
+import {WebPageModule} from "./web-page/web-page.module";
+import {webPageRoutingModule} from "./web-page/web-page-routing-module";
+
 //
 // import { AngularFireModule } from '@angular/fire';
 //
@@ -60,30 +64,34 @@ export function playerFactory() {
 }
 @NgModule({
   declarations: [
+
+
     AppComponent,
-    MenuBarComponent,
-    BouttonComponent,
-    SearBarComponent,
-    MainPresentationComponent,
-    CardPresentationsComponent,
-    HomePageComponent,
-    CountriesPresentationsComponent,
-    CardProjectPresentationComponent,
-    CardProComponent,
-    MiniSerachBarComponent,
-    FooterComponent,
-    ProjectPageComponent,
-    ProjectIntroComponent,
-    BurgerButtonComponent,
-    ResponsiveMenuComponent,
-    IdentityWorkComponent,
-    MissionProjectComponent,
-    KeyHandleComponent,
-    SpecialImageComponent,
-    ChronoPageComponent,
-    ChronoJesuiteComponent,
-    CountriesPageComponent,
-    SideBarComponent
+    WebPageComponent,
+    // MenuBarComponent,
+    // BouttonComponent,
+    // SearBarComponent,
+    // MainPresentationComponent,
+    // CardPresentationsComponent,
+    // HomePageComponent,
+    // CountriesPresentationsComponent,
+    // CardProjectPresentationComponent,
+    // CardProComponent,
+    // MiniSerachBarComponent,
+    // FooterComponent,
+    // ProjectPageComponent,
+    // ProjectIntroComponent,
+    // BurgerButtonComponent,
+    // ResponsiveMenuComponent,
+    // IdentityWorkComponent,
+    // MissionProjectComponent,
+    // KeyHandleComponent,
+    // SpecialImageComponent,
+    // ChronoPageComponent,
+    // ChronoJesuiteComponent,
+    // CountriesPageComponent,
+    // SideBarComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -102,10 +110,41 @@ export function playerFactory() {
     MatSelectModule,
     BrowserAnimationsModule,
     MatPaginatorModule,
+    WebPageModule,
+
+
+
 
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+   // WebPageComponent
+    // AppComponent,
+    // MenuBarComponent,
+    // BouttonComponent,
+    // SearBarComponent,
+    // MainPresentationComponent,
+    // CardPresentationsComponent,
+    // HomePageComponent,
+    // CountriesPresentationsComponent,
+    // CardProjectPresentationComponent,
+    // CardProComponent,
+    // MiniSerachBarComponent,
+    // FooterComponent,
+    // ProjectPageComponent,
+    // ProjectIntroComponent,
+    // BurgerButtonComponent,
+    // ResponsiveMenuComponent,
+    // IdentityWorkComponent,
+    // MissionProjectComponent,
+    // KeyHandleComponent,
+    // SpecialImageComponent,
+    // ChronoPageComponent,
+    // ChronoJesuiteComponent,
+    // CountriesPageComponent,
+    // SideBarComponent,
+  ]
 })
 export class AppModule { }

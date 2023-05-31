@@ -4,7 +4,7 @@ import {CardProjectPresentationComponent} from "../card-project-presentation/car
 import {
   CardProjectPresentationModel
 } from "../card-project-presentation/CardProjectPresentationModel/CardProjectPresentationModel";
-import {CardProModel} from "../card-pro/CardProModel/CardProModel";
+import {CardProModel} from "../component/card-pro/CardProModel/CardProModel";
 
 @Component({
   selector: 'app-home-page',

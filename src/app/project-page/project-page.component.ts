@@ -5,8 +5,8 @@ import {
   CardProjectPresentationModel
 } from "../card-project-presentation/CardProjectPresentationModel/CardProjectPresentationModel";
 import {MissionWork} from "./mission-project/MissionWork/MissionWork";
-import {CardProModel} from "../card-pro/CardProModel/CardProModel";
-import {BouttonService} from "../boutton/bouttonService/BouttonService";
+import {CardProModel} from "../component/card-pro/CardProModel/CardProModel";
+import {BouttonService} from "../component/boutton/bouttonService/BouttonService";
 
 @Component({
   selector: 'app-project-page',

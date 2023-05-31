@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {
   CardProjectPresentationModel
-} from "../card-project-presentation/CardProjectPresentationModel/CardProjectPresentationModel";
+} from "../../card-project-presentation/CardProjectPresentationModel/CardProjectPresentationModel";
 import {CardProModel} from "./CardProModel/CardProModel";
 
 @Component({

@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {MissionWork} from "./MissionWork/MissionWork";
 import {HandleKeyModel} from "../key-handle/HandleKeyModel/HandleKeyModel";
-import {BouttonService} from "../../boutton/bouttonService/BouttonService";
+import {BouttonService} from "../../component/boutton/bouttonService/BouttonService";
 
 @Component({
   selector: 'app-mission-project',

@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {IdentityModel} from "./identyModel/identityModel";
-import {BouttonService} from "../../boutton/bouttonService/BouttonService";
+import {BouttonService} from "../../component/boutton/bouttonService/BouttonService";
 
 @Component({
   selector: 'app-identity-work',

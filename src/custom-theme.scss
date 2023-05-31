@@ -20,7 +20,7 @@ $bureau-devellopemt-website-aoc-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$bureau-devellopemt-website-aoc-theme: mat.define-light-theme((
+$bureau-devellopemt-website-aoc-theme: mat.define-dark-theme((
   color: (
     primary: $bureau-devellopemt-website-aoc-primary,
     accent: $bureau-devellopemt-website-aoc-accent,

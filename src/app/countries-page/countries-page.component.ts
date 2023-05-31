@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {CardProModel} from "../card-pro/CardProModel/CardProModel";
-import {BouttonService} from "../boutton/bouttonService/BouttonService";
+import {CardProModel} from "../component/card-pro/CardProModel/CardProModel";
+import {BouttonService} from "../component/boutton/bouttonService/BouttonService";
 
 @Component({
   selector: 'app-countries-page',

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {BouttonService} from "../boutton/bouttonService/BouttonService";
+import {BouttonService} from "../component/boutton/bouttonService/BouttonService";
 
 @Component({
   selector: 'app-countries-presentations',
