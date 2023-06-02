@@ -14,14 +14,14 @@ import {WebPageModule} from "../web-page/web-page.module";
 import {MatFormFieldControl, MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
-import {MatFileUploadModule} from "angular-material-fileupload";
+
 import {MatButtonModule} from "@angular/material/button";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {HttpClientModule} from "@angular/common/http";
 import {MatCardModule} from "@angular/material/card";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
-import {MatLegacyInputModule} from "@angular/material/legacy-input";
+
 import {MatListModule} from "@angular/material/list";
 import {ImageSelectorComponent} from "../image-selector/image-selector.component";
 
