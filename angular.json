@@ -13,6 +13,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "budgets": [
+              {
+                "type": "initial",
+                "maximumWarning": "1.5mb",
+                "maximumError": "5mb"
+              }
+            ],
             "outputPath": "dist/bureau-devellopemt-website-aoc",
             "index": "src/index.html",
             "main": "src/main.ts",

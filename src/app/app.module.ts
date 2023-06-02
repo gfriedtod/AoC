@@ -112,32 +112,8 @@ export function playerFactory() {
   providers: [],
   bootstrap: [AppComponent],
   exports: [
+  ],
 
-   // WebPageComponent
-    // AppComponent,
-    // MenuBarComponent,
-    // BouttonComponent,
-    // SearBarComponent,
-    // MainPresentationComponent,
-    // CardPresentationsComponent,
-    // HomePageComponent,
-    // CountriesPresentationsComponent,
-    // CardProjectPresentationComponent,
-    // CardProComponent,
-    // MiniSerachBarComponent,
-    // FooterComponent,
-    // ProjectPageComponent,
-    // ProjectIntroComponent,
-    // BurgerButtonComponent,
-    // ResponsiveMenuComponent,
-    // IdentityWorkComponent,
-    // MissionProjectComponent,
-    // KeyHandleComponent,
-    // SpecialImageComponent,
-    // ChronoPageComponent,
-    // ChronoJesuiteComponent,
-    // CountriesPageComponent,
-    // SideBarComponent,
-  ]
+
 })
 export class AppModule { }
