@@ -1,8 +1,7 @@
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import {NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {webPageRoutingModule} from "./web-page-routing-module";
 import {HomePageComponent} from "../home-page/home-page.component";
-import {AppComponent} from "../app.component";
 import {MenuBarComponent} from "../component/menu-bar/menu-bar.component";
 import {BouttonComponent} from "../component/boutton/boutton.component";
 import {SearBarComponent} from "../component/sear-bar/sear-bar.component";
@@ -24,18 +23,14 @@ import {SpecialImageComponent} from "../project-page/mission-project/special-ima
 import {ChronoPageComponent} from "../chrono-page/chrono-page.component";
 import {ChronoJesuiteComponent} from "../chrono-page/chrono-jesuite/chrono-jesuite.component";
 import {CountriesPageComponent} from "../countries-page/countries-page.component";
-import {SideBarComponent} from "../component/side-bar/side-bar.component";
-import {WebPageComponent} from "./web-page.component";
-import {RouterModule, RouterOutlet} from "@angular/router";
-import {pageRouteModule} from "../pageRouteModule";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+
+import {RouterModule} from "@angular/router";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {FormsModule} from "@angular/forms";
 import {LottieModule} from "ngx-lottie";
 import {playerFactory} from "../app.module";
-import {AdminPageModule} from "../admin-page/admin-page.module";
 
 
 

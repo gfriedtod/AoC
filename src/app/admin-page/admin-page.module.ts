@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminPageComponent } from './admin-page.component';
 import {SideBarComponent} from "../component/side-bar/side-bar.component";
-import {Router, RouterModule, RouterOutlet} from "@angular/router";
-import {MenuBarComponent} from "../component/menu-bar/menu-bar.component";
-import {FooterComponent} from "../component/footer/footer.component";
+import {RouterModule} from "@angular/router";
 import {BouttonIconComponent} from "../component/boutton-icon/boutton-icon.component";
 import {UserManageComponent} from "../user-manage/user-manage.component";
 import {DashbordComponent} from "../dashbord/dashbord.component";
 import {adminPageRoute} from "./admin-page.route";
 import {MatIconModule} from "@angular/material/icon";
 import {WebPageModule} from "../web-page/web-page.module";
-import {MatFormFieldControl, MatFormFieldModule} from "@angular/material/form-field";
+import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 
