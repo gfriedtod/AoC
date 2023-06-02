@@ -1,16 +1,27 @@
 main{
   display: flex;
-  background-color: #3A5CEE;
-  width: 2800px;
+
+  width: 100%;
+  //flex-direction: column;
   height: 100%;
 }
 
 app-side-bar{
   width: 20%;
   height: 100%;
+  position: fixed;
+  //z-index: 4;
+
 }
 
 router-outlet{
-  width: 80%;
-  height: 50%;
+
+  //width: 80%;
+  height: 100%;
+  background-color: #3A5CEE;
+  z-index: 1;
+  align-self: flex-end;
 }
+
+
+

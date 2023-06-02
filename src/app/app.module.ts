@@ -42,8 +42,14 @@ import {webPageRoutingModule} from "./web-page/web-page-routing-module";
 import {AdminPageModule} from "./admin-page/admin-page.module";
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { UserManageComponent } from './user-manage/user-manage.component';
-import { BouttonIconComponent } from './boutton-icon/boutton-icon.component';
+import { BouttonIconComponent } from './component/boutton-icon/boutton-icon.component';
 import {AdminPageComponent} from "./admin-page/admin-page.component";
+import {adminPageRoute} from "./admin-page/admin-page.route";
+import { CountriesFormComponent } from './countries-form/countries-form.component';
+import { ImageSelectorComponent } from './image-selector/image-selector.component';
+import {MatIconModule} from "@angular/material/icon";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {MatButtonModule} from "@angular/material/button";
 
 //
 // import { AngularFireModule } from '@angular/fire';
@@ -55,6 +61,7 @@ import {AdminPageComponent} from "./admin-page/admin-page.component";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
+
   apiKey: "AIzaSyCLfs31OivqUUuj6e7GJqfwnFaxu5ALTb8",
   authDomain: "bureau-devellopement-aoc.firebaseapp.com",
   projectId: "bureau-devellopement-aoc",
@@ -62,6 +69,7 @@ const firebaseConfig = {
   messagingSenderId: "369593279940",
   appId: "1:369593279940:web:99f3c7e0bed0c76fd17091",
   measurementId: "G-70FK6EYSED"
+
 };
 
 export function playerFactory() {
@@ -69,12 +77,11 @@ export function playerFactory() {
 }
 @NgModule({
   declarations: [
-
-
     AppComponent,
     WebPageComponent,
+    AdminPageComponent,
+    CountriesFormComponent,
 
-    AdminPageComponent
     // MenuBarComponent,
     // BouttonComponent,
     // SearBarComponent,
@@ -101,6 +108,7 @@ export function playerFactory() {
 
   ],
   imports: [
+
     BrowserModule,
     // AngularFireModule,
     // AngularFireModule.initializeApp(firebaseConfig),
@@ -108,9 +116,8 @@ export function playerFactory() {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireStorageModule,
     FormsModule,
-    AdminPageModule,
-    LottieModule.forRoot({player: playerFactory}),
 
+    LottieModule.forRoot({player: playerFactory}),
     pageRouteModule,
     RouterModule,
     BrowserAnimationsModule,
@@ -119,14 +126,16 @@ export function playerFactory() {
     BrowserAnimationsModule,
     MatPaginatorModule,
     WebPageModule,
-
+    AdminPageModule,
+    MatIconModule,
+    MatProgressBarModule,
+    MatButtonModule,
     // WebPageModule,
-
-
   ],
   providers: [],
   bootstrap: [AppComponent],
   exports: [
+
    // WebPageComponent
     // AppComponent,
     // MenuBarComponent,

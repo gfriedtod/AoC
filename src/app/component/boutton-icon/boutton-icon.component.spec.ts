@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { BouttonIconComponent } from './boutton-icon.component';
+import {BouttonIconComponent} from './boutton-icon.component';
 
 describe('BouttonIconComponent', () => {
   let component: BouttonIconComponent;

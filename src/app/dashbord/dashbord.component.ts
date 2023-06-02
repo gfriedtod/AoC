@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {HttpClient, HttpEventType} from "@angular/common/http";
+import {finalize, Subscription} from "rxjs";
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-dashbord',
@@ -6,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashbord.component.scss']
 })
 export class DashbordComponent {
+ // fileName!: string;
+
+ uploadProgress!: number;
+  mcontrol: any =new FormControl();
+
+
 
 }

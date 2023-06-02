@@ -14,6 +14,11 @@ const routes: Routes = [
   // { path: 'project', component: ProjectPageComponent },
   // {path: 'about-us', component:ChronoPageComponent },
   // { path: 'countries', component:  CountriesPageComponent },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
 
   {
     path: '',
@@ -26,17 +31,22 @@ const routes: Routes = [
     ]
   },
 
+
+
   {
     path:'',
-    component:AdminPageComponent,
+    component: AdminPageComponent,
     children:[
       {
         path:'',
-        loadChildren:()=>import('./admin-page/admin-page.module').then(m=>m.AdminPageModule)
+        loadChildren:()=>import('./admin-page/admin-page.module').then(m=>m.AdminPageModule),
+
       }
     ]
 
   }
+
+
 ];
 
 @NgModule(

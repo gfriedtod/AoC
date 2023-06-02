@@ -1,3 +1,150 @@
+
 <main>
+  <mat-card>
+    <form>
+    <mat-card-header aria-colspan="">Countries Creations</mat-card-header>
+
+
+
+    <mat-card-content >
+
+      <mat-card-title>Main</mat-card-title>
+      <mat-card-subtitle>Title</mat-card-subtitle>
+        <mat-form-field>
+
+          <mat-label>title</mat-label>
+          <textarea matInput [formControl]="mcontrol" type="type" placeholder="enter Title" value="default"></textarea>
+        </mat-form-field>
+
+        <mat-divider></mat-divider>
+
+
+<mat-card-content class="mat-cards">
+  <div class ="mat-form-field">
+
+
+    <mat-card-subtitle>Cover image</mat-card-subtitle>
+
+    <app-image-selector></app-image-selector>
+
+
+
+  </div>
+</mat-card-content>
+
+
+        <mat-divider></mat-divider>
+
+      <mat-card-content class="mat-cards">
+        <div class=" mat-form-field">
+
+
+          <mat-card-subtitle>Flag Image</mat-card-subtitle>
+          <app-image-selector></app-image-selector>
+        </div>
+      </mat-card-content>
+
+<!--generer un formulaire material avec 10 iformatio s a entrer -->
+
+
+
+    </mat-card-content>
+
+    </form>
+
+<mat-divider></mat-divider>
+
+    <mat-card-content>
+      <mat-card-title>Identite</mat-card-title>
+      <mat-card-subtitle>Identite Title</mat-card-subtitle>
+
+
+  <mat-form-field>
+
+    <mat-label> Identitetitle</mat-label>
+    <textarea matInput [formControl]="mcontrol" type="type" placeholder="enter Title" value="default"></textarea>
+  </mat-form-field>
+
+
+      <mat-divider></mat-divider>
+
+      <mat-form-field>
+
+        <mat-label>Desciptiom</mat-label>
+        <textarea matInput [formControl]="mcontrol" type="type" placeholder="enter description" value="default"></textarea>
+      </mat-form-field>
+
+      <mat-divider></mat-divider>
+      <mat-card-content class="mat-cards">
+      <div class ="mat-form-field">
+
+
+        <mat-card-subtitle>Mission Image</mat-card-subtitle>
+
+
+        <app-image-selector></app-image-selector>
+
+
+
+
+      </div>
+      </mat-card-content>
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-card-title>Mission</mat-card-title>
+      <mat-card-subtitle>Mission Title</mat-card-subtitle>
+
+
+      <mat-form-field>
+
+        <mat-label> Identite title</mat-label>
+        <textarea matInput [formControl]="mcontrol" type="type" placeholder="Identite Title" value="default"></textarea>
+      </mat-form-field>
+
+
+      <mat-divider></mat-divider>
+
+      <mat-form-field>
+
+        <mat-label>Desciptiom</mat-label>
+        <textarea matInput [formControl]="mcontrol" type="type" placeholder="mission description" value="default"></textarea>
+      </mat-form-field>
+
+      <mat-divider></mat-divider>
+      <mat-card-content class="mat-cards">
+        <div class ="mat-form-field">
+
+
+          <mat-card-subtitle>Mission Image1</mat-card-subtitle>
+
+
+          <app-image-selector></app-image-selector>
+
+
+
+
+        </div>
+      </mat-card-content>
+
+      <mat-card-content class="mat-cards">
+        <div class ="mat-form-field">
+
+
+          <mat-card-subtitle>Mission Image2</mat-card-subtitle>
+
+
+          <app-image-selector></app-image-selector>
+
+
+
+
+        </div>
+      </mat-card-content>
+    </mat-card-content>
+
+  </mat-card>
+
+
 
 </main>

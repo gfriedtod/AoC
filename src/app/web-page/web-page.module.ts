@@ -35,6 +35,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {FormsModule} from "@angular/forms";
 import {LottieModule} from "ngx-lottie";
 import {playerFactory} from "../app.module";
+import {AdminPageModule} from "../admin-page/admin-page.module";
 
 
 
@@ -70,20 +71,21 @@ import {playerFactory} from "../app.module";
 
     CommonModule,
     RouterModule.forChild(webPageRoutingModule),
+
     LottieModule.forRoot({player: playerFactory}),
    // pageRouteModule,
   //  RouterModule,
-
     MatFormFieldModule,
     MatSelectModule,
-
     MatPaginatorModule,
     FormsModule,
+
   ],
   exports: [
     MenuBarComponent,
     FooterComponent,
-
+    ProjectPageComponent,
+    HomePageComponent,
 
 
   ],
