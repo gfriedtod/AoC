@@ -9,7 +9,7 @@ import {CardProModel} from "../component/card-pro/CardProModel/CardProModel";
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss']
+  styleUrls: ['./home-page.component.scss', "./home-page2.scss"]
 })
 export class HomePageComponent implements  OnInit{
   cardVision!: CardModel

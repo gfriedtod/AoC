@@ -81,6 +81,7 @@ import {playerFactory} from "../app.module";
     FooterComponent,
     ProjectPageComponent,
     HomePageComponent,
+    BouttonComponent,
 
 
   ],

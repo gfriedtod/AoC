@@ -5,7 +5,7 @@ import {BouttonService} from "../component/boutton/bouttonService/BouttonService
 @Component({
   selector: 'app-countries-page',
   templateUrl: './countries-page.component.html',
-  styleUrls: ['./countries-page.component.scss']
+  styleUrls: ['./countries-page.component.scss' , './countries-page2.scss']
 })
 export class CountriesPageComponent implements OnInit{
    seemore!: BouttonService;

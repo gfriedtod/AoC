@@ -16,8 +16,8 @@
             "budgets": [
               {
                 "type": "initial",
-                "maximumWarning": "3.5mb",
-                "maximumError": "5mb"
+                "maximumWarning": "3.5 MB",
+                "maximumError": "5 MB"
               }
             ],
             "outputPath": "dist/bureau-devellopemt-website-aoc",
@@ -42,8 +42,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",

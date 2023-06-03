@@ -1,4 +1,3 @@
-import {AdminPageComponent} from "./admin-page.component";
 import {DashbordComponent} from "../dashbord/dashbord.component";
 import {UserManageComponent} from "../user-manage/user-manage.component";
 import {Routes} from "@angular/router";
