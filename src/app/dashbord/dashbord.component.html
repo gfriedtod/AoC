@@ -1,246 +1,346 @@
 
+<!--<main>-->
+<!--  <mat-card>-->
+<!--    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">-->
+<!--    <mat-card-header aria-colspan="">Countries Creations</mat-card-header>-->
+
+
+
+<!--    <mat-card-content >-->
+
+<!--      <mat-card-title>Main</mat-card-title>-->
+<!--      <mat-card-subtitle>Title</mat-card-subtitle>-->
+<!--        <mat-form-field>-->
+
+<!--          <mat-label>title</mat-label>-->
+<!--          <textarea formControlName="title" matInput  type="type" placeholder="enter Title" value="default"></textarea>-->
+<!--        </mat-form-field>-->
+
+<!--        <mat-divider></mat-divider>-->
+
+
+<!--<mat-card-content class="mat-cards">-->
+<!--  <div class ="mat-form-field">-->
+
+
+<!--    <mat-card-subtitle>Cover image</mat-card-subtitle>-->
+
+<!--    <app-image-selector></app-image-selector>-->
+
+
+
+<!--  </div>-->
+<!--</mat-card-content>-->
+
+
+<!--        <mat-divider></mat-divider>-->
+
+<!--      <mat-form-field>-->
+
+<!--        <mat-label>objectif</mat-label>-->
+<!--        <textarea formControlName="objectif" matInput type="type" placeholder="enter objectif" value="default"></textarea>-->
+<!--      </mat-form-field>-->
+
+<!--&lt;!&ndash;      <mat-card-content class="mat-cards">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class=" mat-form-field">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;          <mat-card-subtitle>Flag Image</mat-card-subtitle>&ndash;&gt;-->
+<!--&lt;!&ndash;          <app-image-selector></app-image-selector>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      </mat-card-content>&ndash;&gt;-->
+
+<!--&lt;!&ndash;generer un formulaire material avec 10 iformatio s a entrer &ndash;&gt;-->
+
+
+
+<!--    </mat-card-content>-->
+
+<!--    </form>-->
+
+<!--<mat-divider></mat-divider>-->
+
+<!--    <mat-card-content>-->
+<!--      <mat-card-title>Identite</mat-card-title>-->
+<!--      <mat-card-subtitle>Identite Title</mat-card-subtitle>-->
+
+
+<!--  <mat-form-field>-->
+
+<!--    <mat-label> Identitetitle</mat-label>-->
+<!--    <textarea formControlName="Identitytitle" matInput type="type" placeholder="enter Title" value="default"></textarea>-->
+<!--  </mat-form-field>-->
+
+
+<!--      <mat-divider></mat-divider>-->
+
+<!--      <mat-form-field>-->
+
+<!--        <mat-label>Desciptiom</mat-label>-->
+<!--        <textarea matInput  formControlName="Identitydescription"  type="type" placeholder="enter description" value="default"></textarea>-->
+<!--      </mat-form-field>-->
+
+<!--      <mat-divider></mat-divider>-->
+<!--      <mat-card-content class="mat-cards">-->
+<!--      <div class ="mat-form-field">-->
+
+
+<!--        <mat-card-subtitle>Mission Image</mat-card-subtitle>-->
+
+
+<!--        <app-image-selector></app-image-selector>-->
+
+
+
+
+<!--      </div>-->
+<!--      </mat-card-content>-->
+<!--    </mat-card-content>-->
+
+<!--    <mat-card-content>-->
+<!--      <mat-card-title>Mission</mat-card-title>-->
+<!--      <mat-card-subtitle>Mission Title</mat-card-subtitle>-->
+
+
+<!--      <mat-form-field>-->
+
+<!--        <mat-label> Identite title</mat-label>-->
+<!--        <textarea matInput  type="type" placeholder="Identite Title" value="default"></textarea>-->
+<!--      </mat-form-field>-->
+
+
+<!--      <mat-divider></mat-divider>-->
+
+<!--      <mat-form-field>-->
+
+<!--        <mat-label>Desciptiom</mat-label>-->
+<!--        <textarea matInput  type="type" placeholder="mission description" value="default"></textarea>-->
+<!--      </mat-form-field>-->
+
+<!--      <mat-divider></mat-divider>-->
+<!--      <mat-card-content id="identite" class="mat-cards">-->
+<!--        <div class ="mat-form-field">-->
+
+
+<!--          <mat-card-subtitle>Mission Image1</mat-card-subtitle>-->
+
+
+<!--          <app-image-selector></app-image-selector>-->
+
+
+
+
+<!--        </div>-->
+<!--      </mat-card-content>-->
+
+<!--      <mat-card-content class="mat-cards" id="mission">-->
+<!--        <div class ="mat-form-field">-->
+
+
+<!--          <mat-card-subtitle>Mission Image2</mat-card-subtitle>-->
+
+
+<!--          <app-image-selector></app-image-selector>-->
+
+
+
+
+<!--        </div>-->
+
+
+
+
+<!--      </mat-card-content>-->
+
+<!--      <div class="key-content">-->
+
+<!--        <div class="flux">-->
+<!--          <app-boutton (click)="addKey()" [stateview]="addboutton"></app-boutton>-->
+<!--        </div>-->
+
+<!--        <ng-container formArrayName="key_list" *ngIf="key_list !== undefined">-->
+<!--          <form *ngFor="let key of key_list.controls" >-->
+<!--            <mat-form-field>-->
+<!--              <mat-label>Key</mat-label>-->
+<!--              <input formControlName="key" matInput  type="type" placeholder="enter Key" value="default">-->
+
+<!--            </mat-form-field>-->
+
+<!--            <mat-form-field >-->
+<!--              <mat-label>Key description</mat-label>-->
+<!--              <textarea formControlName="key_description" matInput  type="type" placeholder="enter Key description" value="default"></textarea>-->
+
+<!--            </mat-form-field>-->
+<!--          </form>-->
+
+<!--        </ng-container>-->
+<!--      </div>-->
+<!--    </mat-card-content>-->
+
+<!--  </mat-card>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--&lt;!&ndash;  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">&ndash;&gt;-->
+<!--&lt;!&ndash;    <mat-form-field>&ndash;&gt;-->
+<!--&lt;!&ndash;      <input matInput formControlName="firstName" placeholder="First Name">&ndash;&gt;-->
+<!--&lt;!&ndash;      <mat-error *ngIf="myForm.controls['firstName'].invalid">First Name is required</mat-error>&ndash;&gt;-->
+<!--&lt;!&ndash;    </mat-form-field>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <mat-form-field>&ndash;&gt;-->
+<!--&lt;!&ndash;      <input matInput formControlName="lastName" placeholder="Last Name">&ndash;&gt;-->
+<!--&lt;!&ndash;      <mat-error *ngIf="myForm.controls['lastName'].invalid">Last Name is required</mat-error>&ndash;&gt;-->
+<!--&lt;!&ndash;    </mat-form-field>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <div formGroupName="address">&ndash;&gt;-->
+<!--&lt;!&ndash;      <mat-form-field>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input matInput formControlName="street" placeholder="Street">&ndash;&gt;-->
+<!--&lt;!&ndash;        <mat-error *ngIf="myForm.get('address.street')">Street is required</mat-error>&ndash;&gt;-->
+<!--&lt;!&ndash;      </mat-form-field>&ndash;&gt;-->
+
+<!--&lt;!&ndash;      <mat-form-field>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input matInput formControlName="city" placeholder="City">&ndash;&gt;-->
+<!--&lt;!&ndash;        <mat-error *ngIf="myForm.get('address.city')">City is required</mat-error>&ndash;&gt;-->
+<!--&lt;!&ndash;      </mat-form-field>&ndash;&gt;-->
+
+<!--&lt;!&ndash;      <mat-form-field>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input matInput formControlName="zip" placeholder="Zip code">&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <mat-error *ngIf="myForm.get('address.zip')">Zip code is required</mat-error>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <mat-error *ngIf="myForm.get('address.zip')">Invalid zip code, must be 5 digits</mat-error>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;      </mat-form-field>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <div formGroupName="contact">&ndash;&gt;-->
+<!--&lt;!&ndash;      <mat-form-field>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input matInput formControlName="email" placeholder="Email">&ndash;&gt;-->
+<!--&lt;!&ndash;        <mat-error *ngIf="myForm.get('contact.email')">Email is required</mat-error>&ndash;&gt;-->
+<!--&lt;!&ndash;        <mat-error *ngIf="myForm.get('contact.email')">Invalid email address</mat-error>&ndash;&gt;-->
+<!--&lt;!&ndash;      </mat-form-field>&ndash;&gt;-->
+
+<!--&lt;!&ndash;      <mat-form-field>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input matInput formControlName="phone" placeholder="Phone number">&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <mat-error *ngIf="myForm.get('contact.phone')">Phone number is required</mat-error>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <mat-error *ngIf="myForm.get('contact.phone')">Invalid phone number, must be 10 digits</mat-error>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;      </mat-form-field>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <button mat-raised-button color="primary" [disabled]="myForm.invalid">Submit</button>&ndash;&gt;-->
+<!--&lt;!&ndash;  </form>&ndash;&gt;-->
+
+<!--</main>-->
 <main>
   <mat-card>
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-    <mat-card-header aria-colspan="">Countries Creations</mat-card-header>
+      <mat-card-header>
+        <span>Countries Creations</span>
+      </mat-card-header>
 
-
-
-    <mat-card-content >
-
-      <mat-card-title>Main</mat-card-title>
-      <mat-card-subtitle>Title</mat-card-subtitle>
+      <mat-card-content>
+        <mat-card-title>Main</mat-card-title>
+        <mat-card-subtitle>Title</mat-card-subtitle>
         <mat-form-field>
-
-          <mat-label>title</mat-label>
-          <textarea formControlName="title" matInput  type="type" placeholder="enter Title" value="default"></textarea>
+          <mat-label>Titre</mat-label>
+          <textarea formControlName="title" matInput type="text" placeholder="Entrez un titre"></textarea>
         </mat-form-field>
 
         <mat-divider></mat-divider>
 
+        <div class="mat-form-field">
+          <mat-card-subtitle>Image de couverture</mat-card-subtitle>
+          <app-image-selector></app-image-selector>
+        </div>
+      </mat-card-content>
 
-<mat-card-content class="mat-cards">
-  <div class ="mat-form-field">
-
-
-    <mat-card-subtitle>Cover image</mat-card-subtitle>
-
-    <app-image-selector></app-image-selector>
-
-
-
-  </div>
-</mat-card-content>
-
+      <mat-card-content>
+        <mat-card-title>Identité</mat-card-title>
+        <mat-card-subtitle>Titre de l'identité</mat-card-subtitle>
+        <mat-form-field>
+          <mat-label>Titre de l'identité</mat-label>
+          <textarea formControlName="Identitytitle" matInput type="text" placeholder="Entrez un titre"></textarea>
+        </mat-form-field>
 
         <mat-divider></mat-divider>
 
-      <mat-form-field>
+        <mat-form-field>
+          <mat-label>Description de l'identité</mat-label>
+          <textarea formControlName="Identitydescription" matInput type="text" placeholder="Entrez une description"></textarea>
+        </mat-form-field>
 
-        <mat-label>objectif</mat-label>
-        <textarea formControlName="objectif" matInput type="type" placeholder="enter objectif" value="default"></textarea>
-      </mat-form-field>
+        <mat-divider></mat-divider>
 
-<!--      <mat-card-content class="mat-cards">-->
-<!--        <div class=" mat-form-field">-->
+        <div class="mat-form-field">
+          <mat-card-subtitle>Image de mission</mat-card-subtitle>
+          <app-image-selector></app-image-selector>
+        </div>
+      </mat-card-content>
 
+      <mat-card-content>
+        <mat-card-title>Mission</mat-card-title>
+        <mat-card-subtitle>Titre de la mission</mat-card-subtitle>
+        <mat-form-field>
+          <mat-label>Titre de la mission</mat-label>
+          <textarea matInput type="text" placeholder="Entrez un titre"></textarea>
+        </mat-form-field>
 
-<!--          <mat-card-subtitle>Flag Image</mat-card-subtitle>-->
-<!--          <app-image-selector></app-image-selector>-->
-<!--        </div>-->
-<!--      </mat-card-content>-->
+        <mat-divider></mat-divider>
 
-<!--generer un formulaire material avec 10 iformatio s a entrer -->
+        <mat-form-field>
+          <mat-label>Description de la mission</mat-label>
+          <textarea matInput type="text" placeholder="Entrez une description"></textarea>
+        </mat-form-field>
 
+        <mat-divider></mat-divider>
 
+        <div class="mat-form-field">
+          <mat-card-subtitle>Image de mission 1</mat-card-subtitle>
+          <app-image-selector></app-image-selector>
+        </div>
 
-    </mat-card-content>
+        <mat-card-content class="mat-cards">
+          <div class="mat-form-field">
+            <mat-card-subtitle>Image de mission 2</mat-card-subtitle>
+            <app-image-selector></app-image-selector>
+          </div>
+        </mat-card-content>
 
+        <div class="key-content">
+          <div class="flux">
+            <app-boutton (click)="addKey()" [stateview]="addboutton"></app-boutton>
+          </div>
+
+          <ng-container formArrayName="key_list" *ngIf="key_list !== undefined">
+            <form *ngFor="let key of key_list.controls">
+              <mat-form-field>
+                <mat-label>Clé</mat-label>
+                <input formControlName="key" matInput type="text" placeholder="Entrez une clé">
+              </mat-form-field>
+
+              <mat-form-field>
+                <mat-label>Description de la clé</mat-label>
+                <textarea formControlName="key_description" matInput type="text" placeholder="Entrez une description"></textarea>
+              </mat-form-field>
+            </form>
+          </ng-container>
+        </div>
+      </mat-card-content>
     </form>
 
-<mat-divider></mat-divider>
-
-    <mat-card-content>
-      <mat-card-title>Identite</mat-card-title>
-      <mat-card-subtitle>Identite Title</mat-card-subtitle>
-
-
-  <mat-form-field>
-
-    <mat-label> Identitetitle</mat-label>
-    <textarea formControlName="Identitytitle" matInput type="type" placeholder="enter Title" value="default"></textarea>
-  </mat-form-field>
-
-
-      <mat-divider></mat-divider>
-
-      <mat-form-field>
-
-        <mat-label>Desciptiom</mat-label>
-        <textarea matInput  formControlName="Identitydescription"  type="type" placeholder="enter description" value="default"></textarea>
-      </mat-form-field>
-
-      <mat-divider></mat-divider>
-      <mat-card-content class="mat-cards">
-      <div class ="mat-form-field">
-
-
-        <mat-card-subtitle>Mission Image</mat-card-subtitle>
-
-
-        <app-image-selector></app-image-selector>
-
-
-
-
-      </div>
-      </mat-card-content>
-    </mat-card-content>
-
-    <mat-card-content>
-      <mat-card-title>Mission</mat-card-title>
-      <mat-card-subtitle>Mission Title</mat-card-subtitle>
-
-
-      <mat-form-field>
-
-        <mat-label> Identite title</mat-label>
-        <textarea matInput  type="type" placeholder="Identite Title" value="default"></textarea>
-      </mat-form-field>
-
-
-      <mat-divider></mat-divider>
-
-      <mat-form-field>
-
-        <mat-label>Desciptiom</mat-label>
-        <textarea matInput  type="type" placeholder="mission description" value="default"></textarea>
-      </mat-form-field>
-
-      <mat-divider></mat-divider>
-      <mat-card-content id="identite" class="mat-cards">
-        <div class ="mat-form-field">
-
-
-          <mat-card-subtitle>Mission Image1</mat-card-subtitle>
-
-
-          <app-image-selector></app-image-selector>
-
-
-
-
-        </div>
-      </mat-card-content>
-
-      <mat-card-content class="mat-cards" id="mission">
-        <div class ="mat-form-field">
-
-
-          <mat-card-subtitle>Mission Image2</mat-card-subtitle>
-
-
-          <app-image-selector></app-image-selector>
-
-
-
-
-        </div>
-
-
-
-
-      </mat-card-content>
-
-      <div class="key-content">
-
-        <div class="flux">
-          <app-boutton (click)="addKey()" [stateview]="addboutton"></app-boutton>
-        </div>
-
-        <ng-container formArrayName="key_list" *ngIf="key_list !== undefined">
-          <form *ngFor="let key of key_list.controls" >
-            <mat-form-field>
-              <mat-label>Key</mat-label>
-              <input formControlName="key" matInput  type="type" placeholder="enter Key" value="default">
-
-            </mat-form-field>
-
-            <mat-form-field >
-              <mat-label>Key description</mat-label>
-              <textarea formControlName="key_description" matInput  type="type" placeholder="enter Key description" value="default"></textarea>
-
-            </mat-form-field>
-          </form>
-
-        </ng-container>
-      </div>
-    </mat-card-content>
-
+    <button mat-raised-button color="primary" [disabled]="myForm.invalid" (click)="onSubmit()">Submit</button>
   </mat-card>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">-->
-<!--    <mat-form-field>-->
-<!--      <input matInput formControlName="firstName" placeholder="First Name">-->
-<!--      <mat-error *ngIf="myForm.controls['firstName'].invalid">First Name is required</mat-error>-->
-<!--    </mat-form-field>-->
-
-<!--    <mat-form-field>-->
-<!--      <input matInput formControlName="lastName" placeholder="Last Name">-->
-<!--      <mat-error *ngIf="myForm.controls['lastName'].invalid">Last Name is required</mat-error>-->
-<!--    </mat-form-field>-->
-
-<!--    <div formGroupName="address">-->
-<!--      <mat-form-field>-->
-<!--        <input matInput formControlName="street" placeholder="Street">-->
-<!--        <mat-error *ngIf="myForm.get('address.street')">Street is required</mat-error>-->
-<!--      </mat-form-field>-->
-
-<!--      <mat-form-field>-->
-<!--        <input matInput formControlName="city" placeholder="City">-->
-<!--        <mat-error *ngIf="myForm.get('address.city')">City is required</mat-error>-->
-<!--      </mat-form-field>-->
-
-<!--      <mat-form-field>-->
-<!--        <input matInput formControlName="zip" placeholder="Zip code">-->
-<!--&lt;!&ndash;        <mat-error *ngIf="myForm.get('address.zip')">Zip code is required</mat-error>&ndash;&gt;-->
-<!--&lt;!&ndash;        <mat-error *ngIf="myForm.get('address.zip')">Invalid zip code, must be 5 digits</mat-error>&ndash;&gt;-->
-<!--      </mat-form-field>-->
-<!--    </div>-->
-
-<!--    <div formGroupName="contact">-->
-<!--      <mat-form-field>-->
-<!--        <input matInput formControlName="email" placeholder="Email">-->
-<!--        <mat-error *ngIf="myForm.get('contact.email')">Email is required</mat-error>-->
-<!--        <mat-error *ngIf="myForm.get('contact.email')">Invalid email address</mat-error>-->
-<!--      </mat-form-field>-->
-
-<!--      <mat-form-field>-->
-<!--        <input matInput formControlName="phone" placeholder="Phone number">-->
-<!--&lt;!&ndash;        <mat-error *ngIf="myForm.get('contact.phone')">Phone number is required</mat-error>&ndash;&gt;-->
-<!--&lt;!&ndash;        <mat-error *ngIf="myForm.get('contact.phone')">Invalid phone number, must be 10 digits</mat-error>&ndash;&gt;-->
-<!--      </mat-form-field>-->
-<!--    </div>-->
-
-<!--    <button mat-raised-button color="primary" [disabled]="myForm.invalid">Submit</button>-->
-<!--  </form>-->
-
 </main>
