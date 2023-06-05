@@ -21,6 +21,7 @@ import {MatNativeDateModule} from "@angular/material/core";
 
 import {MatListModule} from "@angular/material/list";
 import {ImageSelectorComponent} from "../image-selector/image-selector.component";
+import {WorksFormComponent} from "../works-form/works-form.component";
 
 
 
@@ -33,7 +34,8 @@ import {ImageSelectorComponent} from "../image-selector/image-selector.component
 
     BouttonIconComponent,
     DashbordComponent,
-    ImageSelectorComponent
+    ImageSelectorComponent,
+    WorksFormComponent
 
 
   ],

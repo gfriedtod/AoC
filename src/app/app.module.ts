@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
@@ -27,6 +27,10 @@ import { CountriesFormComponent } from './countries-form/countries-form.componen
 import {MatIconModule} from "@angular/material/icon";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatButtonModule} from "@angular/material/button";
+import { WorksFormComponent } from './works-form/works-form.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatInputModule} from "@angular/material/input";
 
 //
 // import { AngularFireModule } from '@angular/fire';
@@ -59,6 +63,7 @@ export function playerFactory() {
     AdminPageComponent,
     CountriesFormComponent,
 
+
     // MenuBarComponent,
     // BouttonComponent,
     // SearBarComponent,
@@ -84,31 +89,35 @@ export function playerFactory() {
     // SideBarComponent,
 
   ],
-  imports: [
+    imports: [
 
-    BrowserModule,
-    // AngularFireModule,
-    // AngularFireModule.initializeApp(firebaseConfig),
-    // AngularFireStorageModule,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireStorageModule,
-    FormsModule,
+        BrowserModule,
+        // AngularFireModule,
+        // AngularFireModule.initializeApp(firebaseConfig),
+        // AngularFireStorageModule,
+        AngularFireModule.initializeApp(firebaseConfig),
+        AngularFireStorageModule,
+        FormsModule,
 
-    LottieModule.forRoot({player: playerFactory}),
-    pageRouteModule,
-    RouterModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    BrowserAnimationsModule,
-    MatPaginatorModule,
-    WebPageModule,
-    AdminPageModule,
-    MatIconModule,
-    MatProgressBarModule,
-    MatButtonModule,
-    // WebPageModule,
-  ],
+        LottieModule.forRoot({player: playerFactory}),
+        pageRouteModule,
+        RouterModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        BrowserAnimationsModule,
+        MatPaginatorModule,
+        WebPageModule,
+        AdminPageModule,
+        MatIconModule,
+        MatProgressBarModule,
+        MatButtonModule,
+        MatCardModule,
+        MatDividerModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        // WebPageModule,
+    ],
   providers: [],
   bootstrap: [AppComponent],
   exports: [

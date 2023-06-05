@@ -1,0 +1,112 @@
+
+<main>
+  <mat-card>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <mat-card-header>
+        <span>Countries Creations</span>
+      </mat-card-header>
+
+      <mat-card-content>
+        <mat-card-title>Main</mat-card-title>
+        <mat-card-subtitle>Title</mat-card-subtitle>
+        <mat-form-field>
+          <mat-label>Titre</mat-label>
+          <textarea formControlName="title" matInput type="text" placeholder="Entrez un titre"></textarea>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>objectif</mat-label>
+          <textarea formControlName="objectif" matInput type="text" placeholder="Entrez un objectif"></textarea>
+        </mat-form-field>
+
+        <mat-divider></mat-divider>
+
+        <div class="mat-form-field">
+          <mat-card-subtitle>Image de couverture</mat-card-subtitle>
+          <app-image-selector (fileDataReady)="receiveFileData($event)"
+                              [id]="'image1'"></app-image-selector>
+        </div>
+      </mat-card-content>
+
+      <mat-card-content>
+        <mat-card-title>Identité</mat-card-title>
+        <mat-card-subtitle>Titre de l'identité</mat-card-subtitle>
+        <mat-form-field>
+          <mat-label>Titre de l'identité</mat-label>
+          <textarea formControlName="Identitytitle" matInput type="text" placeholder="Entrez un titre"></textarea>
+        </mat-form-field>
+
+        <mat-divider></mat-divider>
+
+        <mat-form-field>
+          <mat-label>Description de l'identité</mat-label>
+          <textarea formControlName="Identitydescription" matInput type="text" placeholder="Entrez une description"></textarea>
+        </mat-form-field>
+
+        <mat-divider></mat-divider>
+
+        <div class="mat-form-field">
+          <mat-card-subtitle>Image de mission</mat-card-subtitle>
+          <app-image-selector  (fileDataReady)="receiveFileData($event)"
+                               [id]="'image2'"></app-image-selector>
+        </div>
+      </mat-card-content>
+
+      <mat-card-content>
+        <mat-card-title>Mission</mat-card-title>
+        <mat-card-subtitle>Titre de la mission</mat-card-subtitle>
+        <mat-form-field>
+          <mat-label>Titre de la mission</mat-label>
+          <textarea matInput type="text" placeholder="Entrez un titre"></textarea>
+        </mat-form-field>
+
+        <mat-divider></mat-divider>
+
+        <mat-form-field>
+          <mat-label>Description de la mission</mat-label>
+          <textarea matInput type="text" placeholder="Entrez une description"></textarea>
+        </mat-form-field>
+
+        <mat-divider></mat-divider>
+
+        <div class="mat-form-field">
+          <mat-card-subtitle>Image de mission 1</mat-card-subtitle>
+          <app-image-selector (fileDataReady)="receiveFileData($event)"
+                              [id]="'image3'"></app-image-selector>
+        </div>
+
+        <mat-card-content class="mat-cards">
+          <div class="mat-form-field">
+            <mat-card-subtitle>Image de mission 2</mat-card-subtitle>
+            <app-image-selector (fileDataReady)="receiveFileData($event)"
+                                [id]="'image4'"></app-image-selector>
+          </div>
+        </mat-card-content>
+
+        <div class="key-content">
+          <div class="flux">
+            <app-boutton (click)="addKey()" [stateview]="addboutton"></app-boutton>
+          </div>
+
+          <div formArrayName="key_list" *ngIf="key_list !== undefined">
+            <div *ngFor="let key of key_list_controls.controls let i = index">
+              <div [formGroupName]="i">
+                <mat-form-field>
+                  <mat-label>Clé</mat-label>
+                  <input formControlName="keyS" matInput type="text" placeholder="Entrez une clé">
+                </mat-form-field>
+
+                <mat-form-field>
+                  <mat-label>Description de la clé</mat-label>
+                  <textarea formControlName="keyS_description" matInput type="text" placeholder="Entrez une description"></textarea>
+                </mat-form-field>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </form>
+
+    <button mat-raised-button color="primary" [disabled]="myForm.invalid" (click)="onSubmit()">Submit</button>
+  </mat-card>
+</main>

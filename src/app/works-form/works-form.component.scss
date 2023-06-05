@@ -1,0 +1,116 @@
+main{
+  //position: absolute;
+  display: flex;
+ // margin-left: 350px;
+  width:100%;
+  height: 100%;
+  //background-color: red;
+  //z-index: 3;
+  //flex-direction: column;
+
+  flex-direction: column;
+  //position: relative;
+
+}
+
+.file-input{
+  display: none;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+.mat-form-field{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-content: center;
+  width: 100%;
+  align-items: flex-start;
+  margin-left: 20px;
+}
+
+mat-form-field{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-content: center;
+  width: 100%;
+  align-items: flex-start;
+  //margin-left: 20px;
+}
+.file-upload{
+  display: flex;
+  gap: 10px;
+
+}
+
+mat-label{
+  align-self: flex-start;
+}
+
+.mat-cards{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+  align-self: center;
+}
+
+mat-card{
+  width: 100%;
+  position: relative;
+  align-self: center;
+  padding-bottom: 20px;
+  border-radius: 20px;
+}
+
+mat-card-header{
+  background-color: rgba(58, 92, 238, 0.6);
+  height: 80px;
+  font-size: 30px;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 20px 20px 0px 0px;
+}
+
+mat-card-title{
+  font-size: 30px;
+  font-family: "Poppins" , "sans-serif";
+  color: #495f6d;
+}
+
+textarea{
+
+  border-radius: 20px;
+
+
+  display: flex;
+  padding: 20px;
+}
+
+app-image-selector{
+  width: 100%;
+  height: 100%;
+}
+
+.key-content{
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+
+  .flux{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: flex-end;
+    // background-color: yellow;
+
+    app-boutton{
+      align-self: flex-end;
+    }
+  }
+}
