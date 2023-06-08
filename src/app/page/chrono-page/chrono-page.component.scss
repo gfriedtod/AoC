@@ -1,0 +1,51 @@
+main{
+  //background:linear-gradient(to top, #ffffff, #49bbd8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 100px;
+}
+.main-presentation{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // width: 1780px;
+  width: 100%;
+  margin-top: 50px;
+  height: 800px;
+  //height: 100%;
+  background-image: url("/src/assets/building6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  //border-radius: 20px;
+  align-self: center;
+  app-sear-bar{
+    align-self: center;
+    width: 80%;
+  }
+  h1{
+    font-size: 80px;
+    align-self: center;
+    //inline-size: 0px;
+    //color: #284256;
+    color: white;
+
+    @media screen  and (max-width: 1225px){
+      font-size: 180%;
+
+    }
+  }
+  h2{
+    align-self: center;
+    //color: #284256;
+    color: white;
+  }
+}
+
+app-chrono-jesuite{
+  width: 80%;
+  align-self: center;
+  height: 500px;
+}
+

@@ -18,12 +18,12 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 import {AngularFireModule} from "@angular/fire/compat";
 
-import {WebPageComponent} from "./web-page/web-page.component";
-import {WebPageModule} from "./web-page/web-page.module";
-import {AdminPageModule} from "./admin-page/admin-page.module";
+import {WebPageComponent} from "./layout/web-page/web-page.component";
+import {WebPageModule} from "./layout/web-page/web-page.module";
+import {AdminPageModule} from "./layout/admin-page/admin-page.module";
 
-import {AdminPageComponent} from "./admin-page/admin-page.component";
-import { CountriesFormComponent } from './countries-form/countries-form.component';
+import {AdminPageComponent} from "./layout/admin-page/admin-page.component";
+import { CountriesFormComponent } from './page/countries-form/countries-form.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatButtonModule} from "@angular/material/button";
@@ -31,6 +31,12 @@ import { WorksFormComponent } from './works-form/works-form.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatInputModule} from "@angular/material/input";
+import { UploafFormsComponent } from './uploaf-forms/uploaf-forms.component';
+import { CountrieMakerComponent } from './page/countrie-maker/countrie-maker.component';
+import { TestCardComponent } from './test-card/test-card.component';
+import { CountrieManagementComponent } from './page/countrie-management/countrie-management.component';
+import { CountriesCardComponent } from './component/countries-card/countries-card.component';
+import { CountriesManageCardComponent } from './component/countries-manage-card/countries-manage-card.component';
 
 //
 // import { AngularFireModule } from '@angular/fire';
@@ -62,6 +68,9 @@ export function playerFactory() {
     WebPageComponent,
     AdminPageComponent,
     CountriesFormComponent,
+    UploafFormsComponent,
+
+
 
 
     // MenuBarComponent,
@@ -116,11 +125,13 @@ export function playerFactory() {
         MatDividerModule,
         MatInputModule,
         ReactiveFormsModule,
+
         // WebPageModule,
     ],
   providers: [],
   bootstrap: [AppComponent],
   exports: [
+
   ],
 
 

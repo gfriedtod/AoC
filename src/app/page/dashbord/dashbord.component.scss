@@ -1,0 +1,60 @@
+main{
+
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+ // background-color: #0b0a0a;
+  width: 100%;
+  height: 100%;
+
+}
+
+app-boutton{
+  align-self: center;
+ // margin-left: 500px;
+
+}
+
+.grid-card {
+  background-color: #0667ad;
+  margin-left: 30px;
+
+  align-self: center;
+  align-items: center;
+  width: 130%;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 60% 60% 60%;
+  grid-template-rows: 40% 50% 30% ;
+  gap: 20px;
+ // margin-left: 300px;
+  //margin-left: 500px;
+  app-test-card{
+    height: 100%;
+    display: flex;
+    align-self: center;
+
+  }
+
+  #card1{
+
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  #card2{
+  //  margin-top: 150px;
+    grid-column-start: 2;
+    grid-row-start: 0.5;
+    grid-row-end:2;
+  }
+  #card3{
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+}
+app-test-card{
+  position: relative;
+}

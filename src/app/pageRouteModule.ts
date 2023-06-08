@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {HomePageComponent} from "./home-page/home-page.component";
-import {ProjectPageComponent} from "./project-page/project-page.component";
-import {ChronoPageComponent} from "./chrono-page/chrono-page.component";
-import {CountriesPageComponent} from "./countries-page/countries-page.component";
-import {WebPageComponent} from "./web-page/web-page.component";
+import {HomePageComponent} from "./page/home-page/home-page.component";
+import {ProjectPageComponent} from "./page/project-page/project-page.component";
+import {ChronoPageComponent} from "./page/chrono-page/chrono-page.component";
+import {CountriesPageComponent} from "./page/countries-page/countries-page.component";
+import {WebPageComponent} from "./layout/web-page/web-page.component";
 import {CommonModule} from "@angular/common";
 import {BrowserModule} from "@angular/platform-browser";
-import {AdminPageComponent} from "./admin-page/admin-page.component";
+import {AdminPageComponent} from "./layout/admin-page/admin-page.component";
 
 const routes: Routes = [
   //  { path: '', component: WebPageComponent },
@@ -26,7 +26,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren : () => import('./web-page/web-page.module').then(m => m.WebPageModule)
+        loadChildren : () => import('./layout/web-page/web-page.module').then(m => m.WebPageModule)
       }
     ]
   },
@@ -39,7 +39,7 @@ const routes: Routes = [
     children:[
       {
         path:'',
-        loadChildren:()=>import('./admin-page/admin-page.module').then(m=>m.AdminPageModule),
+        loadChildren:()=>import('./layout/admin-page/admin-page.module').then(m=>m.AdminPageModule),
 
       }
     ]

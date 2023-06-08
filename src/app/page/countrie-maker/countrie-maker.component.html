@@ -1,0 +1,92 @@
+<main>
+  <mat-card>
+    <mat-card-header>
+      <h1>Countries maker</h1>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form [formGroup]="Countrieform" >
+
+        <mat-form-field>
+          <input matInput placeholder="Name of countries" formControlName='Countries' value="unset" >
+
+        </mat-form-field>
+
+
+          <mat-card-subtitle>flag</mat-card-subtitle>
+          <app-image-selector (fileDataReady)="receiveFileData($event)" [id]="'image1'"></app-image-selector>
+
+          <mat-card-subtitle>cover-image</mat-card-subtitle>
+          <app-image-selector (fileDataReady)="receiveFileData($event)" [id]="'image2'"></app-image-selector>
+
+        <mat-form-field>
+          <input matInput placeholder="Capitale" formControlName="Capitale" value="unset">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Population" formControlName="Population" value="unset">
+        </mat-form-field>
+
+
+
+
+
+        <mat-form-field>
+          <input matInput placeholder="Regions" formControlName="Regions" value="unset">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Religions" formControlName="Religions" value="unset">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Statut" formControlName="Statut" value="unset">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="PNB" formControlName="PNB" value="unset">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="superficie" formControlName="Superficie" value="unset">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="ESP" formControlName="Esp" value="unset">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Pvilles" formControlName="Pvilles" value="unset">
+        </mat-form-field>
+
+        <mat-form-field>
+          <textarea matInput placeholder=" premiere Description" formControlName="Description1"></textarea>
+        </mat-form-field>
+
+        <mat-card-subtitle>first image</mat-card-subtitle>
+        <app-image-selector (fileDataReady)="receiveFileData($event)" [id]="'image3'"></app-image-selector>
+
+        <mat-card-subtitle>main image</mat-card-subtitle>
+        <app-image-selector (fileDataReady)="receiveFileData($event)" [id]="'image4'"></app-image-selector>
+
+        <mat-form-field>
+          <textarea matInput placeholder=" deuxieme Description" formControlName="Description2"></textarea>
+        </mat-form-field>
+
+
+        <mat-card-subtitle>last image</mat-card-subtitle>
+        <app-image-selector (fileDataReady)="receiveFileData($event)" [id]="'image5'"></app-image-selector>
+
+        <button mat-raised-button color="primary"  (click)="onSubmit()">Submit</button>
+
+<!--        <mat-card-header>Add works</mat-card-header>-->
+<!--        <app-boutton [stateview]="dialog" (click)="openDialog()"></app-boutton>-->
+      </form>
+
+
+    </mat-card-content>
+
+
+
+  </mat-card>
+
+
+</main>
