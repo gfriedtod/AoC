@@ -34,6 +34,6 @@ export class HomePageComponent implements  OnInit{
     this.cardsProject1 =new CardProjectPresentationModel('/assets/about-us.gif', ' Qui somme nous ?', '')
     this.cardsProject2 =new CardProjectPresentationModel('/assets/countries.gif', 'Ou somme nous ?', '')
 
-    this.cardPro = new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont')
+  //  this.cardPro = new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont')
   }
 }

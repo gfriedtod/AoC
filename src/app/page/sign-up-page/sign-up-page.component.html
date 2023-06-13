@@ -1,0 +1,65 @@
+<main>
+  <!--  login forms material-->
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+      <mat-card-subtitle>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="loginForm">
+        <mat-card-subtitle>
+          <h1>Name</h1>
+        </mat-card-subtitle>
+<!--        name matformfield -->
+         <mat-form-field>
+          <mat-label>name</mat-label>
+          <input  matInput formControlName="name">
+        </mat-form-field>
+        <div class="form-group">
+<mat-card-subtitle>
+   <h1>Email</h1>
+</mat-card-subtitle>
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email">
+          </mat-form-field>
+        </div>
+        <mat-card-subtitle>
+          <h1>Password</h1>
+        </mat-card-subtitle>
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="password">
+          </mat-form-field>
+          <!--          make et mat selector who select type of user-->
+          <mat-form-field>
+            <mat-label>Role</mat-label>
+            <mat-select formControlName="role">
+              <mat-option value="particulier">particulier</mat-option>
+              <mat-option value="organisation">organisation</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-card-content>
+            <mat-card-subtitle>
+              image avatar
+            </mat-card-subtitle>
+            <app-image-selector [id]="'imageAvatar'" (fileDataReady)="ReciveFileData($event)"></app-image-selector>
+          </mat-card-content>
+
+
+        </div>
+        <div class="form-group">
+
+        </div>
+      </form>
+      <app-boutton (click)="onSubmit()" [stateview]="loginBoutton"></app-boutton>
+<!--      <app-boutton (click)="payement()" [stateview]="registerBoutton"></app-boutton>-->
+    </mat-card-content>
+
+  </mat-card>
+
+</main>

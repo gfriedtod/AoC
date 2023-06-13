@@ -6,6 +6,7 @@ import {WorksFormComponent} from "../../works-form/works-form.component";
 import {UploadFormsService} from "../../service/forms-service/upload-forms.service";
 import {HttpClient} from "@angular/common/http";
 import {Observable, Subscriber, tap} from "rxjs";
+import {ActivatedRoute, Route, Router} from "@angular/router";
 
 // @ts-ignore
 @Component({
@@ -15,12 +16,14 @@ import {Observable, Subscriber, tap} from "rxjs";
 })
 export class CountrieMakerComponent implements OnInit {
   private listFiles: { id: string; fileData$: File }[] = [];
+  // private closeForm
 
   constructor(
     private  dial: MatDialog,
     private  service : UploadFormsService,
     private http : HttpClient,
-    private form : FormBuilder
+    private form : FormBuilder,
+    private route : Router
   ) {
   }
 
@@ -88,6 +91,10 @@ ngOnInit() {
         await this.http.post('http://localhost:8080/api/countries/create/countries', form.value).subscribe(
           (data) => {
             console.log(data)
+
+            // @ts-ignore
+            this.route.navigateByUrl('countries-manage');
+
           }
         )
       }

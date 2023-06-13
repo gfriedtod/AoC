@@ -1,10 +1,19 @@
 <main>
+<app-sear-bar></app-sear-bar>
 
-  <app-countries-manage-card></app-countries-manage-card>
-  <app-countries-manage-card></app-countries-manage-card>
-  <app-countries-manage-card></app-countries-manage-card>
-  <app-countries-manage-card></app-countries-manage-card>
-  <app-countries-manage-card></app-countries-manage-card>
-  <app-countries-manage-card></app-countries-manage-card>
-  <app-countries-manage-card></app-countries-manage-card>
+  <div class="grid">
+
+
+      <app-countries-presentations *ngFor=" let card of Cards | async" [card]="card"></app-countries-presentations>
+
+
+
+  </div>
+
+<!--  <app-countries-manage-card></app-countries-manage-card>-->
+<!--  <app-countries-manage-card></app-countries-manage-card>-->
+<!--  <app-countries-manage-card></app-countries-manage-card>-->
+<!--  <app-countries-manage-card></app-countries-manage-card>-->
+<!--  <app-countries-manage-card></app-countries-manage-card>-->
+<!--  <app-countries-manage-card></app-countries-manage-card>-->
 </main>

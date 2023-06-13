@@ -1,10 +1,17 @@
-<div class="cards">
+<div (click)="redirect()" class="cards">
 
-  <img src="../../../assets/building4.jpg" alt="">
+<!--  <img src="/assets/building4.jpg" alt="">-->
 
-  <p>title</p>
+    <div class="img" [ngStyle]="{backgroundImage: 'url(' + imageUrl + ')'}"> </div>
+  <div class="mt-4">
+    <p><span class="font-bold">Population:</span> {{ population }}</p>
+    <p><span class="font-bold">Capital:</span> {{ capital }}</p>
+    <p><span class="font-bold">Currency:</span> {{ currency }}</p>
+
+
+
+
+</div>
 
   <app-boutton [stateview]="stateviews" ></app-boutton>
-
-
 </div>

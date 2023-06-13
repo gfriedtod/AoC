@@ -13,6 +13,12 @@ display: flex;
 
 }
 
+*{
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+}
+
 app-project-intro{
 
   align-self: center;
@@ -66,7 +72,7 @@ app-mission-project{
   align-items: center;
 
   gap: 20px;
-  background-image: url("/src/assets/grid-pattern.jpeg");
+  background-image: url("/assets/grid-pattern.jpeg");
 
   h1{
     width: 100%;
@@ -154,4 +160,19 @@ app-main-presentation{
 
   height: 1225px;
 
+}
+.loader{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  //position: absolute;
+  //z-index: 1;
+
+  img{
+    width: 20%;
+    height: 20%;
+    align-self: center;
+  }
 }

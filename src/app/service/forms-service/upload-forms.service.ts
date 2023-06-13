@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {async, BehaviorSubject, Observable, Subscriber, tap} from "rxjs";
 import {FormGroup} from "@angular/forms";
 import {AngularFireStorage} from "@angular/fire/compat/storage";
+import {HttpClient} from "@angular/common/http";
+import {environement} from "../../../Environement";
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +15,12 @@ export class UploadFormsService {
  snap: Promise<void> []= [];
 
 
+
   getForms(): Observable<FormGroup> {
     return this.Forms.asObservable()
   }
 
-  constructor(private storage: AngularFireStorage) {
+  constructor(private storage: AngularFireStorage , private http: HttpClient) {
   }
 
   // uploadImages(file: { id: string; fileData$: File }[], path: string, myForm: FormGroup) {
@@ -98,8 +101,8 @@ export class UploadFormsService {
         return task.then(snapshot => {
           return snapshot.ref.getDownloadURL().then((url) => {
             console.log("url auncher", url)
-            // @ts-ignore
-            myForm.get(element.id).setValue(url);
+
+            myForm.get(element.id)?.setValue(url);
           });
         });
       });
@@ -111,6 +114,10 @@ export class UploadFormsService {
         subscriber.error(error);
       });
     });
+  }
+
+  PostForm(myForm: FormGroup) {
+   return  this.http.post(environement+'/works/create/works', myForm.value)
   }
 }
 

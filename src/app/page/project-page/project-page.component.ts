@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {WorkModel} from "./project-intro/WorkModel/WorkModel";
+import {WorkingModel, WorkModel} from "./project-intro/WorkModel/WorkModel";
 import {IdentityModel} from "./identity-work/identyModel/identityModel";
 import {
   CardProjectPresentationModel
@@ -7,15 +7,21 @@ import {
 import {MissionWork} from "./mission-project/MissionWork/MissionWork";
 import {CardProModel} from "../../component/card-pro/CardProModel/CardProModel";
 import {BouttonService} from "../../component/boutton/bouttonService/BouttonService";
+import {ActivatedRoute, Router} from "@angular/router";
+import {HttpClient} from "@angular/common/http";
+import {delay, map, Observable} from "rxjs";
+import {WorksModel} from "./model/WorksModel";
+import {PAUSE} from "@angular/cdk/keycodes";
 
 @Component({
   selector: 'app-project-page',
   templateUrl: './project-page.component.html',
-  styleUrls: ['./project-page.component.scss']
+  styleUrls: ['./project-page.component.scss',
+  './loading.scss']
 })
 export class ProjectPageComponent implements  OnInit {
 
-  Project!: WorkModel;
+ project!: WorkingModel;
   identity!: IdentityModel;
   cardpresentation!: CardProjectPresentationModel ;
   mission!: MissionWork;
@@ -30,38 +36,52 @@ export class ProjectPageComponent implements  OnInit {
   seeless!:BouttonService
   cardpresentationmission!: CardProjectPresentationModel;
   cardpresentationproject!: CardProjectPresentationModel;
+  Works! : Observable<WorksModel>
+   work!: Observable<WorksModel>;
+  view: boolean = false;
 
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private http: HttpClient
+  ) {
+  }
 
   ngOnInit(): void {
-    this.cardPro = [new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
-      new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont'),
 
+    // @ts-ignore
+    this.Works =this.http.get( `http://localhost:8080/api/works/${this.route.snapshot.params['id']}`)
+
+    this.work = this.Works.pipe(
+      map(
+        data => data
+      )
+    )
+
+
+    this.work.subscribe(async data => {
+
+
+
+        //  console.log("project nameeeeeeeeeeee",this.project.name)
+        this.identity = new IdentityModel(data.image2, data.identitytitle, data.identitydescription);
+        this.mission = new MissionWork(data.missiontitle, data.image3, data.missiondescription, data.image4);
+        this.project = new WorkingModel(data.title, data.objectif, data.image1)
+
+      this.view =true
+
+      }
+    )
+    this.cardpresentationproject = new  CardProjectPresentationModel('assets/project-project.gif','Project','');
+
+    this.cardpresentationmission = new  CardProjectPresentationModel('assets/project-mission.gif','Mission','');
+    this.cardpresentation = new CardProjectPresentationModel( 'assets/project-identity.gif','Project','');
+
+    this.cardPro = [
     ]
     this.seemore=new BouttonService( 'see more', )
     this.seeless=new BouttonService( 'see less', )
     this.subList = this.cardPro.slice( 0, this.number);
-    this.cardpresentationproject = new  CardProjectPresentationModel('assets/project-project.gif','Project','');
-    this.cardpresentationmission = new  CardProjectPresentationModel('assets/project-mission.gif','Mission','');
-    this.Project = new WorkModel('LIBERMAN', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam iure nobis non odio officiis perferendis quae quis quod recusandae veritatis!', 'assets/building4.jpg');
-    this.cardpresentation = new CardProjectPresentationModel( 'assets/project-identity.gif','identity','');
-    this.identity = new IdentityModel('assets/building4.jpg', 'Lorem' , 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam iure nobis non odio officiis perferendis quae quis quod recusandae veritatis!');
-    this.mission = new MissionWork( 'lorem ipsum dolor sit amet, consectetur ', 'assets/building4.jpg','lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam iure nobis non odio officiis perferendis quae quis quod recusandae veritatis!', 'assets/building1.jpg');
 
 
   }
@@ -79,5 +99,9 @@ export class ProjectPageComponent implements  OnInit {
     this.subList = this.subList.slice(0,this.number-4);
     this.number-=4;
     this.number >8 ? this.decrement = true : this.decrement = false
+  }
+
+  delay(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 }

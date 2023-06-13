@@ -1,6 +1,6 @@
 
 import {Component, Input, OnInit} from '@angular/core';
-import {WorkModel} from "./WorkModel/WorkModel";
+import {WorkingModel, WorkModel} from "./WorkModel/WorkModel";
 
 
 @Component({
@@ -14,12 +14,13 @@ export class ProjectIntroComponent implements OnInit {
   identity!: string;
   image!: string;
 
-  @Input() Project!: WorkModel
+  @Input() Project!: WorkingModel
 
   ngOnInit(): void {
     this.name = this.Project.name;
     this.identity = this.Project.identity;
     this.image = this.Project.image;
+    console.log("nameuuuuuuuuuuuuuuuu",this.name)
   }
 
 }

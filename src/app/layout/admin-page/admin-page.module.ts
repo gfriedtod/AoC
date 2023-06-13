@@ -50,10 +50,11 @@ import {CountriesCardComponent} from "../../component/countries-card/countries-c
 
 
   ],
-  exports: [
-    SideBarComponent,
-    DashbordComponent
-  ],
+    exports: [
+        SideBarComponent,
+        DashbordComponent,
+        ImageSelectorComponent
+    ],
   imports: [
     CommonModule,
     RouterModule.forChild(adminPageRoute),

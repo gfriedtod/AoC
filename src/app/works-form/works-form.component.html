@@ -1,7 +1,7 @@
 
 <main>
   <mat-card>
-    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="myForm">
       <mat-card-header>
         <span>Countries Creations</span>
       </mat-card-header>
@@ -12,6 +12,11 @@
         <mat-form-field>
           <mat-label>Titre</mat-label>
           <textarea formControlName="title" matInput type="text" placeholder="Entrez un titre"></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Location</mat-label>
+          <textarea formControlName="position" matInput type="text" placeholder="Entrez une location"></textarea>
         </mat-form-field>
         <mat-form-field>
           <mat-label>objectif</mat-label>
@@ -56,14 +61,14 @@
         <mat-card-subtitle>Titre de la mission</mat-card-subtitle>
         <mat-form-field>
           <mat-label>Titre de la mission</mat-label>
-          <textarea matInput type="text" placeholder="Entrez un titre"></textarea>
+          <textarea formControlName="Missiontitle" matInput type="text" placeholder="Entrez un titre"></textarea>
         </mat-form-field>
 
         <mat-divider></mat-divider>
 
         <mat-form-field>
           <mat-label>Description de la mission</mat-label>
-          <textarea matInput type="text" placeholder="Entrez une description"></textarea>
+          <textarea formControlName="Missiondescription" matInput type="text" placeholder="Entrez une description"></textarea>
         </mat-form-field>
 
         <mat-divider></mat-divider>
@@ -105,8 +110,9 @@
           </div>
         </div>
       </mat-card-content>
+      <button mat-raised-button color="primary" [disabled]="myForm.invalid" (click)="onSubmit()">Submit</button>
+
     </form>
 
-    <button mat-raised-button color="primary" [disabled]="myForm.invalid" (click)="onSubmit()">Submit</button>
   </mat-card>
 </main>

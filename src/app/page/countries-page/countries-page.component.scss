@@ -14,7 +14,7 @@ img{
   display: flex;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("/assets/building6.jpg") ;
+   ;
   backface-visibility: hidden;
   h1{
 
@@ -32,4 +32,54 @@ img{
 
 .see-less{
   align-self: flex-end;
+}
+
+
+.paragraphe{
+
+  align-self: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+//  background-color: #0667ad;
+  width: 100%;
+  height: 100%;
+}
+
+span{
+  color: #2f6abc;
+}
+
+.second{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  //overflow: hidden;
+
+  img{
+    height: 30%;
+  }
+  gap:20px ;
+
+  p{
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+.add{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  width: 80%;
+
+  app-boutton{
+    align-self: flex-end;
+  }
 }

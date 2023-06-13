@@ -15,5 +15,8 @@ export class CardProjectPresentationComponent implements  OnInit{
   ngOnInit(): void {
     this.name = this.cardPresentation.name
     this.title = this.cardPresentation.title
-    this.position = this.cardPresentation.position}
+    this.position = this.cardPresentation.position
+
+    console.log(".............................",this.name)
+  }
 }

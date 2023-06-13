@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {MissionWork} from "./MissionWork/MissionWork";
 import {HandleKeyModel} from "../key-handle/HandleKeyModel/HandleKeyModel";
 import {BouttonService} from "../../../component/boutton/bouttonService/BouttonService";
+import {SpecialModel} from "./special-image/model/SpecialModel";
 
 @Component({
   selector: 'app-mission-project',
@@ -24,9 +25,15 @@ export class MissionProjectComponent implements OnInit{
 
     this.name = this.MissionWork.name;
     this.image = this.MissionWork.image;
-    this.mission = this.MissionWork.mission;
+    // this.mission = this.MissionWork.mission;
     this.other = this.MissionWork.other;
     this.stateview = new BouttonService('See More');
+    this.specialModel = new SpecialModel(this.image, this.MissionWork.image2);
+    console.log("other........." + this.other);
+
+    console.log("mission........." + this.MissionWork.image2);
   }
 
+
+  specialModel!: SpecialModel;
 }

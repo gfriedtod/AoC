@@ -16,8 +16,8 @@
 
 <!--    <button> Login </button>-->
 <!--    <button> sing up </button>-->
-    <app-boutton [stateview]="stateviewSign" ></app-boutton>
-    <app-boutton  [stateview]="stateviewLogIn" ></app-boutton>
+    <app-boutton (click)="navigateRoute('signUp')" [stateview]="stateviewSign" ></app-boutton>
+    <app-boutton (click)="navigateRoute('login')"  [stateview]="stateviewLogIn" ></app-boutton>
 
   </div>
 

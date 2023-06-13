@@ -1,39 +1,51 @@
 <main>
-  <div class="main-presentations">
-    <h1>Germany <img src="/assets/germany.png" alt=""></h1>
+  <div [ngStyle]="{backgroundImage: 'url(' + image2 + ')'}" class="main-presentations">
+    <h1>{{ status }} <img [src]="image1" alt=""></h1>
   </div>
 
   <div class="details-countrues">'
 
   <div class="first">
     <ul>
-      <li>{{ Statut }}</li>
-      <li>{{ PNB }}</li>
-      <li>{{ Superficie }}</li>
-      <li>{{ Esp }}</li>
+<!--      <li>countries :  <span></span></li>-->
+      <li>PIB :   <span>{{ PNB }}</span></li>
+      <li>Superficie :    <span>{{ Superficie }} </span></li>
+      <li>Esperence de vie :   <span>{{ Esp }} </span></li>
+      <li>Religions :  <span> {{ Religions }} </span></li>
+      <li>Regions :   <span>{{ Regions }} </span></li>
 <!--      religion-->
-      <li> {{ Religions }}</li>
-      <li> {{ Regions }}</li>
-      <li>{{ PV }}</li>
-      <li>{{ Population }}</li>
-      <li>{{ Capital }}</li>
+
 
   </ul>
 
-<p>{{ Description1 }}</p>
-    <img src="/assets/building4.jpg" alt="">
+<!--<p>{{ Description1 | lowercase }}</p>-->
+    <img [src]="image2" alt="">
   </div>
 <div class="div">
   <h1>Germany</h1>
-  <img src="/assets/building4.jpg" alt="">
+  <img [src]="image4" alt="">
 </div>
 
 
     <div class="second">
-      <img src="/assets/building4.jpg" alt="">
-<p>{{ Description2 }}</p>
-    </div>
+      <img [src]="image5" alt="">
+
+<ul>
+
+
+        <li>Principaux villes :   <span>{{ PV }} </span></li>
+        <li>Population :   <span>{{ Population }} </span></li>
+        <li>Capital :  <span> {{ Capital }}  </span></li>
+</ul>
+      </div>
+
+
   </div>
+
+<div class="add">
+  <app-boutton  [stateview]="addmore" class="see-more" (click)="onAdd()"></app-boutton>
+
+</div>
 
   <div class="project">
 
@@ -41,7 +53,8 @@
       <app-boutton [stateview]="seemore" class="see-more" (click)="increment()"></app-boutton>
     </h1>
     <div class="list-project">
-      <app-card-pro *ngFor="let card of subList" [cardPresentation]="card"></app-card-pro>
+
+      <app-card-pro (click)="WorkRoute(i)" *ngFor="let card of subList | async let i = index" [cardPresentation]="card"></app-card-pro>
 
     </div>
     <app-boutton [stateview]="seeless" class="see-less" *ngIf="decrement" (click)="dicrement()"></app-boutton>

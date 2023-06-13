@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {BouttonService} from "../boutton/bouttonService/BouttonService";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-menu-bar',
@@ -13,6 +14,12 @@ export class MenuBarComponent implements  OnInit{
   stateviewSign: any;
   stateviewLogIn: any;
   stated!: boolean;
+
+  constructor(
+    private route : Router
+
+  ) {
+  }
 ngOnInit() {
 
 
@@ -27,5 +34,12 @@ ngOnInit() {
   statechange() {
     this.stated = !this.stated
     console.log(this.stated)
+  }
+
+    protected readonly navigator = navigator;
+
+  navigateRoute(login: string) {
+    this.route.navigateByUrl(login);
+
   }
 }

@@ -2,14 +2,15 @@
 <div class="main-composant">
   <div class="big-main">
     <div class="main-presentation">
+
       <div class="description">
-        <h1>Lorem ipsum dolor sit amet.{{ name }}</h1>
+        <h1>{{ name }}</h1>
         <h2>{{ identity }}</h2>
 
       </div>
 
-      <img src="{{ image }}" alt="{{ name }}" />
 
+    <img [src]="image" alt="{{ name }}" />
     </div>
     <app-sear-bar></app-sear-bar>
   </div>
@@ -22,8 +23,6 @@
 
 
 <div class="main-presentation">
-  <div class="description">
-    <h1></h1>
-  </div>
+
 </div>
 

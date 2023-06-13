@@ -8,6 +8,9 @@ import {WebPageComponent} from "./layout/web-page/web-page.component";
 import {CommonModule} from "@angular/common";
 import {BrowserModule} from "@angular/platform-browser";
 import {AdminPageComponent} from "./layout/admin-page/admin-page.component";
+import {
+  AuthenticationLayoutComponent
+} from "./layout/authentication.layout/authentication/authentication-layout/authentication-layout.component";
 
 const routes: Routes = [
   //  { path: '', component: WebPageComponent },
@@ -44,6 +47,16 @@ const routes: Routes = [
       }
     ]
 
+  },
+  {
+    path:'',
+    component: AuthenticationLayoutComponent,
+    children:[
+      {
+        path:'',
+        loadChildren:()=>import('./layout/authentication.layout/authentication/authentication.module').then(m=>m.AuthenticationModule),
+      }
+    ]
   }
 
 

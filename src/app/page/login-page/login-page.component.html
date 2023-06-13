@@ -1,0 +1,46 @@
+<main>
+<!--  login forms material-->
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+      <mat-card-subtitle>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email">
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="password">
+          </mat-form-field>
+<!--          make et mat selector who select type of user-->
+<!--          <mat-form-field>-->
+<!--&lt;!&ndash;            <mat-label>Role</mat-label>&ndash;&gt;-->
+<!--&lt;!&ndash;            <mat-select formControlName="role">&ndash;&gt;-->
+<!--&lt;!&ndash;              <mat-option value="particulier">Admin</mat-option>&ndash;&gt;-->
+<!--&lt;!&ndash;              <mat-option value="organisation">User</mat-option>&ndash;&gt;-->
+<!--&lt;!&ndash;            </mat-select>&ndash;&gt;-->
+<!--          </mat-form-field>-->
+
+
+        </div>
+        <div class="form-group">
+
+        </div>
+      </form>
+      <span> <a>you dont have an account? sign up</a></span>
+
+      <app-boutton [stateview]="loginBoutton"></app-boutton>
+    </mat-card-content>
+
+  </mat-card>
+
+</main>

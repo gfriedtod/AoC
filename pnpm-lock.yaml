@@ -53,6 +53,9 @@ dependencies:
   ngx-lottie:
     specifier: ^10.0.0
     version: 10.0.0(@angular/core@16.0.0)(lottie-web@5.12.0)
+  ngx-paypal:
+    specifier: ^11.0.0
+    version: 11.0.0(@angular/common@16.0.0)(@angular/core@16.0.0)
   node:
     specifier: ^20.2.0
     version: 20.2.0
@@ -6597,6 +6600,17 @@ packages:
       '@scarf/scarf': 1.1.1
       lottie-web: 5.12.0
       tslib: 2.3.0
+    dev: false
+
+  /ngx-paypal@11.0.0(@angular/common@16.0.0)(@angular/core@16.0.0):
+    resolution: {integrity: sha512-ABISig5C868S3KAylZr1iG9/ydjBDqqKOyuPBpaPeqDfkBz2kSZsgX+JXvrS4oT7C3SFf3NOrN3h1ECaltx1/g==}
+    peerDependencies:
+      '@angular/common': '>= 15.0.0'
+      '@angular/core': '>= 15.0.0'
+    dependencies:
+      '@angular/common': 16.0.0(@angular/core@16.0.0)(rxjs@7.8.0)
+      '@angular/core': 16.0.0(rxjs@7.8.0)(zone.js@0.13.0)
+      tslib: 2.5.0
     dev: false
 
   /nice-napi@1.0.2:

@@ -1,1 +1,13 @@
-<p>countries-manage-card works!</p>
+<div class="card">
+  <div class="header">
+    <h2 class="">{{ title }}</h2>
+  </div>
+  <div class="">
+    <img [src]="imageUrl" alt="Flag of {{ title }}" class="">
+    <div class="mt-4">
+      <p><span class="font-bold">Population:</span> {{ population }}</p>
+      <p><span class="font-bold">Capital:</span> {{ capital }}</p>
+      <p><span class="font-bold">Currency:</span> {{ currency }}</p>
+    </div>
+  </div>
+</div>

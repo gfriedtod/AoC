@@ -20,8 +20,8 @@ app-main-presentation{
 }
 
   .presentation{
-    background-image: url("/src/assets/grid-pattern.jpeg");
-    background-origin: padding-box;
+    background-image: url("/assets/grid-pattern.jpeg");
+//    background-origin: padding-box;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -56,6 +56,7 @@ app-main-presentation{
 
 
     .list-card{
+      background-image: url("/assets/grid-pattern.jpeg");
      // position: absolute;
       display: flex;
       width: 100%;
@@ -111,7 +112,7 @@ app-card-presentations{
 
 .list-cardv2{
 
-  //background-image: url("/assets/grid-pattern.jpeg");
+  background-image: url("/assets/grid-pattern.jpeg");
 
   display: flex;
   width: 80%;

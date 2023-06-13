@@ -1,7 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {
-  CardProjectPresentationModel
-} from "../card-project-presentation/CardProjectPresentationModel/CardProjectPresentationModel";
+
 import {CardProModel} from "./CardProModel/CardProModel";
 
 @Component({
@@ -14,12 +12,21 @@ export class CardProComponent implements OnInit{
   title!: string;
   position! : string
   @Input() cardPresentation! : CardProModel
+   imageUrl!: string;
+  workId!: string;
+  pageId!: string;
 
 
   ngOnInit(): void {
-    this.name = this.cardPresentation.name
+
+    this.imageUrl = this.cardPresentation.imageUrl
     this.title = this.cardPresentation.title
     this.position = this.cardPresentation.position
+    this.workId = this.cardPresentation.workId
+    this.pageId = this.cardPresentation.pageId
+
+    console.log(".............................")
+
 }
 
 }

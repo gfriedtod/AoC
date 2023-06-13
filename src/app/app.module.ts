@@ -37,6 +37,14 @@ import { TestCardComponent } from './test-card/test-card.component';
 import { CountrieManagementComponent } from './page/countrie-management/countrie-management.component';
 import { CountriesCardComponent } from './component/countries-card/countries-card.component';
 import { CountriesManageCardComponent } from './component/countries-manage-card/countries-manage-card.component';
+import {countrieLoaderResolver} from "./resolver/countrie-loader.resov/countrie-loader.resolver";
+import { LoginPageComponent } from './page/login-page/login-page.component';
+import { SignUpPageComponent } from './page/sign-up-page/sign-up-page.component';
+import {AuthenticationModule} from "./layout/authentication.layout/authentication/authentication.module";
+import {
+  AuthenticationLayoutComponent
+} from "./layout/authentication.layout/authentication/authentication-layout/authentication-layout.component";
+import {NgxPayPalModule} from "ngx-paypal";
 
 //
 // import { AngularFireModule } from '@angular/fire';
@@ -69,6 +77,9 @@ export function playerFactory() {
     AdminPageComponent,
     CountriesFormComponent,
     UploafFormsComponent,
+
+    AuthenticationLayoutComponent
+
 
 
 
@@ -125,10 +136,14 @@ export function playerFactory() {
         MatDividerModule,
         MatInputModule,
         ReactiveFormsModule,
+      AuthenticationModule,
+      NgxPayPalModule
 
         // WebPageModule,
     ],
-  providers: [],
+  providers: [
+    countrieLoaderResolver
+  ],
   bootstrap: [AppComponent],
   exports: [
 

@@ -1,28 +1,87 @@
 .cards{
   display: flex;
+  background-image: linear-gradient( rgb(77, 121, 155), rgb(127, 115, 164));
+  background-size: cover;
+  background-repeat: no-repeat;
   flex-direction: column;
   justify-content: center;
   width: 100%;
  // margin-left: 20px;
   height: 100%;
+
   gap: 20px;
  // border: 1px solid rgba(140, 201, 244, 0.5);
   border-radius: 20px;
   //background-color: white;
  // background-color: rebeccapurple;
-  img{
+  transition: border ease-in-out 0.5s , box-shadow ease-in-out 0.5s;
+
+  .img{
     border-radius: 20px;
     width: 100%;
-    height: 80%;
-    align-self: center;
+    height: 90%;
+   background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
   }
   p{
     align-self: center;
   }
 }
 app-boutton{
-  //width: 50%;
+  width: 50%;
   align-self: center;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+}
+//h-40 {
+//  height: 10rem;
+//}
+//
+//.justify-center {
+//  justify-content: center;
+//}
+//
+//.items-center {
+//  align-items: center;
+//}
+//
+//.text-xl {
+//  font-size: 1.25rem;
+//}
+//
+//.font-bold {
+//  font-weight: bold;
+//}
+//
+//.uppercase {
+//  text-transform: uppercase;
+//}
+
+//img {
+//  width: 100%;
+//  object-fit: cover;
+//  height: 12rem;
+//}
+
+.mt-4 {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+//
+//.font-bold {
+//  font-weight: bold;
+//}
+
+
+.cards:hover{
+
+  border: 1px solid #46464a;
+
+  box-shadow: 15px 15px 0 0 rgba(75, 75, 237, 0.5);
+}
+
+app-sear-bar{
+  width: 100%;
 }
