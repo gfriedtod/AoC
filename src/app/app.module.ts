@@ -45,6 +45,16 @@ import {
   AuthenticationLayoutComponent
 } from "./layout/authentication.layout/authentication/authentication-layout/authentication-layout.component";
 import {NgxPayPalModule} from "ngx-paypal";
+import { UserAvatarComponent } from './component/user-avatar/user-avatar.component';
+import {ImageSelectorComponent} from "./component/image-selector/image-selector.component";
+import {ComposantModule} from "./layout/Composant/composant/composant.module";
+import { ChronoFormComponent } from './component/chrono-form/chrono-form.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import { ProfilePresentComponent } from './component/profile-present/profile-present.component';
+import { WorkDirectorManageComponent } from './page/work-director-manage/work-director-manage.component';
+import { WorkDirectorLayoutComponent } from './layout/work-director.layout/work-director.layout.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import { ProjectValidatorComponent } from './component/project-validator/project-validator.component';
 
 //
 // import { AngularFireModule } from '@angular/fire';
@@ -76,9 +86,15 @@ export function playerFactory() {
     WebPageComponent,
     AdminPageComponent,
     CountriesFormComponent,
-    UploafFormsComponent,
 
-    AuthenticationLayoutComponent
+
+    AuthenticationLayoutComponent,
+      ChronoFormComponent,
+
+      WorkDirectorLayoutComponent,
+       ProjectValidatorComponent,
+
+
 
 
 
@@ -109,45 +125,52 @@ export function playerFactory() {
     // SideBarComponent,
 
   ],
-    imports: [
+  imports: [
 
-        BrowserModule,
-        // AngularFireModule,
-        // AngularFireModule.initializeApp(firebaseConfig),
-        // AngularFireStorageModule,
-        AngularFireModule.initializeApp(firebaseConfig),
-        AngularFireStorageModule,
-        FormsModule,
+    BrowserModule,
+    // AngularFireModule,
+    // AngularFireModule.initializeApp(firebaseConfig),
+    // AngularFireStorageModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireStorageModule,
+    FormsModule,
 
-        LottieModule.forRoot({player: playerFactory}),
-        pageRouteModule,
-        RouterModule,
-        BrowserAnimationsModule,
-        MatFormFieldModule,
-        MatSelectModule,
-        BrowserAnimationsModule,
-        MatPaginatorModule,
-        WebPageModule,
-        AdminPageModule,
-        MatIconModule,
-        MatProgressBarModule,
-        MatButtonModule,
-        MatCardModule,
-        MatDividerModule,
-        MatInputModule,
-        ReactiveFormsModule,
-      AuthenticationModule,
-      NgxPayPalModule
+    LottieModule.forRoot({player: playerFactory}),
+    pageRouteModule,
+    RouterModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    BrowserAnimationsModule,
+    MatPaginatorModule,
+    WebPageModule,
+    AdminPageModule,
+    MatIconModule,
+    MatProgressBarModule,
+    MatButtonModule,
+    MatCardModule,
+    MatDividerModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    AuthenticationModule,
+    NgxPayPalModule,
+    ComposantModule,
+    MatDatepickerModule,
+    MatSidenavModule,
 
-        // WebPageModule,
-    ],
+
+    // WebPageModule,
+  ],
   providers: [
     countrieLoaderResolver
   ],
   bootstrap: [AppComponent],
-  exports: [
+    exports: [
 
-  ],
+        //ImageSelectorComponent
+
+
+    ],
 
 
 })

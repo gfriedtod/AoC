@@ -1,0 +1,13 @@
+<main>
+  <app-user-avatar [userModel]="user"></app-user-avatar>
+
+  <div class="descripton">
+
+    <h1 class="name">{{user.name}}</h1>
+    <p>{{user.description}}</p>
+
+  </div>
+
+  <app-boutton [stateview]="signout" (click)="signOut()"></app-boutton>
+
+</main>

@@ -127,7 +127,7 @@ export class WorksFormComponent implements  OnInit{
       async (form) => {
         console.log("enter")
         console.log("value..............", form.value)
-        await this.service.PostForm(this.myForm).subscribe(
+        await this.service.PostForm(this.myForm , "/works/create/works").subscribe(
           (data) => {
             console.log(data)
 

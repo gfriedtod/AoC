@@ -28,6 +28,8 @@ import {TestCardComponent} from "../../test-card/test-card.component";
 import {CountriesManageCardComponent} from "../../component/countries-manage-card/countries-manage-card.component";
 import {CountrieManagementComponent} from "../../page/countrie-management/countrie-management.component";
 import {CountriesCardComponent} from "../../component/countries-card/countries-card.component";
+import {BouttonComponent} from "../../component/boutton/boutton.component";
+import {ComposantModule} from "../Composant/composant/composant.module";
 
 
 
@@ -35,32 +37,34 @@ import {CountriesCardComponent} from "../../component/countries-card/countries-c
 @NgModule({
   declarations: [
     //AdminPageComponent,
-    SideBarComponent,
-    UserManageComponent,
-
-    BouttonIconComponent,
-    DashbordComponent,
-    ImageSelectorComponent,
-    WorksFormComponent,
-    CountrieMakerComponent,
-    TestCardComponent,
-    CountrieManagementComponent,
-    CountriesCardComponent,
+    // SideBarComponent,
+    // UserManageComponent,
+    //
+    // BouttonIconComponent,
+     DashbordComponent,
+    //
+    // WorksFormComponent,
+    // CountrieMakerComponent,
+    // TestCardComponent,
+    // CountrieManagementComponent,
+  //  CountriesCardComponent,
     CountriesManageCardComponent,
+   // BouttonComponent
 
 
   ],
-    exports: [
-        SideBarComponent,
-        DashbordComponent,
-        ImageSelectorComponent
-    ],
+  exports: [
+   // SideBarComponent,
+    DashbordComponent,
+  //  BouttonComponent,
+
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(adminPageRoute),
 
     MatIconModule,
-    WebPageModule,
+
     MatFormFieldModule,
 
     ReactiveFormsModule,
@@ -76,6 +80,7 @@ import {CountriesCardComponent} from "../../component/countries-card/countries-c
     MatDialogModule,
 
     MatListModule,
+    ComposantModule,
 
 
   ]

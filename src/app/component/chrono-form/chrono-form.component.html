@@ -1,0 +1,67 @@
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Chrono
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form [formGroup]="form"  (ngSubmit)="onSubmit()">
+      <mat-card-title>
+        plage de temps
+      </mat-card-title>
+
+      <mat-card-content>
+        <mat-form-field>
+          <mat-label>Enter a date range</mat-label>
+          <mat-date-range-input [rangePicker]="picker">
+            <input formControlName="start" matStartDate placeholder="Start date">
+            <input formControlName="end" matEndDate placeholder="End date">
+          </mat-date-range-input>
+
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+      </mat-card-content>
+
+
+      <mat-divider></mat-divider>
+
+      <mat-card-title>
+        Name
+      </mat-card-title>
+
+      <mat-card-content>
+        <mat-form-field>
+          <input formControlName="name" matInput placeholder="Name">
+        </mat-form-field>
+      </mat-card-content>
+
+     <mat-divider></mat-divider>
+      <mat-card-title> image </mat-card-title>
+      <mat-card-content>
+        <app-image-selector (fileDataReady)="reciveFile($event)" [id]="'imageAvatar'"></app-image-selector>
+
+      </mat-card-content>
+
+      <mat-divider>
+      </mat-divider>
+
+      <mat-card-title>Description</mat-card-title>
+      <mat-card-content>
+        <mat-form-field>
+          <textarea matInput formControlName="description" placeholder="Description"></textarea>
+        </mat-form-field>
+      </mat-card-content>
+
+
+    </form>
+
+
+  </mat-card-content>
+
+  <app-boutton [stateview]="submit" (click)="onSubmit()"></app-boutton>
+
+</mat-card>
+

@@ -1,0 +1,138 @@
+<main>
+  <form [formGroup]="form">
+<mat-card>
+  <mat-card-header>
+    <mat-card-title><h1>Work Director Manage</h1></mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="main-content">
+
+
+<mat-card-content>
+  <mat-form-field>
+
+    <mat-label>Name of the project</mat-label>
+    <input formControlName="name" matInput placeholder="Name of the project">
+  </mat-form-field>
+</mat-card-content>
+
+
+
+      <mat-card-content>
+        <mat-form-field>
+
+          <mat-label>Contexte</mat-label>
+          <textarea formControlName="contexte" matInput placeholder="Contexte"></textarea>
+        </mat-form-field>
+      </mat-card-content>
+
+<!--    but-->
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>But</mat-label>
+        <textarea formControlName="but" matInput placeholder="But"></textarea>
+      </mat-form-field>
+    </mat-card-content>
+
+<!--    justification-->
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Justification</mat-label>
+        <textarea formControlName="justification" matInput placeholder="Justification"></textarea>
+      </mat-form-field>
+    </mat-card-content>
+
+<!--    country-->
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Country</mat-label>
+        <input formControlName="country" matInput placeholder="Country">
+      </mat-form-field>
+    </mat-card-content>
+<!--    location-->
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Location</mat-label>
+        <input formControlName="location" matInput placeholder="Location">
+      </mat-form-field>
+    </mat-card-content>
+
+
+<!--      beneficiary-->
+      <mat-card-content>
+        <mat-form-field>
+          <mat-label>Beneficiary</mat-label>
+          <textarea formControlName="beneficiary" matInput placeholder="Beneficiary"></textarea>
+        </mat-form-field>
+      </mat-card-content>
+
+<!--      result-->
+      <mat-card-content>
+        <mat-form-field>
+          <mat-label>Result</mat-label>
+          <textarea formControlName="result" matInput placeholder="Result"></textarea>
+        </mat-form-field>
+      </mat-card-content>
+
+<!--      impact-->
+      <mat-card-content>
+        <mat-form-field>
+          <mat-label>Impact</mat-label>
+          <textarea formControlName="impact" matInput placeholder="Impact"></textarea>
+        </mat-form-field>
+      </mat-card-content>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Apport local (in $)</mat-label>
+        <input formControlName="apportLocal"  type='number' matInput placeholder=''>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+
+        <mat-label>Devis</mat-label>
+
+      <app-image-selector (fileDataReady)="reciveFile($event)" [id]="'devis'"></app-image-selector>
+    </mat-card-content>
+
+  </mat-card-content>
+
+<!--  apport local-->
+
+<mat-card>
+  <mat-card-content>
+    <mat-card-subtitle>
+      Planning d'execution
+    </mat-card-subtitle>
+    <app-image-selector (fileDataReady)="reciveFile($event)" [id]="'planning'"></app-image-selector>
+  </mat-card-content>
+</mat-card>
+
+  <mat-card class="submit">
+    <mat-card-content>
+      <app-boutton [stateview]="submit" (click)="onSubmit()"></app-boutton>
+    </mat-card-content>
+  </mat-card>
+
+
+
+
+</mat-card>
+    <mat-card  class="card">
+
+      <mat-calendar  (_userSelection)="onSelectedChanged(selected)"  [(selected)]="selected"></mat-calendar>
+      <mat-error *ngIf="dateInvalid">incorrect range choose please choose 2 date</mat-error>
+
+    </mat-card>
+
+
+<!--planning d'execution-->
+
+  </form>
+
+
+
+<div class="other">
+  <app-profile-present></app-profile-present>
+  <mat-card></mat-card>
+</div>
+</main>

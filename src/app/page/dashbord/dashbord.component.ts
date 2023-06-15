@@ -9,6 +9,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {CountrieMakerComponent} from "../countrie-maker/countrie-maker.component";
 import {TestCardComponent} from "../../test-card/test-card.component";
 import {TestCardModel} from "../../test-card/test-card.model/TestCardModel";
+import {ChronoFormComponent} from "../../component/chrono-form/chrono-form.component";
 
 @Component({
   selector: 'app-dashbord',
@@ -23,6 +24,9 @@ export class DashbordComponent  implements OnInit{
     'red',
     // @ts-ignore
     CountrieMakerComponent);
+
+  // @ts-ignore
+  card2 : TestCardModel=new TestCardModel('chronologie', 'red',ChronoFormComponent)
 
   constructor(private  dial: MatDialog) {}
 

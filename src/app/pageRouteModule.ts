@@ -11,6 +11,7 @@ import {AdminPageComponent} from "./layout/admin-page/admin-page.component";
 import {
   AuthenticationLayoutComponent
 } from "./layout/authentication.layout/authentication/authentication-layout/authentication-layout.component";
+import {WorkDirectorLayoutComponent} from "./layout/work-director.layout/work-director.layout.component";
 
 const routes: Routes = [
   //  { path: '', component: WebPageComponent },
@@ -55,6 +56,16 @@ const routes: Routes = [
       {
         path:'',
         loadChildren:()=>import('./layout/authentication.layout/authentication/authentication.module').then(m=>m.AuthenticationModule),
+      }
+    ]
+  },
+  {
+    path: '',
+    component : WorkDirectorLayoutComponent,
+    children:[
+      {
+        path:'',
+        loadChildren:()=>import('./layout/work-director.layout/work-director.layout.module').then(m=>m.WorkDirectorLayoutModule),
       }
     ]
   }

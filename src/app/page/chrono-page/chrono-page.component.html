@@ -1,4 +1,4 @@
-<main>
+<main *ngIf="loades">
   <div class="main-presentation">
     <h1>Welcome to the</h1>
     <h1> cojecam offices Aoc </h1>
@@ -11,14 +11,14 @@
 
 <!--  <app-mission-project [MissionWork]="mission"></app-mission-project>-->
 
-<app-chrono-jesuite></app-chrono-jesuite>
-  <app-chrono-jesuite></app-chrono-jesuite>
-  <app-chrono-jesuite></app-chrono-jesuite>
-  <app-chrono-jesuite></app-chrono-jesuite>
+<app-chrono-jesuite *ngFor="let myjesuite of myjesuites" [chronoModel]="myjesuite"></app-chrono-jesuite>
+<!--  <app-chrono-jesuite></app-chrono-jesuite>-->
+<!--  <app-chrono-jesuite></app-chrono-jesuite>-->
+<!--  <app-chrono-jesuite></app-chrono-jesuite>-->
 
 
-  <app-chrono-jesuite></app-chrono-jesuite>
-  <app-chrono-jesuite></app-chrono-jesuite>
+<!--  <app-chrono-jesuite></app-chrono-jesuite>-->
+<!--  <app-chrono-jesuite></app-chrono-jesuite>-->
 
 </main>
 

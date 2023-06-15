@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AnimationItem } from 'lottie-web';
 // @ts-ignore
 import animationData from './burgger.json';
+import {BouttonService} from "../../boutton/bouttonService/BouttonService";
 
 @Component({
   selector: 'app-burger-button',
@@ -12,6 +13,7 @@ export class BurgerButtonComponent {
   options: any;
   // @ts-ignore
   private animationItem: AnimationItem;
+  viewMore: BouttonService = new BouttonService("view");
 
   constructor() {
     this.options = {

@@ -1,0 +1,56 @@
+main{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient( 45deg , #177bae, #93bef7 , #98adb5);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  form{
+    width: 50%;
+    height: 80%;
+    align-self: center;
+
+    display: flex;padding-bottom: 50px;
+
+    mat-card{
+      display: flex;
+
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      mat-card-content{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        mat-form-field{
+          align-self: center;
+          width: 80%;
+          height: 100%;
+        }
+
+      }
+    }
+  }
+
+  app-profile-present{
+    margin-top: 60px;
+   // align-self: center;
+    margin-right: 60px;
+    width: 20%;
+
+    height: 500px;
+
+  }
+}
+
+input{
+  width: 100%;
+  height: 100%;
+}
+
+app-boutton{
+  align-self: center;
+
+}

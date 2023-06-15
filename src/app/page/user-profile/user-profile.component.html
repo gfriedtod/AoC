@@ -1,0 +1,82 @@
+<main>
+<form [formGroup]="profileForm">
+  <mat-card>
+    <mat-card-header>
+      <span>your profile</span>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>first name</mat-label>
+        <input formControlName="name" matInput placeholder="first name">
+      </mat-form-field>
+<mat-card-content>
+  <app-image-selector [id]="'imageAvatar'" (fileDataReady)="ReciveFileData($event)"></app-image-selector>
+</mat-card-content>
+
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>last name</mat-label>
+        <input formControlName="Lastname" matInput placeholder="last name">
+      </mat-form-field>
+    </mat-card-content>
+<!--    description-->
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>email</mat-label>
+        <input formControlName="email" matInput placeholder="email">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>password</mat-label>
+        <input type="password" formControlName="password" matInput placeholder="password">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>phone</mat-label>
+        <input formControlName="phone" matInput placeholder="phone">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>address</mat-label>
+        <input formControlName="address" matInput placeholder="address">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>city</mat-label>
+        <input matInput placeholder="city">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>country</mat-label>
+        <input formControlName="country" matInput placeholder="country">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>zip code</mat-label>
+        <input formControlName="zipCode" matInput placeholder="zip code">
+      </mat-form-field>
+    </mat-card-content>
+    <app-boutton [stateview]="submit" (click)="onSubmit()"></app-boutton>
+  </mat-card>
+
+
+
+
+</form>
+
+  <app-profile-present></app-profile-present>
+</main>
+

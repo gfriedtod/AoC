@@ -28,7 +28,10 @@ import {animate, animation, keyframes, style, transition, trigger} from "@angula
 export class ResponsiveMenuComponent implements  OnInit{
    stateviewLogIn!: BouttonService;
    stateviewSign!: BouttonService;
+  panelOpenState!: boolean;
   ngOnInit(): void {
+
+    this.panelOpenState = false;
 
     this.stateviewLogIn = new BouttonService('LogIn' )
     this.stateviewSign= new BouttonService('Sign up' , true)
@@ -36,6 +39,7 @@ export class ResponsiveMenuComponent implements  OnInit{
   }
 
   protected readonly close = close;
+
 
  ngDestroy() {
 

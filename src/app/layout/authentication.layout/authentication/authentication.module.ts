@@ -12,14 +12,26 @@ import {Router, RouterModule} from "@angular/router";
 import {AuthenticationRoutes} from "./authentication.route";
 import {NgxPayPalModule} from "ngx-paypal";
 import {AdminPageModule} from "../../admin-page/admin-page.module";
+import {BouttonComponent} from "../../../component/boutton/boutton.component";
+import {ImageSelectorComponent} from "../../../component/image-selector/image-selector.component";
+import {AppModule} from "../../../app.module";
+import {MatIconModule} from "@angular/material/icon";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {ComposantModule} from "../../Composant/composant/composant.module";
 
 
 
 @NgModule({
   declarations: [
-   // AuthenticationLayoutComponent,
+    // AuthenticationLayoutComponent,
     LoginPageComponent,
     SignUpPageComponent,
+    //BouttonComponent,
+
+
+  ],
+  exports: [
+    LoginPageComponent
   ],
   imports: [
     CommonModule,
@@ -27,10 +39,20 @@ import {AdminPageModule} from "../../admin-page/admin-page.module";
     MatSelectModule,
     MatCardModule,
     ReactiveFormsModule,
-    WebPageModule,
+
+
+    //AdminPageModule,
+
     RouterModule.forChild(AuthenticationRoutes),
     NgxPayPalModule,
-    AdminPageModule
+    MatIconModule,
+    MatProgressBarModule,
+    WebPageModule,
+    AdminPageModule,
+    ComposantModule,
+    //WebPageModule,
+
+
   ]
 })
 export class AuthenticationModule { }

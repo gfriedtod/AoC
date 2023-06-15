@@ -1,5 +1,5 @@
 main{
-  position: relative;
+  //position: relative;
   display: flex;
  // flex-direction: row-reverse;
   justify-content: center;
@@ -13,10 +13,19 @@ main{
   }
   .description{
     align-self: center;
+
+    position: relative;
+    //word-break: normal;
+   // width: 50%;
+    //background-color: #0667ad;
+    flex: 1;
     h1{
       width: 100%;
       font-size: 60px;
       color: #284256 ;
+     // inline-size: 5px;
+      position: relative;
+      flex: 1;
 
       @media screen and (max-width: 1280px){
         font-size: 280%;
@@ -25,7 +34,7 @@ main{
     }
   }
   img{
-    position: relative;
+    position: static;
     width: 40%;
     height: 100%;
     align-self: center;
@@ -43,8 +52,11 @@ main{
 .intro{
   font-size: 20px;
   color: #3A5CEE;
+
 }
 .des{
   font-size: 25px;
   color: rgb(78, 76, 76);
+  //inline-size: 10px;
 }
+.name{}

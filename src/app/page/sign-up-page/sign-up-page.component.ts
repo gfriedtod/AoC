@@ -34,8 +34,9 @@ export class SignUpPageComponent { // @ts-ignore
       email: '',
       password: '',
       role: '',
-      imageAvatar: '',
+      imageAvatar: 'https://www.pngmart.com/files/22/User-Avatar-Profile-Download-PNG-Isolated-Image.png',
       name: '',
+      description: '',
     })
   }
 

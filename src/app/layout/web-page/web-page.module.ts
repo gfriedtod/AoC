@@ -28,39 +28,52 @@ import {RouterModule} from "@angular/router";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import {MatPaginatorModule} from "@angular/material/paginator";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {LottieModule} from "ngx-lottie";
-import {playerFactory} from "../../app.module";
+import {AppModule, playerFactory} from "../../app.module";
 import {MatListModule} from "@angular/material/list";
+import {UserAvatarComponent} from "../../component/user-avatar/user-avatar.component";
+import {ComposantModule} from "../Composant/composant/composant.module";
+import {UserProfileComponent} from "../../page/user-profile/user-profile.component";
+import {MatCardModule} from "@angular/material/card";
+import {MatInputModule} from "@angular/material/input";
+import {AuthGardService} from "../../service/routeGard/auth-gard.service";
 
 
 
 @NgModule({
   declarations: [
+    //
+   MenuBarComponent,
+    // BouttonComponent,
+    // SearBarComponent,
+    // MainPresentationComponent,
+    // CardPresentationsComponent,
+    // HomePageComponent,
+    // CountriesPresentationsComponent,
+    // CardProjectPresentationComponent,
+    // CardProComponent,
+    // MiniSerachBarComponent,
+   FooterComponent,
+    // ProjectPageComponent,
+    // ProjectIntroComponent,
+    // BurgerButtonComponent,
+    // ResponsiveMenuComponent,
+    // IdentityWorkComponent,
+    // MissionProjectComponent,
+    // KeyHandleComponent,
+    // SpecialImageComponent,
+    // ChronoPageComponent,
+    // ChronoJesuiteComponent,
+    // CountriesPageComponent,
+    // UserAvatarComponent,
+    // BouttonComponent
 
-    MenuBarComponent,
-    BouttonComponent,
-    SearBarComponent,
-    MainPresentationComponent,
-    CardPresentationsComponent,
     HomePageComponent,
-    CountriesPresentationsComponent,
-    CardProjectPresentationComponent,
-    CardProComponent,
-    MiniSerachBarComponent,
-    FooterComponent,
-    ProjectPageComponent,
-    ProjectIntroComponent,
-    BurgerButtonComponent,
-    ResponsiveMenuComponent,
-    IdentityWorkComponent,
-    MissionProjectComponent,
-    KeyHandleComponent,
-    SpecialImageComponent,
-    ChronoPageComponent,
-    ChronoJesuiteComponent,
     CountriesPageComponent,
-
+    ChronoPageComponent,
+    ProjectPageComponent,
+    UserProfileComponent
 
   ],
   imports: [
@@ -76,6 +89,11 @@ import {MatListModule} from "@angular/material/list";
     MatPaginatorModule,
     FormsModule,
     MatListModule,
+    ComposantModule,
+    MatCardModule,
+    ReactiveFormsModule,
+    MatInputModule,
+
 
   ],
   exports: [
@@ -83,12 +101,15 @@ import {MatListModule} from "@angular/material/list";
     FooterComponent,
     ProjectPageComponent,
     HomePageComponent,
-    BouttonComponent,
-    CountriesPresentationsComponent,
-    SearBarComponent,
+    // BouttonComponent,
+    // CountriesPresentationsComponent,
+    // SearBarComponent,
 
 
   ],
+  providers: [
+    AuthGardService
+  ]
 
 })
 export class WebPageModule { }

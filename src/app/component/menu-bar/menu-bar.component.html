@@ -9,15 +9,28 @@
     <li><a routerLink ="project" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >Products</a></li>
     <li><a routerLink="countries" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}">Services</a></li>
     <li><a routerLink="dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}" >Dashboard</a></li>
+    <li><a routerLink="work-director" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}" >Dashboard</a></li>
 
   </ul>
 
-  <div class="boutton-login">
+  <div *ngIf="!isidentified" class="boutton-login">
 
 <!--    <button> Login </button>-->
 <!--    <button> sing up </button>-->
     <app-boutton (click)="navigateRoute('signUp')" [stateview]="stateviewSign" ></app-boutton>
     <app-boutton (click)="navigateRoute('login')"  [stateview]="stateviewLogIn" ></app-boutton>
+
+  </div>
+
+  <div *ngIf="isidentified" class="profile">
+
+    <app-user-avatar (click)="navigateRoute('profile')" [userModel]="userModel"></app-user-avatar>
+
+
+    <!--    <button> Login </button>-->
+    <!--    <button> sing up </button>-->
+<!--    <app-boutton (click)="navigateRoute('signUp')" [stateview]="stateviewSign" ></app-boutton>-->
+<!--    <app-boutton (click)="navigateRoute('login')"  [stateview]="stateviewLogIn" ></app-boutton>-->
 
   </div>
 

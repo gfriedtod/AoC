@@ -96,6 +96,7 @@ export class UploadFormsService {
 
   uploadImages(file: { id: string; fileData$: File }[], path: string, myForm: FormGroup) {
     return new Observable((subscriber: Subscriber<FormGroup>) => {
+
       const promises = file.map((element: any) => {
         const task = this.storage.upload(path + "/" + element.fileData$.name, element.fileData$);
         return task.then(snapshot => {
@@ -116,8 +117,8 @@ export class UploadFormsService {
     });
   }
 
-  PostForm(myForm: FormGroup) {
-   return  this.http.post(environement+'/works/create/works', myForm.value)
+  PostForm(myForm: FormGroup , path: string) {
+   return  this.http.post(environement+path, myForm.value)
   }
 }
 

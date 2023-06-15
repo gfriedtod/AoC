@@ -1,13 +1,13 @@
 <main>
   <div class="description">
-    <p class="intro">---------- Lorem ipsum dolor.</p>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+    <p class="intro">---------- {{ start.split(':')[0].split('T')[0] }} -- {{ end.split(':')[0].split('T')[0] }}</p>
+    <h1>{{ name | titlecase }}</h1>
     <p></p>
-    <p class="des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, consectetur distinctio doloremque eius esse eum eveniet impedit iure modi molestias nam porro provident, quos recusandae, repudiandae rerum vero voluptate? Qui?</p>
+    <p class="des">{{ description }}</p>
     <h1 class="number">01</h1>
   </div>
 
-  <img src="https://wp.fr.aleteia.org/wp-content/uploads/sites/6/2016/10/web-arturo-sosa-superior-rome-italy-c2a9alessia-giuliani-cpp.jpg" alt="">
+  <img [src]="iamgeAvatar" alt="">
 
 
 </main>
