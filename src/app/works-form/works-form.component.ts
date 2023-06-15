@@ -2,7 +2,7 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {FormArray, FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {BouttonService} from "../component/boutton/bouttonService/BouttonService";
 import {AngularFireStorage} from "@angular/fire/compat/storage";
-import {Observable} from "rxjs";
+
 import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 import {UploadFormsService} from "../service/forms-service/upload-forms.service";
 import {HttpClient} from "@angular/common/http";
