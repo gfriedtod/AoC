@@ -30,6 +30,12 @@ import {CountrieManagementComponent} from "../../page/countrie-management/countr
 import {CountriesCardComponent} from "../../component/countries-card/countries-card.component";
 import {BouttonComponent} from "../../component/boutton/boutton.component";
 import {ComposantModule} from "../Composant/composant/composant.module";
+import {MatTableModule} from "@angular/material/table";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {
+  ProjectValidateAdminPageComponent
+} from "../../page/project-validate-admin-page/project-validate-admin-page.component";
+import {ProjectManagePageComponent} from "../../page/project-manage-page/project-manage-page.component";
 
 
 
@@ -49,6 +55,8 @@ import {ComposantModule} from "../Composant/composant/composant.module";
     // CountrieManagementComponent,
   //  CountriesCardComponent,
     CountriesManageCardComponent,
+    ProjectValidateAdminPageComponent,
+    ProjectManagePageComponent,
    // BouttonComponent
 
 
@@ -81,6 +89,8 @@ import {ComposantModule} from "../Composant/composant/composant.module";
 
     MatListModule,
     ComposantModule,
+    MatTableModule,
+    MatButtonToggleModule,
 
 
   ]

@@ -1,0 +1,104 @@
+<main>
+<div class="header" [ngStyle]="{ backgroundImage: 'url(' + projectModel.imageUrl + ')'}">
+  <h1>{{ projectModel.name }}</h1>
+</div>
+
+  <div class="headers"></div>
+  <div class="gard">
+    <mat-card>
+      <mat-card-content>
+        <img [src]="projectModel.imageUrl" class="icon-card" alt="">
+        <div class="details">
+          <div class="title-card"><span>nom du projet</span> : {{ projectModel.name }}</div>
+          <p><span> pays  </span> : {{ projectModel.country }}</p>
+          <p><span> localisation </span> : {{ projectModel.location }}</p>
+        </div>
+      </mat-card-content>
+
+    </mat-card>
+    <mat-card>
+      <mat-card-content>
+        <mat-label>Contexte</mat-label>
+        <p>{{ projectModel.contexte }}</p>
+      </mat-card-content>
+      <mat-card-content>
+        <mat-label>But</mat-label>
+        <p>{{ projectModel.but }}</p>
+      </mat-card-content>
+      <mat-card-content>
+        <mat-label>Beneficiaire</mat-label>
+        <p>{{ projectModel.beneficiary }}</p>
+      </mat-card-content>
+      <mat-card-content>
+        <mat-label>Impact</mat-label>
+        <p>{{ projectModel.impact }}</p>
+      </mat-card-content>
+
+      <mat-card-content>
+        <mat-label>Justification</mat-label>
+        <p>{{ projectModel.justification }}</p>
+      </mat-card-content>
+
+      <mat-card-content>
+        <mat-label>Apport local</mat-label>
+        <p>{{ projectModel.apportLocal }}</p>
+      </mat-card-content>
+
+
+
+    </mat-card>
+
+  </div>
+<mat-card class="period">
+  <mat-card-content>
+    <mat-label>Periode</mat-label>
+    <p> <span> date de début </span>:{{ projectModel.start }} <span> date de fin </span> :{{  projectModel.end }}</p>
+  </mat-card-content>
+</mat-card>
+
+  <div class="link-doc">
+    <a  [href]="projectModel.devis">
+      <mat-card>
+        <mat-card-content>
+          <mat-label>Devis</mat-label>
+          <mat-icon>file_download</mat-icon>
+        </mat-card-content>
+      </mat-card>
+    </a>
+
+    <a  [href]="projectModel.planning">
+      <mat-card>
+        <mat-card-content>
+          <mat-label>Planing</mat-label>
+          <mat-icon>file_download</mat-icon>
+        </mat-card-content>
+      </mat-card>
+    </a>
+  </div>
+
+
+  <div class="link-doc boutton">
+
+      <mat-card>
+        <mat-card-content>
+
+          <app-boutton [stateview]="validate"></app-boutton>
+        </mat-card-content>
+      </mat-card>
+
+    <mat-card>
+      <mat-card-content>
+
+        <app-boutton [stateview]="dismiss"></app-boutton>
+      </mat-card-content>
+    </mat-card>
+
+
+  </div>
+
+
+
+
+
+
+</main>

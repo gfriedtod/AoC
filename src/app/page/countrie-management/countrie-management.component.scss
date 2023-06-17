@@ -1,15 +1,18 @@
 main{
-  width: 100%;
-  //background-color: #919090;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  //justify-content: center;
   align-items: center;
-  align-self: flex-end;
-  flex-wrap: wrap;
   gap: 20px;
-  margin-left: 150px;
+  //position: relative;
+  //background-color: red;
+  position: absolute;
+
+  // background-color: #0b0a0a;
+  width: 85%;
+  height: 100%;
+  overflow-y: scroll;
+
 
 
   .grid{
@@ -17,7 +20,7 @@ main{
     display: flex;
     margin-left: 50px;
 
-    width: 100%;
+    width: 90%;
     height: 600px;
     align-self: flex-end;
     margin-bottom: 80px;

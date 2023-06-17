@@ -94,6 +94,11 @@
       <app-image-selector (fileDataReady)="reciveFile($event)" [id]="'devis'"></app-image-selector>
     </mat-card-content>
 
+    <mat-card-content>
+      <mat-label>cover image</mat-label>
+      <app-image-selector (fileDataReady)="reciveFile($event)" [id]="'imageUrl'"></app-image-selector>
+    </mat-card-content>
+
   </mat-card-content>
 
 <!--  apport local-->
@@ -129,10 +134,11 @@
 
   </form>
 
-
-
 <div class="other">
   <app-profile-present></app-profile-present>
   <mat-card></mat-card>
 </div>
+
+
+
 </main>

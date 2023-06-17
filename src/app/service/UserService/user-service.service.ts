@@ -50,6 +50,11 @@ export class UserServiceService {
 
   }
 
+  getAlluser() : Observable<UserModel[]>{
+    // @ts-ignore
+    return this.http.get(environement+"/user/all")
+  }
+
   login(mtForm : FormGroup) : Observable<boolean> {
     return new Observable<any>(
       (subscriber) =>{
@@ -95,7 +100,8 @@ export class UserModel{
     public city : string,
     public country : string,
     public zipCode : string,
-    public Lastname : string
+    public Lastname : string,
+    public Status :string
 
   ) {
   }

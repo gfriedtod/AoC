@@ -1,0 +1,33 @@
+main{
+
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+  //position: relative;
+  //background-color: red;
+  position: absolute;
+  //justify-content: center;
+
+ //  background-color: #0b0a0a;
+  width: 85%;
+  height: 100%;
+  overflow-y: scroll;
+
+  //  overflow-x: hidden;
+
+}
+
+.grid{
+  width: 98%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  app-project-validator{
+    width: 25%;
+    height: 45%;
+  }
+}

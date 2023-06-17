@@ -43,6 +43,8 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import {LottieComponent} from "ngx-lottie";
 import {MatButtonModule} from "@angular/material/button";
 import {ProfilePresentComponent} from "../../../component/profile-present/profile-present.component";
+import {LoaderComponent} from "../../../component/loader/loader.component";
+import {ProjectValidatorComponent} from "../../../component/project-validator/project-validator.component";
 
 
 
@@ -82,6 +84,8 @@ import {ProfilePresentComponent} from "../../../component/profile-present/profil
     CountrieMakerComponent,
     TestCardComponent,
     CountrieManagementComponent,
+    LoaderComponent,
+    ProjectValidatorComponent,
 
   ],
   exports: [
@@ -101,7 +105,9 @@ import {ProfilePresentComponent} from "../../../component/profile-present/profil
     UserAvatarComponent,
     ResponsiveMenuComponent,
     BurgerButtonComponent,
-    ProfilePresentComponent
+    ProfilePresentComponent,
+    LoaderComponent,
+    ProjectValidatorComponent
   ],
   imports: [
     CommonModule,

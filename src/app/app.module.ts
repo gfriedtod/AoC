@@ -55,6 +55,9 @@ import { WorkDirectorManageComponent } from './page/work-director-manage/work-di
 import { WorkDirectorLayoutComponent } from './layout/work-director.layout/work-director.layout.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { ProjectValidatorComponent } from './component/project-validator/project-validator.component';
+import { LoaderComponent } from './component/loader/loader.component';
+import { ProjectValidateAdminPageComponent } from './page/project-validate-admin-page/project-validate-admin-page.component';
+import { ProjectManagePageComponent } from './page/project-manage-page/project-manage-page.component';
 
 //
 // import { AngularFireModule } from '@angular/fire';
@@ -92,7 +95,10 @@ export function playerFactory() {
       ChronoFormComponent,
 
       WorkDirectorLayoutComponent,
-       ProjectValidatorComponent,
+
+
+
+
 
 
 
@@ -165,12 +171,14 @@ export function playerFactory() {
     countrieLoaderResolver
   ],
   bootstrap: [AppComponent],
-    exports: [
-
-        //ImageSelectorComponent
+  exports: [
 
 
-    ],
+
+    //ImageSelectorComponent
+
+
+  ],
 
 
 })

@@ -4,9 +4,16 @@ main{
   flex-direction: column;
   //justify-content: center;
   align-items: center;
+  //position: relative;
+  //background-color: red;
+  position: absolute;
+
  // background-color: #0b0a0a;
-  width: 100%;
+  width: 85%;
   height: 100%;
+  overflow-y: scroll;
+
+//  overflow-x: hidden;
 
 }
 
@@ -17,21 +24,22 @@ app-boutton{
 }
 
 .grid-card {
-  //background-color: #0667ad;
-  margin-left: 30px;
+ // background-color: #0667ad;
+ // margin-left: 30px;
 
   align-self: center;
   align-items: center;
-  width: 130%;
+  width: 100%;
   height: 600px;
-  display: grid;
-  grid-template-columns: 60% 60% 60%;
-  grid-template-rows: 40% 50% 30% ;
+  display: flex;
+  justify-content: center;
+
   gap: 20px;
  // margin-left: 300px;
   //margin-left: 500px;
   app-test-card{
-    height: 100%;
+    width: 30%;
+    height: 55%;
     display: flex;
     align-self: center;
 
@@ -57,4 +65,41 @@ app-boutton{
 }
 app-test-card{
   position: relative;
+}
+
+
+mat-card{
+  width: 90%;
+  height: 800px;
+  overflow-y: scroll;
+  border-radius: 20px;
+  align-self: center;
+
+  table{
+    width: 100%;
+    ng-container{
+      width: 100%;
+      height: 100%;
+
+    }
+  }
+}
+
+
+
+td{
+
+  width: 20px;
+  height: 20px;
+
+
+.image{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+  height: 80%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
 }

@@ -10,6 +10,8 @@ import {CountrieMakerComponent} from "../countrie-maker/countrie-maker.component
 import {TestCardComponent} from "../../test-card/test-card.component";
 import {TestCardModel} from "../../test-card/test-card.model/TestCardModel";
 import {ChronoFormComponent} from "../../component/chrono-form/chrono-form.component";
+import {Element} from "../work-director-manage/work-director-manage.component";
+import {UserModel, UserServiceService} from "../../service/UserService/user-service.service";
 
 @Component({
   selector: 'app-dashbord',
@@ -28,10 +30,32 @@ export class DashbordComponent  implements OnInit{
   // @ts-ignore
   card2 : TestCardModel=new TestCardModel('chronologie', 'red',ChronoFormComponent)
 
-  constructor(private  dial: MatDialog) {}
+  ELEMENT_DATA: UserModel [] = [];
+  displayedColumns: string[] = ['image', 'name', 'email', 'statut' ,'role'];
+
+  loaded: boolean = true;
+ dataSource!: UserModel[];
+  statut!: FormGroup;
+  constructor(private  dial: MatDialog , private  userService: UserServiceService,
+              private  fb : FormBuilder
+
+  ) {}
 
 
   ngOnInit(): void {
+
+    this.userService.getAlluser().subscribe(
+      (data) => {
+        console.log("data", data)
+        this.ELEMENT_DATA = data,
+          this.dataSource = this.ELEMENT_DATA;
+        this.loaded =false
+      }
+    )
+
+    this.statut=this.fb.group({
+      statut:['',Validators.required]
+    })
 
 
   }

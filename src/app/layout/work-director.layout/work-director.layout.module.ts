@@ -8,6 +8,8 @@ import {MatInputModule} from "@angular/material/input";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {ComposantModule} from "../Composant/composant/composant.module";
 import {ReactiveFormsModule} from "@angular/forms";
+import {MatTableModule} from "@angular/material/table";
+import {MatChipsModule} from "@angular/material/chips";
 
 
 
@@ -22,7 +24,9 @@ import {ReactiveFormsModule} from "@angular/forms";
     MatInputModule,
     MatDatepickerModule,
     ComposantModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule,
+    MatChipsModule
   ]
 })
 export class WorkDirectorLayoutModule { }

@@ -1,6 +1,6 @@
 main{
   background-image: linear-gradient( rgb(77, 121, 155), rgb(127, 115, 164));
-  background-size: 30%;
+
 
   display: flex;
   overflow-x: hidden;
@@ -12,25 +12,19 @@ main{
 }
 
 app-side-bar{
-  z-index: 2;
+
   align-self: flex-start;
   width: 15%;
   height: 100%;
-  position: fixed;
+
   //z-index: 4;
 
 
 }
 
-.fake-side{
 
-  z-index: 1;
-  width: 20%;
-  height: 100%;
-  //background-color: yellow;
-
-}
-
-
-
+//router-outlet{
+//  width: 80%;
+//  height: 100%;
+//}
 

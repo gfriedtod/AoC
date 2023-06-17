@@ -1,0 +1,14 @@
+<main *ngIf="loades">
+ <div class="grid">
+   <app-project-validator *ngFor="let pro of project" (click)="navaigeteRoute(pro)" [projectModel]="pro"></app-project-validator>
+
+
+
+ </div>
+
+<!--  <app-project-manage-page [projectModel]="project"></app-project-manage-page>-->
+</main>
+
+<main *ngIf="!loades">
+  <app-loader></app-loader>
+</main>
