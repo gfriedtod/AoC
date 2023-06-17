@@ -10,6 +10,7 @@ import {ComposantModule} from "../Composant/composant/composant.module";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatTableModule} from "@angular/material/table";
 import {MatChipsModule} from "@angular/material/chips";
+import {MatSelectModule} from "@angular/material/select";
 
 
 
@@ -26,7 +27,8 @@ import {MatChipsModule} from "@angular/material/chips";
     ComposantModule,
     ReactiveFormsModule,
     MatTableModule,
-    MatChipsModule
+    MatChipsModule,
+    MatSelectModule
   ]
 })
 export class WorkDirectorLayoutModule { }

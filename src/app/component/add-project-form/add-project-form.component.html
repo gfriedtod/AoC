@@ -1,0 +1,13 @@
+<!-- form for add a new project you need to use project model mat-card anf form builder-->
+<form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+    </mat-card-content>
+
+  </mat-card>
+
+</form>

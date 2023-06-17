@@ -1,4 +1,4 @@
-<main>
+<main *ngIf="loades">
 <div class="header" [ngStyle]="{ backgroundImage: 'url(' + projectModel.imageUrl + ')'}">
   <h1>{{ projectModel.name }}</h1>
 </div>
@@ -13,6 +13,17 @@
           <p><span> pays  </span> : {{ projectModel.country }}</p>
           <p><span> localisation </span> : {{ projectModel.location }}</p>
         </div>
+      </mat-card-content>
+
+      <mat-card-content>
+        <mat-label>Qui vous soumets ce projet ?</mat-label>
+        <mat-card-content>
+          <div class="image" [ngStyle]="{ backgroundImage: 'url(' + director.imageAvatar + ')'}"></div>
+          <p><span>name :</span>{{ director.name }}</p>
+          <p><span>email :</span>{{ director.email }}</p>
+          <mat-label>{{ projectModel.userId }}</mat-label>
+        </mat-card-content>
+
       </mat-card-content>
 
     </mat-card>
@@ -55,6 +66,8 @@
     <p> <span> date de début </span>:{{ projectModel.start }} <span> date de fin </span> :{{  projectModel.end }}</p>
   </mat-card-content>
 </mat-card>
+
+
 
   <div class="link-doc">
     <a  [href]="projectModel.devis">
@@ -101,4 +114,7 @@
 
 
 
+</main>
+<main *ngIf="!loades">
+  <app-loader></app-loader>
 </main>

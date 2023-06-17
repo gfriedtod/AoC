@@ -4,6 +4,7 @@ import {Router} from "@angular/router";
 import {BouttonService} from "../../component/boutton/bouttonService/BouttonService";
 import {HttpClient} from "@angular/common/http";
 import {environement} from "../../../Environement";
+import {UserModel} from "../../service/UserService/user-service.service";
 
 @Component({
   selector: 'app-project-manage-page',
@@ -14,6 +15,9 @@ export class ProjectManagePageComponent implements OnInit{
  projectModel!: ProjectModel;
   validate: BouttonService = new BouttonService('validate' , true);
   dismiss: BouttonService = new BouttonService('dismiss' );
+  director!: UserModel ;
+  loades: boolean = false;
+
 
  constructor( private  route : Router , private  http : HttpClient) {
  }
@@ -24,6 +28,14 @@ export class ProjectManagePageComponent implements OnInit{
 
    // @ts-ignore
    this.projectModel = history.state.project;
+
+   this.http.get('http://localhost:8080/api/user/' + this.projectModel.userId).subscribe(
+     data => {
+       this.director = data as UserModel;
+       console.log("may data " , data )
+       this.loades=true
+     }
+   )
 
  }
 

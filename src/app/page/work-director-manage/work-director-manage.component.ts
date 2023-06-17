@@ -6,6 +6,13 @@ import {DateRange, MatCalendar} from "@angular/material/datepicker";
 import {push} from "@angular/fire/database";
 import {Router} from "@angular/router";
 import {UserModel, UserServiceService} from "../../service/UserService/user-service.service";
+import {Observable} from "rxjs";
+import {WorkingModel} from "../project-page/project-intro/WorkModel/WorkModel";
+import {WorksModel} from "../project-page/model/WorksModel";
+
+import {HttpClient} from "@angular/common/http";
+import {environement} from "../../../Environement";
+
 
 export interface Element {
   name: string;
@@ -30,7 +37,10 @@ export class WorkDirectorManageComponent  implements OnInit {
 
   user! : UserModel ;
 
-  constructor(private formBuilder: FormBuilder , private service : UploadFormsService , private router : Router , private  profile :UserServiceService) {}
+  works$! : Observable<WorksModel[]>
+   options: WorksModel[]=[];
+
+  constructor(private formBuilder: FormBuilder , private service : UploadFormsService , private router : Router , private  profile :UserServiceService , private  http : HttpClient) {}
 
   ngOnInit() {
 
@@ -53,8 +63,23 @@ export class WorkDirectorManageComponent  implements OnInit {
       beneficiary : new FormControl('',Validators.required),
       result : new FormControl('',Validators.required),
       impact : new FormControl('',Validators.required),
-      imageUrl : new FormControl('/assets/building4.jpg')
+      imageUrl : new FormControl('/assets/building4.jpg'),
+      oeuvre : new FormControl('',Validators.required),
     });
+
+    this.form.get('country')?.valueChanges.subscribe(
+      (country) => {
+
+        this.http.get<WorksModel[]>(environement+`/app/all/${country}`).subscribe(
+          (data) => {
+
+            this.options = data;
+          }
+
+        )
+
+      }
+    )
   }
 
 
@@ -76,6 +101,7 @@ export class WorkDirectorManageComponent  implements OnInit {
   ];
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = this.ELEMENT_DATA;
+  // options: Object=['cameroun', 'guimee' ,'tchad'];
   onSelectedChanged(calendar: Date) {
 
      this.selection.push( calendar);

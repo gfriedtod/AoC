@@ -58,6 +58,7 @@ import { ProjectValidatorComponent } from './component/project-validator/project
 import { LoaderComponent } from './component/loader/loader.component';
 import { ProjectValidateAdminPageComponent } from './page/project-validate-admin-page/project-validate-admin-page.component';
 import { ProjectManagePageComponent } from './page/project-manage-page/project-manage-page.component';
+import { AddProjectFormComponent } from './component/add-project-form/add-project-form.component';
 
 //
 // import { AngularFireModule } from '@angular/fire';
@@ -95,6 +96,7 @@ export function playerFactory() {
       ChronoFormComponent,
 
       WorkDirectorLayoutComponent,
+       AddProjectFormComponent,
 
 
 

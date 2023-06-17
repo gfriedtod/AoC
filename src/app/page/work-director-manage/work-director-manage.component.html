@@ -103,14 +103,29 @@
 
 <!--  apport local-->
 
-<mat-card>
+<mat-card class="select">
   <mat-card-content>
     <mat-card-subtitle>
       Planning d'execution
     </mat-card-subtitle>
     <app-image-selector (fileDataReady)="reciveFile($event)" [id]="'planning'"></app-image-selector>
   </mat-card-content>
+
+
 </mat-card>
+
+  <mat-card>
+    <mat-card-content>
+
+      <mat-form-field>
+        <mat-label>oeuvre</mat-label>
+        <mat-select  formControlName="oeuvre">
+          <mat-option *ngFor="let option of options" [value]="option.id">{{option.title}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </mat-card-content>
+  </mat-card>
 
   <mat-card class="submit">
     <mat-card-content>
@@ -123,9 +138,13 @@
 
 </mat-card>
     <mat-card  class="card">
+<mat-card-content>
+  <mat-calendar  (_userSelection)="onSelectedChanged(selected)"  [(selected)]="selected"></mat-calendar>
+  <mat-error *ngIf="dateInvalid">incorrect range choose please choose 2 date</mat-error>
 
-      <mat-calendar  (_userSelection)="onSelectedChanged(selected)"  [(selected)]="selected"></mat-calendar>
-      <mat-error *ngIf="dateInvalid">incorrect range choose please choose 2 date</mat-error>
+</mat-card-content>
+
+
 
     </mat-card>
 

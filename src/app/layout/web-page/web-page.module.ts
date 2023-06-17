@@ -38,6 +38,7 @@ import {UserProfileComponent} from "../../page/user-profile/user-profile.compone
 import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import {AuthGardService} from "../../service/routeGard/auth-gard.service";
+import {MatIconModule} from "@angular/material/icon";
 
 
 
@@ -76,26 +77,27 @@ import {AuthGardService} from "../../service/routeGard/auth-gard.service";
     UserProfileComponent
 
   ],
-  imports: [
+    imports: [
 
-    CommonModule,
-    RouterModule.forChild(webPageRoutingModule),
+        CommonModule,
+        RouterModule.forChild(webPageRoutingModule),
 
-    LottieModule.forRoot({player: playerFactory}),
-    // pageRouteModule,
-    //  RouterModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatPaginatorModule,
-    FormsModule,
-    MatListModule,
-    ComposantModule,
-    MatCardModule,
-    ReactiveFormsModule,
-    MatInputModule,
+        LottieModule.forRoot({player: playerFactory}),
+        // pageRouteModule,
+        //  RouterModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatPaginatorModule,
+        FormsModule,
+        MatListModule,
+        ComposantModule,
+        MatCardModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        MatIconModule,
 
 
-  ],
+    ],
   exports: [
     MenuBarComponent,
     FooterComponent,

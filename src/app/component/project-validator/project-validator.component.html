@@ -1,6 +1,6 @@
 <div class="card">
 
-  <img [src]="projectModel.imageUrl" class="icon-card" alt="">
+  <div [ngStyle]="{ backgroundImage: 'url('+projectModel.imageUrl+')'}" class="icon-card"></div>
   <div class="details">
     <div class="title-card">{{ projectModel.name }}</div>
     <p>{{ projectModel.country }}</p>
