@@ -8,6 +8,47 @@
       </mat-form-field>
     </mat-card-content>
 
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Objectif</mat-label>
+        <input matInput formControlName="objectif">
+      </mat-form-field>
+      <app-image-selector (fileDataReady)="receiveFileData($event)" [id]="'image1'"></app-image-selector>
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>But</mat-label>
+        <input matInput formControlName="but">
+      </mat-form-field>
+      <app-image-selector (fileDataReady)="receiveFileData($event)" [id]="'image2'"></app-image-selector>
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Justification</mat-label>
+        <input matInput formControlName="justification">
+      </mat-form-field>
+      <app-image-selector (fileDataReady)="receiveFileData($event)" [id]="'image3'"></app-image-selector>
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Impact</mat-label>
+        <input matInput formControlName="impact">
+      </mat-form-field>
+      <app-image-selector (fileDataReady)="receiveFileData($event)" [id]="'image4'"></app-image-selector>
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Beneficiere</mat-label>
+        <input matInput formControlName="beneficiary">
+      </mat-form-field>
+      <app-image-selector (fileDataReady)="receiveFileData($event)" [id]="'image5'"></app-image-selector>
+
+    </mat-card-content>
   </mat-card>
+
 
 </form>

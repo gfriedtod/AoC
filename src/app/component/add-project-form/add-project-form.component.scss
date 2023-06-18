@@ -1,0 +1,15 @@
+form{
+  width: 800px;
+  mat-card{
+    width: 100%;
+    mat-card-content{
+      width: 100%;
+      mat-form-field{
+        width: 100%;
+        input{
+          width: 90%;
+        }
+      }
+    }
+  }
+}

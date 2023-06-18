@@ -5,6 +5,8 @@ import {BouttonService} from "../../component/boutton/bouttonService/BouttonServ
 import {HttpClient} from "@angular/common/http";
 import {environement} from "../../../Environement";
 import {UserModel} from "../../service/UserService/user-service.service";
+import {MatDialog} from "@angular/material/dialog";
+import {AddProjectFormComponent} from "../../component/add-project-form/add-project-form.component";
 
 @Component({
   selector: 'app-project-manage-page',
@@ -19,7 +21,7 @@ export class ProjectManagePageComponent implements OnInit{
   loades: boolean = false;
 
 
- constructor( private  route : Router , private  http : HttpClient) {
+ constructor( private  route : Router , private  http : HttpClient , private  dialog : MatDialog) {
  }
 
  ngOnInit(): void {
@@ -39,4 +41,11 @@ export class ProjectManagePageComponent implements OnInit{
 
  }
 
+  validated() {
+
+   this.dialog.open(AddProjectFormComponent , {
+     data: this.projectModel
+   })
+
+  }
 }

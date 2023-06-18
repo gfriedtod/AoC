@@ -19,7 +19,12 @@ export  class ProjectModel{
     public impact: string,
     public id: string,
     public Status : string,
-    public imageUrl: string
+    public imageUrl: string,
+    public image1: string,
+    public image2: string,
+    public image3: string,
+    public image4: string,
+    public image5: string
   ) {
   }
 }

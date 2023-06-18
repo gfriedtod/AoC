@@ -57,6 +57,8 @@
 
 
 
+
+
     </mat-card>
 
   </div>
@@ -95,7 +97,7 @@
       <mat-card>
         <mat-card-content>
 
-          <app-boutton [stateview]="validate"></app-boutton>
+          <app-boutton (click)="validated()" [stateview]="validate"></app-boutton>
         </mat-card-content>
       </mat-card>
 
