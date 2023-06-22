@@ -8,6 +8,7 @@ import {
   ProjectValidateAdminPageComponent
 } from "../../page/project-validate-admin-page/project-validate-admin-page.component";
 import {ProjectManagePageComponent} from "../../page/project-manage-page/project-manage-page.component";
+import {countriesViewResolvResolver} from "../../resolver/countries-view-resolv/countries-view-resolv.resolver";
 
 
 export const  adminPageRoute: Routes= [
@@ -17,7 +18,7 @@ export const  adminPageRoute: Routes= [
   },
   { path: 'user-manage' , component:UserManageComponent},
 
-  { path:'countries-manage' , component:CountrieManagementComponent , resolve:{ card : countrieLoaderResolver}},
+  { path:'countries-manage' , component:CountrieManagementComponent , resolve:{ card : countriesViewResolvResolver}},
 
   { path: 'manage-project' , component:ProjectValidateAdminPageComponent },
 

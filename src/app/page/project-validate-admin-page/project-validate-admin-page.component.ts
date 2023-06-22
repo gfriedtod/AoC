@@ -20,7 +20,7 @@ export class ProjectValidateAdminPageComponent implements OnInit{
   loades : boolean = false
 
   ngOnInit(): void {
-    this.http.get<ProjectModel[]>(environement+'/project/all').subscribe(
+    this.http.get<ProjectModel[]>(environement+'/project/atend').subscribe(
 
       data => {
         console.log(

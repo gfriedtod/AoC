@@ -29,9 +29,14 @@ export class ProjectManagePageComponent implements OnInit{
 
 
    // @ts-ignore
+   //jer ecuperer les informations du projet injecter sur la  roiute'
+
    this.projectModel = history.state.project;
 
-   this.http.get('http://localhost:8080/api/user/' + this.projectModel.userId).subscribe(
+/* je recupere les informations de tous les directeur d'oeuvres
+* elle vont nous etres utiles pour identifiere qui a preoposer le projet s*
+*/
+   this.http.get(environement+'/user/' + this.projectModel.userId).subscribe(
      data => {
        this.director = data as UserModel;
        console.log("may data " , data )
@@ -44,6 +49,9 @@ export class ProjectManagePageComponent implements OnInit{
   validated() {
 
    this.dialog.open(AddProjectFormComponent , {
+
+     //j'injecte les donnes du projets dans le formulaire de validation ,
+
      data: this.projectModel
    })
 

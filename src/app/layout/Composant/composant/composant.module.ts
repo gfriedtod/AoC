@@ -45,6 +45,10 @@ import {MatButtonModule} from "@angular/material/button";
 import {ProfilePresentComponent} from "../../../component/profile-present/profile-present.component";
 import {LoaderComponent} from "../../../component/loader/loader.component";
 import {ProjectValidatorComponent} from "../../../component/project-validator/project-validator.component";
+import {ChronoFormComponent} from "../../../component/chrono-form/chrono-form.component";
+import {AddProjectFormComponent} from "../../../component/add-project-form/add-project-form.component";
+import {CardPresentComponent} from "../../../component/card-present/card-present.component";
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 
 
@@ -86,6 +90,12 @@ import {ProjectValidatorComponent} from "../../../component/project-validator/pr
     CountrieManagementComponent,
     LoaderComponent,
     ProjectValidatorComponent,
+    ChronoFormComponent,
+
+
+    AddProjectFormComponent,
+
+    CardPresentComponent,
 
   ],
   exports: [
@@ -107,7 +117,8 @@ import {ProjectValidatorComponent} from "../../../component/project-validator/pr
     BurgerButtonComponent,
     ProfilePresentComponent,
     LoaderComponent,
-    ProjectValidatorComponent
+    ProjectValidatorComponent,
+    CardPresentComponent
   ],
   imports: [
     CommonModule,
@@ -123,6 +134,7 @@ import {ProjectValidatorComponent} from "../../../component/project-validator/pr
     MatExpansionModule,
     LottieComponent,
     MatButtonModule,
+    MatDatepickerModule,
   ]
 })
 export class ComposantModule { }

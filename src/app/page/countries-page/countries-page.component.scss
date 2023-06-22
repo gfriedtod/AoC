@@ -21,11 +21,16 @@ img{
     margin-left: 80px;
     font-size: 80px;
     align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
-    img{
+    .image{
 
       width: 80px;
       height: 80px;
+      background-size: cover;
+      border-radius: 50%;
     }
   }
 }

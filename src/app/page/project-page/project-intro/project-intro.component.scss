@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: 'poppins' , 'sans-serif';
 }
 .main-composant{
   //position: absolute;
@@ -73,11 +74,12 @@
     }
   }
 }
-img{
+.image{
   //align-self: center;
   width: 45%;
   height: 680px;
   position: relative;
+  background-size: cover;
  // z-index: 1;
   //flex: 2;
 

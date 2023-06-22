@@ -14,6 +14,7 @@ export class UserServiceService {
   public authKey= "profile";
 
   private _AuthToken! : UserModel ;
+
   isAuth: boolean = false;
   getAuthKey(): string {
     return this.authKey;

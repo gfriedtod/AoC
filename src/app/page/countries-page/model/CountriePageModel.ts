@@ -18,6 +18,7 @@ export class CountriePageModel{
     public image3: string,
     public image4: string,
     public image5: string,
+    public countries: string
   ) {
   }
 }

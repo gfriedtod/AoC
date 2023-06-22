@@ -12,6 +12,8 @@ import {HttpClient} from "@angular/common/http";
 import {delay, map, Observable} from "rxjs";
 import {WorksModel} from "./model/WorksModel";
 import {PAUSE} from "@angular/cdk/keycodes";
+import {environement} from "../../../Environement";
+import {ProjectModel} from "../../model/ProjectModel";
 
 @Component({
   selector: 'app-project-page',
@@ -25,8 +27,8 @@ export class ProjectPageComponent implements  OnInit {
   identity!: IdentityModel;
   cardpresentation!: CardProjectPresentationModel ;
   mission!: MissionWork;
-  cardPro!: CardProModel[] ;
-  subList!: CardProModel[];
+  cardPro!: ProjectModel[] ;
+  subList!: ProjectModel[];
 
   number: number = 8;
 
@@ -50,15 +52,24 @@ export class ProjectPageComponent implements  OnInit {
   ngOnInit(): void {
 
     // @ts-ignore
-    this.Works =this.http.get( `http://localhost:8080/api/works/${this.route.snapshot.params['id']}`)
+    this.Works =this.http.get( environement+'/works/'+this.route.snapshot.params['id'])
 
     this.work = this.Works.pipe(
       map(
-        data => data
+        data =>{
+          console.log("the data ",data)
+          return data
+        }
       )
     )
 
+    this.http.get<ProjectModel[]>(environement+'/project/works/'+this.route.snapshot.params['id']).subscribe(
+      res =>{
+        this.cardPro = res
+          this.subList = this.cardPro.slice( 0, this.number);
 
+      }
+    )
     this.work.subscribe(async data => {
 
 
@@ -67,6 +78,7 @@ export class ProjectPageComponent implements  OnInit {
         this.identity = new IdentityModel(data.image2, data.identitytitle, data.identitydescription);
         this.mission = new MissionWork(data.missiontitle, data.image3, data.missiondescription, data.image4);
         this.project = new WorkingModel(data.title, data.objectif, data.image1)
+
 
       this.view =true
 
@@ -77,11 +89,9 @@ export class ProjectPageComponent implements  OnInit {
     this.cardpresentationmission = new  CardProjectPresentationModel('assets/project-mission.gif','Mission','');
     this.cardpresentation = new CardProjectPresentationModel( 'assets/project-identity.gif','Project','');
 
-    this.cardPro = [
-    ]
     this.seemore=new BouttonService( 'see more', )
     this.seeless=new BouttonService( 'see less', )
-    this.subList = this.cardPro.slice( 0, this.number);
+
 
 
   }

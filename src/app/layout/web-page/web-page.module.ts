@@ -39,6 +39,10 @@ import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import {AuthGardService} from "../../service/routeGard/auth-gard.service";
 import {MatIconModule} from "@angular/material/icon";
+import {countriesViewResolvResolver} from "../../resolver/countries-view-resolv/countries-view-resolv.resolver";
+import {WorkDirectorLayoutComponent} from "../work-director.layout/work-director.layout.component";
+import {CountriesViewPageComponent} from "../../page/countries-view-page/countries-view-page.component";
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 
 
@@ -74,30 +78,33 @@ import {MatIconModule} from "@angular/material/icon";
     CountriesPageComponent,
     ChronoPageComponent,
     ProjectPageComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    WorkDirectorLayoutComponent,
+    CountriesViewPageComponent,
 
   ],
-    imports: [
+  imports: [
 
-        CommonModule,
-        RouterModule.forChild(webPageRoutingModule),
+    CommonModule,
+    RouterModule.forChild(webPageRoutingModule),
 
-        LottieModule.forRoot({player: playerFactory}),
-        // pageRouteModule,
-        //  RouterModule,
-        MatFormFieldModule,
-        MatSelectModule,
-        MatPaginatorModule,
-        FormsModule,
-        MatListModule,
-        ComposantModule,
-        MatCardModule,
-        ReactiveFormsModule,
-        MatInputModule,
-        MatIconModule,
+    LottieModule.forRoot({player: playerFactory}),
+    // pageRouteModule,
+    //  RouterModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatPaginatorModule,
+    FormsModule,
+    MatListModule,
+    ComposantModule,
+    MatCardModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatIconModule,
+    MatSidenavModule,
 
 
-    ],
+  ],
   exports: [
     MenuBarComponent,
     FooterComponent,
@@ -110,7 +117,8 @@ import {MatIconModule} from "@angular/material/icon";
 
   ],
   providers: [
-    AuthGardService
+    AuthGardService,
+    countriesViewResolvResolver
   ]
 
 })

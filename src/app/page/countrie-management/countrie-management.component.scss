@@ -1,9 +1,9 @@
 main{
   display: flex;
   flex-direction: column;
-  //justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 20px;
+  gap: 120px;
   //position: relative;
   //background-color: red;
   position: absolute;
@@ -29,7 +29,7 @@ main{
 
     flex-wrap: wrap;
 
-    gap: 50px;
+    gap: 20px;
     app-countries-presentations{
       width: 25%;
       height: 500px;

@@ -65,6 +65,7 @@ export class WorkDirectorManageComponent  implements OnInit {
       impact : new FormControl('',Validators.required),
       imageUrl : new FormControl('/assets/building4.jpg'),
       oeuvre : new FormControl('',Validators.required),
+      Status : new FormControl('attend',Validators.required),
     });
 
     this.form.get('country')?.valueChanges.subscribe(

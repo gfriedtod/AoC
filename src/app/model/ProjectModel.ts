@@ -1,6 +1,7 @@
 export  class ProjectModel{
 
 
+
   constructor(
     public name: string,
     public contexte: string,
@@ -24,7 +25,9 @@ export  class ProjectModel{
     public image2: string,
     public image3: string,
     public image4: string,
-    public image5: string
+    public image5: string,
+    public objectif : string,
+    public oeuvre : string
   ) {
   }
 }

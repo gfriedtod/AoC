@@ -12,6 +12,7 @@ import {TestCardModel} from "../../test-card/test-card.model/TestCardModel";
 import {ChronoFormComponent} from "../../component/chrono-form/chrono-form.component";
 import {Element} from "../work-director-manage/work-director-manage.component";
 import {UserModel, UserServiceService} from "../../service/UserService/user-service.service";
+import {AddUserFormComponent} from "../../component/add-user-form/add-user-form.component";
 
 @Component({
   selector: 'app-dashbord',
@@ -37,12 +38,21 @@ export class DashbordComponent  implements OnInit{
  dataSource!: UserModel[];
   statut!: FormGroup;
   constructor(private  dial: MatDialog , private  userService: UserServiceService,
-              private  fb : FormBuilder
+              private  fb : FormBuilder, private http : HttpClient
 
   ) {}
 
 
   ngOnInit(): void {
+    this.http.post('http://localhost:6080/client/login/john.doe@example.com/password123', {
+      dateDebut:"2023-06-18T19:07:21.200Z",
+      dateFin:"2023-06-18T19:07:21.200Z",
+
+    }).subscribe(
+      (data) => {
+        console.log("victoire test data " , data)
+      }
+    )
 
     this.userService.getAlluser().subscribe(
       (data) => {
@@ -73,4 +83,9 @@ export class DashbordComponent  implements OnInit{
   }
 
 
+  openDialog() {
+    console.log("open.......")
+    // @ts-ignore
+    this.dial.open(AddUserFormComponent);
+  }
 }

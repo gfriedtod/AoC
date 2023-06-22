@@ -40,10 +40,11 @@ h2{
 
   }
 
-  img{
+  .image{
     width: 50%;
     height: 100%;
     border-radius: 20px;
+    background-size: cover;
     @media screen and (max-width: 1225px){
      // font-size: 180%;
       width: 100%;

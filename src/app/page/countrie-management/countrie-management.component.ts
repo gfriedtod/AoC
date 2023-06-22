@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Route, Router} from "@angular/router";
 import {map, Observable} from "rxjs";
 import {CountriesMangeModel} from "../../component/countries-manage-card/model/CountriesMangeModel";
+import {CountriePageModel} from "../countries-page/model/CountriePageModel";
 
 @Component({
   selector: 'app-countrie-management',
@@ -11,7 +12,7 @@ import {CountriesMangeModel} from "../../component/countries-manage-card/model/C
 export class CountrieManagementComponent implements OnInit {
 
 
-  Cards!: Observable<CountriesMangeModel[]> ;
+  Cards!: Observable<CountriePageModel[]> ;
   constructor( private  route : ActivatedRoute , private  router : Router) {
   }
 
@@ -26,4 +27,8 @@ export class CountrieManagementComponent implements OnInit {
   }
 
 
+  navigate(card: CountriePageModel) {
+
+    this.router.navigate(["countries"], { state : { countrie: card } });
+  }
 }

@@ -15,6 +15,7 @@ import {WorksFormComponent} from "../../works-form/works-form.component";
 })
 export class CountriesPageComponent implements OnInit{
   public id!: string;
+ name!: string;
 
   constructor(private route : ActivatedRoute , private  router : Router , private countrieService : CountriePageService , private dial : MatDialog) {
   }
@@ -37,7 +38,7 @@ export class CountriesPageComponent implements OnInit{
   Description1!: string;
   Description2!: string;
 
-  countries! : Observable<CountriePageModel>
+  countries : CountriePageModel[]=[];
   image1!: string;
   image2!: string;
   image3!: string;
@@ -45,10 +46,12 @@ export class CountriesPageComponent implements OnInit{
   image5!: string;
 
   ngOnInit() {
-this.countries = this.countrieService.gtCountrieById(this.route.snapshot.params['id'])
+//this.countries = this.countrieService.gtCountrieById(this.route.snapshot.params['id'])
+    this.countries.push(history.state.countrie);
+    this.countries.map(
 
-    this.countries.subscribe(
       (data) => {
+        console.log("ok")
         this.id = data.id;
         console.log(this.id)
         this.Statut = data.statut;
@@ -70,6 +73,7 @@ this.countries = this.countrieService.gtCountrieById(this.route.snapshot.params[
         this.image3 = data.image3;
         this.image4 = data.image4;
         this.image5 = data.image5;
+        this.name = data.countries
 
 
         this.cardPro = this.countrieService.getCardProById(this.id)

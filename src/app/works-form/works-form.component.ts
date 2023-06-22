@@ -38,6 +38,8 @@ export class WorksFormComponent implements  OnInit{
   }
   ngOnInit(): void {
 
+
+
     this.myForm = this.fb.group({
       pageId: `${this.data.id}`,
       title: '',

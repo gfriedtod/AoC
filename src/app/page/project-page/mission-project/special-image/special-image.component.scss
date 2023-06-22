@@ -16,6 +16,8 @@ position: relative;
     width: 100%;
     height: 90%;
     border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
 
@@ -26,6 +28,8 @@ position: relative;
   justify-content: center;
   width: 100%;
   height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
  // border: 3px solid ;
   @media screen and (max-width: 1225px){
     flex-direction: column-reverse;
@@ -35,6 +39,8 @@ position: relative;
 .sub-img{
   align-self: flex-end;
   //align-self: flex-end;
+  background-size: cover;
+  background-repeat: no-repeat;
  position: absolute;
   z-index: 2;
   border-radius: 20px;

@@ -10,7 +10,8 @@
       </div>
 
 
-    <img [src]="image" alt="{{ name }}" />
+    <div class="image" [ngStyle]="{backgroundImage:'url(' + image + ')'}"  >
+    </div>
     </div>
     <app-sear-bar></app-sear-bar>
   </div>

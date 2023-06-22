@@ -6,13 +6,16 @@ main{
   display: flex;
 
   justify-content: space-between;
+  //align-items: center;
 
   form{
     width: 50%;
-    height: 80%;
+    height: 95%;
     align-self: center;
 
-    display: flex;padding-bottom: 50px;
+    display: flex;
+    padding-bottom: 50px;
+    margin-top: 50px;
 
     mat-card{
       display: flex;
@@ -37,7 +40,7 @@ main{
   app-profile-present{
     margin-top: 60px;
    // align-self: center;
-    margin-right: 60px;
+    margin-right: 120px;
     width: 20%;
 
     height: 500px;
@@ -52,5 +55,6 @@ input{
 
 app-boutton{
   align-self: center;
+  padding-bottom: 20px;
 
 }

@@ -59,6 +59,9 @@ import { LoaderComponent } from './component/loader/loader.component';
 import { ProjectValidateAdminPageComponent } from './page/project-validate-admin-page/project-validate-admin-page.component';
 import { ProjectManagePageComponent } from './page/project-manage-page/project-manage-page.component';
 import { AddProjectFormComponent } from './component/add-project-form/add-project-form.component';
+import { CountriesViewPageComponent } from './page/countries-view-page/countries-view-page.component';
+import { CardPresentComponent } from './component/card-present/card-present.component';
+import { AddUserFormComponent } from './component/add-user-form/add-user-form.component';
 
 //
 // import { AngularFireModule } from '@angular/fire';
@@ -93,10 +96,8 @@ export function playerFactory() {
 
 
     AuthenticationLayoutComponent,
-      ChronoFormComponent,
+      AddUserFormComponent,
 
-      WorkDirectorLayoutComponent,
-       AddProjectFormComponent,
 
 
 
@@ -173,14 +174,14 @@ export function playerFactory() {
     countrieLoaderResolver
   ],
   bootstrap: [AppComponent],
-  exports: [
+    exports: [
 
 
 
-    //ImageSelectorComponent
+        //ImageSelectorComponent
 
 
-  ],
+    ],
 
 
 })

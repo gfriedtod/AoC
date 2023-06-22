@@ -1,11 +1,10 @@
 
 <main>
-  <mat-card [ngStyle]="{ backgroundColor : color }">
+  <mat-card (click)="openDialog()">
     <h1>{{ title }}</h1>
     <mat-card-content>
       <mat-divider></mat-divider>
 
-      <app-boutton [stateview]="dialog" (click)="openDialog()"></app-boutton>
     </mat-card-content>
 
   </mat-card>

@@ -9,14 +9,18 @@ import {countriePageResolver} from "../../resolver/countrie-page.resolv/countrie
 import {UserProfileComponent} from "../../page/user-profile/user-profile.component";
 import {canActivate} from "@angular/fire/auth-guard";
 import {AuthGardService} from "../../service/routeGard/auth-gard.service";
+import {CountriesViewPageComponent} from "../../page/countries-view-page/countries-view-page.component";
+import {countrieLoaderResolver} from "../../resolver/countrie-loader.resov/countrie-loader.resolver";
+import {countriesViewResolvResolver} from "../../resolver/countries-view-resolv/countries-view-resolv.resolver";
 
 
 export const webPageRoutingModule : Routes  =[
  // {path: 'home', component: WebPageComponent },
   { path: 'home', component: HomePageComponent },
   { path: 'works/:id', component: ProjectPageComponent },
+  { path: 'worker', component: CountriesViewPageComponent , resolve:{ card :countriesViewResolvResolver}},
   {path: 'about-us', component:ChronoPageComponent },
-  { path: 'countries/:id', component:  CountriesPageComponent  ,
+  { path: 'countries', component:  CountriesPageComponent  ,
     // resolve  : { card : countriePageResolver }
   },
 

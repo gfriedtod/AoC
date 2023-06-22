@@ -4,7 +4,7 @@
   <div class="grid">
 
 
-      <app-countries-presentations *ngFor=" let card of Cards | async" [card]="card"></app-countries-presentations>
+      <app-card-present (click)="navigate(card)" *ngFor=" let card of Cards | async"  [cardModel]="card"></app-card-present>
 
 
 

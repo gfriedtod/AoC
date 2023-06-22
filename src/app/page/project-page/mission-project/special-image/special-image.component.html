@@ -1,10 +1,12 @@
 <div class="big-main">
   <div class="main">
 
-    <img class="main-img" [src]="SpecialModel.image1"alt="">
+<!--    <img class="main-img" [src]="SpecialModel.image1"alt="">-->
+    <div class="image main-img" [ngStyle]="{backgroundImage:'url(' + SpecialModel.image1 + ')'}"></div>
 
   </div>
-  <img class="sub-img" [src]="SpecialModel.image2" alt="">
+<!--  <img class="sub-img" [src]="SpecialModel.image2" alt="">-->
+  <div class="image sub-img" [ngStyle]="{backgroundImage:'url(' + SpecialModel.image2 + ')'}"></div>
 
 </div>
 

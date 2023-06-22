@@ -1,6 +1,7 @@
 <main>
   <div [ngStyle]="{backgroundImage: 'url(' + image2 + ')'}" class="main-presentations">
-    <h1>{{ status }} <img [src]="image1" alt=""></h1>
+    <h1>{{ name }}  <div class="image" [ngStyle]="{ backgroundImage : 'url('+image1+')'}"></div>
+    </h1>
   </div>
 
   <div class="details-countrues">'
@@ -18,17 +19,18 @@
 
   </ul>
 
-<!--<p>{{ Description1 | lowercase }}</p>-->
-    <img [src]="image2" alt="">
+<p>{{ Description1 | lowercase }}</p>
+<!--    <img [src]="image2" alt="">-->
+    <div class="image" [ngStyle]="{ backgroundImage : 'url('+image2+')'}"></div>
   </div>
 <div class="div">
-  <h1>Germany</h1>
-  <img [src]="image4" alt="">
+  <h1>{{name}}</h1>
+  <div class="image" [ngStyle]="{ backgroundImage : 'url('+image4+')'}"></div>
 </div>
 
 
     <div class="second">
-      <img [src]="image5" alt="">
+      <div class="image" [ngStyle]="{ backgroundImage : 'url('+image5+')'}"></div>
 
 <ul>
 
@@ -37,6 +39,7 @@
         <li>Population :   <span>{{ Population }} </span></li>
         <li>Capital :  <span> {{ Capital }}  </span></li>
 </ul>
+      <p>{{ Description2 | lowercase }}</p>
       </div>
 
 

@@ -7,10 +7,12 @@ main{
   //position: relative;
   //background-color: red;
   position: absolute;
+ // justify-content: space-evenly;
 
  // background-color: #0b0a0a;
   width: 85%;
   height: 100%;
+  gap: 100px;
   overflow-y: scroll;
 
 //  overflow-x: hidden;
@@ -33,13 +35,14 @@ app-boutton{
   height: 600px;
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 
   gap: 20px;
  // margin-left: 300px;
   //margin-left: 500px;
   app-test-card{
     width: 30%;
-    height: 55%;
+    height: 150%;
     display: flex;
     align-self: center;
 
@@ -69,9 +72,9 @@ app-test-card{
 
 
 mat-card{
-  width: 90%;
+  width: 95%;
   height: 800px;
-  overflow-y: scroll;
+  //overflow-y: scroll;
   border-radius: 20px;
   align-self: center;
 
@@ -96,10 +99,16 @@ td{
 .image{
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 80%;
-  height: 80%;
+  width: 50px;
+  height: 50px;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
 }
+}
+.zone{
+  display: flex;
+  align-items: flex-end;
+  width: 95%;
+  justify-content: flex-end;
 }
