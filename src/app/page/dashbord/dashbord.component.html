@@ -48,6 +48,10 @@
       <!-- Data Rows -->
       <tr mat-row *matRowDef="let element; columns: displayedColumns;"></tr>
     </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"
+                   [pageSize]="5"
+                   [length]="dataSource.length"
+                 (page)="onPaginatorChange($event)" ></mat-paginator>
   </mat-card>
 
 </main>

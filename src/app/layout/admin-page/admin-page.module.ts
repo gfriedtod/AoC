@@ -36,6 +36,7 @@ import {
   ProjectValidateAdminPageComponent
 } from "../../page/project-validate-admin-page/project-validate-admin-page.component";
 import {ProjectManagePageComponent} from "../../page/project-manage-page/project-manage-page.component";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 
 
@@ -91,6 +92,7 @@ import {ProjectManagePageComponent} from "../../page/project-manage-page/project
     ComposantModule,
     MatTableModule,
     MatButtonToggleModule,
+    MatPaginatorModule,
 
 
   ]

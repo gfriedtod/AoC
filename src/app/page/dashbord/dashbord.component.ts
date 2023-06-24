@@ -13,6 +13,7 @@ import {ChronoFormComponent} from "../../component/chrono-form/chrono-form.compo
 import {Element} from "../work-director-manage/work-director-manage.component";
 import {UserModel, UserServiceService} from "../../service/UserService/user-service.service";
 import {AddUserFormComponent} from "../../component/add-user-form/add-user-form.component";
+import {PageEvent} from "@angular/material/paginator";
 
 @Component({
   selector: 'app-dashbord',
@@ -44,21 +45,21 @@ export class DashbordComponent  implements OnInit{
 
 
   ngOnInit(): void {
-    this.http.post('http://localhost:6080/client/login/john.doe@example.com/password123', {
-      dateDebut:"2023-06-18T19:07:21.200Z",
-      dateFin:"2023-06-18T19:07:21.200Z",
-
-    }).subscribe(
-      (data) => {
-        console.log("victoire test data " , data)
-      }
-    )
+    // this.http.post('http://localhost:6080/client/login/john.doe@example.com/password123', {
+    //   dateDebut:"2023-06-18T19:07:21.200Z",
+    //   dateFin:"2023-06-18T19:07:21.200Z",
+    //
+    // }).subscribe(
+    //   (data) => {
+    //     console.log("victoire test data " , data)
+    //   }
+    // )
 
     this.userService.getAlluser().subscribe(
       (data) => {
         console.log("data", data)
         this.ELEMENT_DATA = data,
-          this.dataSource = this.ELEMENT_DATA;
+          this.dataSource = this.ELEMENT_DATA.slice(0, 5);
         this.loaded =false
       }
     )
@@ -87,5 +88,14 @@ export class DashbordComponent  implements OnInit{
     console.log("open.......")
     // @ts-ignore
     this.dial.open(AddUserFormComponent);
+  }
+
+  onPaginatorChange($event: PageEvent) {
+
+   let  startIndex = $event.pageIndex * $event.pageSize;
+   let endIndex = startIndex + $event.pageSize;
+   this.dataSource = this.ELEMENT_DATA.slice(startIndex, endIndex);
+
+
   }
 }
