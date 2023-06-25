@@ -3,7 +3,7 @@ main{
 display: flex;
 
   flex-direction: column;
-  gap: 200px;
+  //gap: 200px;
   height:  100%;
   width: 100%;
   //align-items: center;
@@ -23,8 +23,9 @@ app-project-intro{
 
   align-self: center;
   width: 90%;
+  margin-bottom: 100px;
   //background-color: rebeccapurple;
-  height: 30%;
+//  height: 30%;
   @media screen and (max-width: 1225px){
     width: 100%;
 
@@ -36,8 +37,9 @@ app-project-intro{
 app-identity-work{
 
  width: 90%;
-  height: 900px;
+  height: 500px;
   align-self: center;
+  margin-bottom: 150px;
   @media screen and (max-width: 1225px){
     width: 100%;
 

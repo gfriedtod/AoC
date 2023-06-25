@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {CountriePageModel} from "../countries-page/model/CountriePageModel";
-import {map, Observable} from "rxjs";
-import {ActivatedRoute} from "@angular/router";
+
+import {ActivatedRoute, Router} from "@angular/router";
+import {PageEvent} from "@angular/material/paginator";
 
 @Component({
   selector: 'app-countries-view-page',
@@ -11,7 +12,7 @@ import {ActivatedRoute} from "@angular/router";
 export class CountriesViewPageComponent implements OnInit{
  card!: CountriePageModel[]
   loades : boolean = false
-  constructor( private  route : ActivatedRoute) {
+  constructor( private  route : ActivatedRoute, private router : Router) {
   }
   ngOnInit(){
      this.route.data.subscribe(
@@ -29,5 +30,16 @@ export class CountriesViewPageComponent implements OnInit{
    //     }
    //   )
    // )
+  }
+
+  navigate(cadd: CountriePageModel) {
+    this.router.navigate(["countries"], { state : { countrie: cadd } });
+  }
+
+  onPaginatorChange($event: PageEvent) {
+    let  startIndex = $event.pageIndex * $event.pageSize;
+    let endIndex = startIndex + $event.pageSize;
+    this.card = this.card.slice(startIndex, endIndex);
+
   }
 }

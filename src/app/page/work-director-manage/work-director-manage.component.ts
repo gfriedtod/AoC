@@ -2,12 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {BouttonService} from "../../component/boutton/bouttonService/BouttonService";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {UploadFormsService} from "../../service/forms-service/upload-forms.service";
-import {DateRange, MatCalendar} from "@angular/material/datepicker";
-import {push} from "@angular/fire/database";
+
 import {Router} from "@angular/router";
 import {UserModel, UserServiceService} from "../../service/UserService/user-service.service";
 import {Observable} from "rxjs";
-import {WorkingModel} from "../project-page/project-intro/WorkModel/WorkModel";
+
 import {WorksModel} from "../project-page/model/WorksModel";
 
 import {HttpClient} from "@angular/common/http";
@@ -75,6 +74,7 @@ export class WorkDirectorManageComponent  implements OnInit {
           (data) => {
 
             this.options = data;
+
           }
 
         )
