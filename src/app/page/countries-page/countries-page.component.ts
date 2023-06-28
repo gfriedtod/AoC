@@ -7,6 +7,7 @@ import {map, Observable} from "rxjs";
 import {CountriePageService} from "../../service/COuntriePageService/countrie-page.service";
 import {MatDialog} from "@angular/material/dialog";
 import {WorksFormComponent} from "../../works-form/works-form.component";
+import {UserServiceService} from "../../service/UserService/user-service.service";
 
 @Component({
   selector: 'app-countries-page',
@@ -17,7 +18,8 @@ export class CountriesPageComponent implements OnInit{
   public id!: string;
  name!: string;
 
-  constructor(private route : ActivatedRoute , private  router : Router , private countrieService : CountriePageService , private dial : MatDialog) {
+  constructor(private route : ActivatedRoute , private  router : Router , private countrieService : CountriePageService , private dial : MatDialog ,
+              public  user : UserServiceService) {
   }
    seemore!: BouttonService;
    cardPro!: Observable<CardProModel[]>;

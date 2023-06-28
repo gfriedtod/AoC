@@ -22,7 +22,8 @@ export class UserProfileComponent implements OnInit {
     private formBuilder: FormBuilder,
     private profile: UserServiceService,
     private service : UploadFormsService,
-    private router: Router
+    private router: Router,
+    private users : UserServiceService
   ) { }
 
   ngOnInit() {
@@ -56,9 +57,10 @@ export class UserProfileComponent implements OnInit {
       (form) => {
         // @ts-ignore
         this.service.PostForm(form , '/user/update/' + this.user.id).subscribe(
-          () =>{
+          (res  ) =>{
+            localStorage.setItem( this.profile.authKey, JSON.stringify(res));
 
-            this.router.navigateByUrl('profile')
+            this.router.navigateByUrl('home')
           }
 
         )

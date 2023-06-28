@@ -12,6 +12,7 @@ import {AuthGardService} from "../../service/routeGard/auth-gard.service";
 import {CountriesViewPageComponent} from "../../page/countries-view-page/countries-view-page.component";
 import {countrieLoaderResolver} from "../../resolver/countrie-loader.resov/countrie-loader.resolver";
 import {countriesViewResolvResolver} from "../../resolver/countries-view-resolv/countries-view-resolv.resolver";
+import {doGuardGuard} from "../../service/Do-guard/do-guard.guard";
 
 
 export const webPageRoutingModule : Routes  =[

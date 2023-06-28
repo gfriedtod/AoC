@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {UploadFormsService} from "../../service/forms-service/upload-forms.service";
+import {MatDialogRef} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-add-user-form',
@@ -11,7 +12,9 @@ import {UploadFormsService} from "../../service/forms-service/upload-forms.servi
 })
 export class AddUserFormComponent implements  OnInit{
   addDirectorForm!: FormGroup;
-  constructor(private  http: HttpClient , private formBuilder: FormBuilder , private router: Router , private service: UploadFormsService) {
+  constructor(
+    private dialref : MatDialogRef<AddUserFormComponent>,
+    private  http: HttpClient , private formBuilder: FormBuilder , private router: Router , private service: UploadFormsService) {
   }
 
   ngOnInit(): void {
@@ -28,7 +31,9 @@ export class AddUserFormComponent implements  OnInit{
 
           this.service.PostForm(this.addDirectorForm ,`/user/admin/save/${this.addDirectorForm.get('statut')?.value}`).subscribe(
             (event: any) => {
-              console.log("dsadadsa",event)
+              this.router.navigateByUrl('dashbord')
+              this.dialref.close();
+
             });
         }
 

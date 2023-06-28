@@ -46,7 +46,7 @@
   </div>
 
 <div class="add">
-  <app-boutton  [stateview]="addmore" class="see-more" (click)="onAdd()"></app-boutton>
+  <app-boutton *ngIf="user.admin"  [stateview]="addmore" class="see-more" (click)="onAdd()"></app-boutton>
 
 </div>
 

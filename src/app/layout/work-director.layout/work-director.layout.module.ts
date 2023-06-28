@@ -11,6 +11,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {MatTableModule} from "@angular/material/table";
 import {MatChipsModule} from "@angular/material/chips";
 import {MatSelectModule} from "@angular/material/select";
+import {doGuardGuard} from "../../service/Do-guard/do-guard.guard";
 
 
 
@@ -29,6 +30,9 @@ import {MatSelectModule} from "@angular/material/select";
     MatTableModule,
     MatChipsModule,
     MatSelectModule
-  ]
+  ],
+  providers: [
+    doGuardGuard
+  ],
 })
 export class WorkDirectorLayoutModule { }

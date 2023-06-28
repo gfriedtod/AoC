@@ -3,6 +3,8 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+  overflow-x: hidden;
 
 app-main-presentation{
 
@@ -100,9 +102,10 @@ app-main-presentation{
 app-card-presentations{
   width: 280px;
   height: 300px;
-  position: relative;
+
   align-self: flex-end;
   margin-right: 20px;
+
   border: 1px solid rgba(140, 201, 244, 0.5);
 //  margin-top: 120px;
 
@@ -149,5 +152,69 @@ app-card-presentations{
 h1{
   align-self: center;
 }
+.content{
+  align-self: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+mat-card{
+  height: 20%;
+  margin-bottom: 650px;
+}
+mat-card-content{
+  display: flex;
+  margin-bottom: 150px;
+}
+
+app-card-project-presentation{
+  margin-top: 80px;
+}
+
+.mat-card{
+  width: 90%;
+  align-self: center;
+  overflow-x: hidden;
 
 
+
+}
+
+
+.content{
+ width: 90%;
+ // box-shadow: 20px 20px 20px 20px rgba(97, 100, 238, 0.3);
+  height: 1800px;
+
+ // margin-top: 200px;
+  display: flex;
+  justify-content: center;
+
+ // overflow-x: hidden;
+
+  .present{
+
+    font-size: 25px;
+    width: 50%;
+  }
+  .mat-card-content{
+    position: relative;
+    height: 100%;
+
+    width: 100%;
+    box-shadow: 0 0 15px 15px rgba(97, 100, 238, 0.2);
+
+    transition: ease-in-out 3s;
+
+
+
+
+    img{
+
+    }
+
+  }
+}
+
+.mat-card-content:hover{
+  transform: translateX(100%);
+}

@@ -3,6 +3,7 @@ import {MissionWork} from "../project-page/mission-project/MissionWork/MissionWo
 import {ChronoServiceService} from "../../service/chrono/chrono-service.service";
 import {map, Observable} from "rxjs";
 import {ChronoModel} from "./chrono-jesuite/model/ChronoModel";
+import {LoadStateService} from "../../service/loadState/load-state.service";
 
 @Component({
   selector: 'app-chrono-page',
@@ -15,16 +16,21 @@ export class ChronoPageComponent implements OnInit{
   loades : boolean = false ;
 
   constructor(
-    private service :ChronoServiceService
+    private service :ChronoServiceService,
+    private load : LoadStateService
   ) {
   }
   ngOnInit(): void {
+
+    this.load.SetLoadingStatut(true)
 
  this.service.getAllcgrono().subscribe(
    (data:ChronoModel[])=>{
      console.log(data)
      this.myjesuites = data
      this.loades = true
+     this.load.SetLoadingStatut(false)
+
    }
  )
 

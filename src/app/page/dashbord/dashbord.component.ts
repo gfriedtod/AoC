@@ -14,6 +14,7 @@ import {Element} from "../work-director-manage/work-director-manage.component";
 import {UserModel, UserServiceService} from "../../service/UserService/user-service.service";
 import {AddUserFormComponent} from "../../component/add-user-form/add-user-form.component";
 import {PageEvent} from "@angular/material/paginator";
+import {MatButtonToggleChange} from "@angular/material/button-toggle";
 
 @Component({
   selector: 'app-dashbord',
@@ -96,6 +97,11 @@ export class DashbordComponent  implements OnInit{
    let endIndex = startIndex + $event.pageSize;
    this.dataSource = this.ELEMENT_DATA.slice(startIndex, endIndex);
 
+
+  }
+
+  onToggle($event: MatButtonToggleChange) {
+    console.log("you toggle me " , $event)
 
   }
 }

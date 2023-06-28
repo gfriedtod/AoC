@@ -16,6 +16,8 @@ export class UserServiceService {
   private _AuthToken! : UserModel ;
 
   isAuth: boolean = false;
+   admin: boolean = false;
+   Do: boolean = false;
   getAuthKey(): string {
     return this.authKey;
   }
@@ -33,12 +35,19 @@ export class UserServiceService {
     return new Observable<any>(subscriber => {
 
 
-        this.http.post(environement + "/user/register", mtForm.value).subscribe(
+        this.http.post<UserModel>(environement + "/user/register", mtForm.value).subscribe(
           (data) => {
             console.log('response', data);
             localStorage.setItem(this.authKey, JSON.stringify(data));
 
             console.log("my token ...",localStorage.getItem(this.authKey))
+            if(data.statut === "admin"){
+              this.admin = true
+
+            }else if(data.statut === "do"){
+              this.Do = true
+
+            }
 
             subscriber.next(data)
             subscriber.complete();
@@ -59,13 +68,21 @@ export class UserServiceService {
   login(mtForm : FormGroup) : Observable<boolean> {
     return new Observable<any>(
       (subscriber) =>{
-        this.http.post(environement+"/user/login", mtForm.value).subscribe(
+        this.http.post<UserModel>(environement+"/user/login", mtForm.value).subscribe(
           (data) => {
             console.log('response', data);
+            let user = data;
             localStorage.setItem(this.authKey, JSON.stringify(data));
 
             if(data !=null){
               this.isAuth=true
+              if(data.statut === "admin"){
+                this.admin = true
+
+              }else if(data.statut === "do"){
+                this.Do = true
+
+              }
               subscriber.next(this.isAuth)
               subscriber.complete()
             }else {
@@ -102,7 +119,7 @@ export class UserModel{
     public country : string,
     public zipCode : string,
     public Lastname : string,
-    public Status :string
+    public statut :string
 
   ) {
   }

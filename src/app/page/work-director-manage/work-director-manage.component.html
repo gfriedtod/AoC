@@ -132,33 +132,26 @@
       <app-boutton [stateview]="submit" (click)="onSubmit()"></app-boutton>
     </mat-card-content>
   </mat-card>
-
-
-
-
 </mat-card>
-    <mat-card  class="card">
-<mat-card-content>
-  <mat-calendar  (_userSelection)="onSelectedChanged(selected)"  [(selected)]="selected"></mat-calendar>
-  <mat-error *ngIf="dateInvalid">incorrect range choose please choose 2 date</mat-error>
 
-</mat-card-content>
-
-
-
-    </mat-card>
-
-
-
-
-<!--planning d'execution-->
 
   </form>
 
-  <app-profile-present></app-profile-present>
+<!--planning d'execution-->
 
+
+  <mat-card  class="card">
+    <mat-card-content>
+      <mat-calendar  (_userSelection)="onSelectedChanged(selected)"  [(selected)]="selected"></mat-calendar>
+      <mat-error *ngIf="dateInvalid">incorrect range choose please choose 2 date</mat-error>
+
+    </mat-card-content>
+
+
+
+  </mat-card>
 <div class="other">
-<!--  <app-profile-present></app-profile-present>-->
+  <app-profile-present></app-profile-present>
   <mat-card></mat-card>
 </div>
 

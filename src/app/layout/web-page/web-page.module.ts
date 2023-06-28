@@ -43,6 +43,7 @@ import {countriesViewResolvResolver} from "../../resolver/countries-view-resolv/
 import {WorkDirectorLayoutComponent} from "../work-director.layout/work-director.layout.component";
 import {CountriesViewPageComponent} from "../../page/countries-view-page/countries-view-page.component";
 import {MatSidenavModule} from "@angular/material/sidenav";
+import {doGuardGuard} from "../../service/Do-guard/do-guard.guard";
 
 
 
@@ -118,7 +119,8 @@ import {MatSidenavModule} from "@angular/material/sidenav";
   ],
   providers: [
     AuthGardService,
-    countriesViewResolvResolver
+    countriesViewResolvResolver,
+
   ]
 
 })

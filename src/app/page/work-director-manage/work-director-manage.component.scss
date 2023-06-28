@@ -11,7 +11,7 @@ main{
   //background: linear-gradient( 45deg , #b8d9e9, #acbcd8, #98adb5);
 
   form{
-    width:90%;
+    width:100%;
 
   //  background: red;
 
@@ -36,11 +36,10 @@ main{
 
           mat-form-field{
             width: 100%;
-            height: 80%;
 
             input{
               width: 100%;
-              height: 80%;
+              height: 100%;
             }
             textarea{
               width: 120%;
@@ -61,13 +60,11 @@ main{
     .card{
       width: 30%;
       height: auto;
-      //margin-right: 25px;
+      margin-right: 25px;
       flex-wrap: nowrap;
       border-radius: 20px;
      // background-color: white;
     }
-
-
 
   }
 
@@ -85,7 +82,12 @@ input{
   display: flex;
   flex-direction: column;
     justify-content: space-between;
-
+  app-profile-present{
+    width: 25%;
+    height: 100%;
+    align-self: flex-end;
+    margin-right: 25px;
+  }
 }
 
 
@@ -101,12 +103,4 @@ input{
 .select{
   display: flex;
   gap: 10px;
-}
-
-app-profile-present{
-  width: 25%;
-  height: 130%;
-  align-self: flex-end;
-  margin-right: 125px;
- margin-top: 50px;
 }

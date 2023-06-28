@@ -6,11 +6,17 @@ import {CardProModel} from "../../component/card-pro/CardProModel/CardProModel";
 import {
   CardProjectPresentationModel
 } from "../../component/card-project-presentation/CardProjectPresentationModel/CardProjectPresentationModel";
+import {trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss', "./home-page2.scss"]
+  styleUrls: ['./home-page.component.scss', "./home-page2.scss"],
+  animations: [
+    trigger('fade', [
+
+      ])
+  ]
 })
 export class HomePageComponent implements  OnInit{
   cardVision!: CardModel
@@ -23,6 +29,7 @@ export class HomePageComponent implements  OnInit{
   cardsProject2: any;
 
   cardPro! : CardProModel
+  i: number = 2;
   ngOnInit(): void {
 
     this.cardMission = new CardModel("mission.gif", "Mission")

@@ -62,6 +62,8 @@ import { AddProjectFormComponent } from './component/add-project-form/add-projec
 import { CountriesViewPageComponent } from './page/countries-view-page/countries-view-page.component';
 import { CardPresentComponent } from './component/card-present/card-present.component';
 import { AddUserFormComponent } from './component/add-user-form/add-user-form.component';
+import {adminGuardGuard} from "./service/AdminGuard/admin-guard.guard";
+import { DontComponent } from './page/dont/dont.component';
 
 //
 // import { AngularFireModule } from '@angular/fire';
@@ -97,6 +99,7 @@ export function playerFactory() {
 
     AuthenticationLayoutComponent,
       AddUserFormComponent,
+      DontComponent,
 
 
 
@@ -171,7 +174,8 @@ export function playerFactory() {
     // WebPageModule,
   ],
   providers: [
-    countrieLoaderResolver
+    countrieLoaderResolver,
+    adminGuardGuard
   ],
   bootstrap: [AppComponent],
     exports: [

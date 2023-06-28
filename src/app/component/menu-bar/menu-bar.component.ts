@@ -16,6 +16,8 @@ export class MenuBarComponent implements  OnInit{
   stateviewLogIn: any;
   stated!: boolean;
   token! :  any
+  admin : boolean = false
+  Do : boolean = false
 
   constructor(
     private route : Router,
@@ -29,7 +31,13 @@ this.token = localStorage.getItem(this.userService.authKey)
   if(this.token !== null){
     console.log("token................", this.token)
     this.userModel = JSON.parse(this.token)
+    console.log(this.userModel.statut)
     this.isidentified = true
+    if(this.userModel.statut === "admin"){
+      this.admin = true
+    }else if(this.userModel.statut === "do"){
+      this.Do = true
+    }
   }
   console.log(this.userService.authKey)
   this.stated =false
@@ -37,7 +45,7 @@ this.token = localStorage.getItem(this.userService.authKey)
   this.stateviewLogIn = new BouttonService('LogIn' )
   this.stateviewSign= new BouttonService('Sign up' , true)
 
-    this.stateview.stateview = true
+
 }
 
   statechange() {

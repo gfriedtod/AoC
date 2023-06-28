@@ -12,6 +12,7 @@ import {
   AuthenticationLayoutComponent
 } from "./layout/authentication.layout/authentication/authentication-layout/authentication-layout.component";
 import {WorkDirectorLayoutComponent} from "./layout/work-director.layout/work-director.layout.component";
+import {adminGuardGuard} from "./service/AdminGuard/admin-guard.guard";
 
 const routes: Routes = [
   //  { path: '', component: WebPageComponent },
@@ -44,9 +45,11 @@ const routes: Routes = [
       {
         path:'',
         loadChildren:()=>import('./layout/admin-page/admin-page.module').then(m=>m.AdminPageModule),
+        canActivate:[adminGuardGuard]
 
       }
-    ]
+    ],
+    canActivate:[adminGuardGuard]
 
   },
   {

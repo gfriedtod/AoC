@@ -37,6 +37,7 @@ import {
 } from "../../page/project-validate-admin-page/project-validate-admin-page.component";
 import {ProjectManagePageComponent} from "../../page/project-manage-page/project-manage-page.component";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import {adminGuardGuard} from "../../service/AdminGuard/admin-guard.guard";
 
 
 
@@ -95,6 +96,9 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     MatPaginatorModule,
 
 
-  ]
+  ],
+  providers: [
+
+  ],
 })
 export class AdminPageModule { }

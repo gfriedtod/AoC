@@ -17,7 +17,8 @@ a:hover{
   color: black;
 }
 .nav-bar{
-  //position: fixed;
+  position: fixed;
+  z-index: 5;
   height: 80px;
   width: 100%;
   display: flex;
