@@ -2,15 +2,18 @@ import {Component, OnInit} from '@angular/core';
 import {ChronoModel} from "../chrono-page/chrono-jesuite/model/ChronoModel";
 import {animate, keyframes, style, transition, trigger} from "@angular/animations";
 import {BouttonService} from "../../component/boutton/bouttonService/BouttonService";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {ProjectModel} from "../../model/ProjectModel";
+import  { PayPalScriptService} from "ngx-paypal";
+
+
 
 @Component({
   selector: 'app-dont',
   templateUrl: './dont.component.html',
   styleUrls: ['./dont.component.scss'],
   animations: [
-    trigger( 'dont', [
+    trigger( 'don', [
        transition( ':enter', [
          animate( '1s', keyframes([
            style({
@@ -42,7 +45,9 @@ export class DontComponent implements OnInit{
   LocalApport: ChronoModel = new ChronoModel('Contexte','',',','','');
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router,
+    private scriptService: PayPalScriptService
   ) {
   }
 ngOnInit() {
@@ -73,6 +78,24 @@ ngOnInit() {
     if(this.i <= this.max+1){
       this.i++;
     }
+
+  }
+
+  Donate() {
+    // PayPal.Donation.Button({
+    //   env: 'sandbox',
+    //   hosted_button_id: 'YOUR_SANDBOX_HOSTED_BUTTON_ID',
+    //   // business: 'YOUR_EMAIL_OR_PAYERID',
+    //   image: {
+    //     src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+    //     title: 'PayPal - The safer, easier way to pay online!',
+    //     alt: 'Donate with PayPal button'
+    //   },
+    //   onComplete: function (params) {
+    //     // Your onComplete handler
+    //   },
+    // })
+
 
   }
 }
