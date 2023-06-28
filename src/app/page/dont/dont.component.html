@@ -1,1 +1,26 @@
-<p>dont works!</p>
+<main>
+
+  <div class="space">
+
+    <app-boutton [stateview]="dont" (click)="Goleft()"></app-boutton>
+  </div>
+  <div class="caroussel">
+
+
+    <div class="list">
+      <app-chrono-jesuite @dont *ngIf="i ===1" [chronoModel]="LocalApport"></app-chrono-jesuite>
+
+      <app-chrono-jesuite  *ngIf="i ===2" @dont [chronoModel]="chrono"></app-chrono-jesuite>
+      <app-chrono-jesuite  @dont *ngIf="i ===3" [chronoModel]="beneficiary"></app-chrono-jesuite>
+      <app-chrono-jesuite @dont *ngIf="i ===4" [chronoModel]="impact"></app-chrono-jesuite>
+    </div>
+
+
+  </div>
+
+  <div class="guide">
+    <app-boutton [stateview]="Left" (click)="Goleft()"></app-boutton>
+    <app-boutton [stateview]="right" (click)="Goright()"></app-boutton>
+  </div>
+
+</main>

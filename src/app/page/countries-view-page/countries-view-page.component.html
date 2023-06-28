@@ -27,7 +27,7 @@
       <app-card-present (click)="navigate(cadd)"  [cardModel]="cadd"></app-card-present>
     </ng-container>
   </div>
-  <mat-paginator [length]="card.length" [pageSize]="3" [pageSizeOptions]="[5, 10, 25]" (page)="onPaginatorChange($event)"></mat-paginator>
+<!--  <mat-paginator [length]="card.length" [pageSize]="3" [pageSizeOptions]="[5, 10, 25]" (page)="onPaginatorChange($event)"></mat-paginator>-->
 
   <app-loader *ngIf="!loades"></app-loader>
 

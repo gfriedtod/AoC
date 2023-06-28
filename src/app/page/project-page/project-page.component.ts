@@ -114,4 +114,8 @@ export class ProjectPageComponent implements  OnInit {
   delay(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
+
+  navigate(card: ProjectModel) {
+    this.router.navigate(["project"], { state : { projectData: card } });
+  }
 }

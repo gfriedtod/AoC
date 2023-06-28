@@ -33,11 +33,13 @@ main{
       }
     }
   }
-  img{
+  .img{
     position: static;
     width: 40%;
     height: 100%;
     align-self: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 

@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {BouttonIconModel} from "./model/BouttonIconModel";
 
 @Component({
   selector: 'app-boutton-icon',
@@ -6,5 +7,7 @@ import {Component} from '@angular/core';
   styleUrls: ['./boutton-icon.component.scss']
 })
 export class BouttonIconComponent {
+  @Input() bouttonIconModel! : BouttonIconModel;
+
 
 }

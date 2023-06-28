@@ -6,8 +6,8 @@
   <ul class="items">
     <li><a routerLink="home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >Home </a></li>
     <li><a routerLink="about-us" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}" > About us</a></li>
-    <li><a routerLink ="worker" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >Products</a></li>
-    <li><a routerLink="countries" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}">Services</a></li>
+    <li><a routerLink ="worker" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >Countries</a></li>
+    <li><a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}">View</a></li>
     <li><a *ngIf="admin" routerLink="dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}" >Dashboard</a></li>
     <li *ngIf="Do"><a routerLink="work-director" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}" >DO-Dashboard</a></li>
 

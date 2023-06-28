@@ -13,6 +13,7 @@ import {CountriesViewPageComponent} from "../../page/countries-view-page/countri
 import {countrieLoaderResolver} from "../../resolver/countrie-loader.resov/countrie-loader.resolver";
 import {countriesViewResolvResolver} from "../../resolver/countries-view-resolv/countries-view-resolv.resolver";
 import {doGuardGuard} from "../../service/Do-guard/do-guard.guard";
+import {DontComponent} from "../../page/dont/dont.component";
 
 
 export const webPageRoutingModule : Routes  =[
@@ -24,6 +25,8 @@ export const webPageRoutingModule : Routes  =[
   { path: 'countries', component:  CountriesPageComponent  ,
     // resolve  : { card : countriePageResolver }
   },
+
+  {path:'project', component:DontComponent},
 
   { path:'profile' , component : UserProfileComponent , canActivate : [AuthGardService]}
 ]

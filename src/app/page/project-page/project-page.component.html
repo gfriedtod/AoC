@@ -16,7 +16,7 @@
     <app-boutton [stateview]="seemore" class="see-more" (click)="increment()"></app-boutton>
   </h1>
  <div class="list-project">
-   <app-project-validator *ngFor="let card of subList" [projectModel]="card"></app-project-validator>
+   <app-project-validator (click)="navigate(card)" *ngFor="let card of subList" [projectModel]="card"></app-project-validator>
 
  </div>
 <app-boutton [stateview]="seeless" class="see-less" *ngIf="decrement" (click)="dicrement()"></app-boutton>

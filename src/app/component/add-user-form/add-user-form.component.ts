@@ -29,7 +29,7 @@ export class AddUserFormComponent implements  OnInit{
     console.log(this.addDirectorForm.value)
     if(this.addDirectorForm.valid){
 
-          this.service.PostForm(this.addDirectorForm ,`/user/admin/save/${this.addDirectorForm.get('statut')?.value}`).subscribe(
+          this.service.PostForm(this.addDirectorForm ,`/user/admin/save/`+this.addDirectorForm.get('statut')?.value).subscribe(
             (event: any) => {
               this.router.navigateByUrl('dashbord')
               this.dialref.close();
