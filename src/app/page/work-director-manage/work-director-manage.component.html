@@ -138,8 +138,7 @@
   </form>
 
 <!--planning d'execution-->
-
-
+<div class="items">
   <mat-card  class="card">
     <mat-card-content>
       <mat-calendar  (_userSelection)="onSelectedChanged(selected)"  [(selected)]="selected"></mat-calendar>
@@ -150,10 +149,15 @@
 
 
   </mat-card>
-<div class="other">
-  <app-profile-present></app-profile-present>
-  <mat-card></mat-card>
+
+    <app-profile-present></app-profile-present>
+    <mat-card></mat-card>
+  <div class="other">
+  </div>
+
 </div>
+
+
 
 
 
