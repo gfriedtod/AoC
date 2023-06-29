@@ -7,6 +7,7 @@ import {UploadFormsService} from "../../service/forms-service/upload-forms.servi
 import {HttpClient} from "@angular/common/http";
 import {Observable, Subscriber, tap} from "rxjs";
 import {ActivatedRoute, Route, Router} from "@angular/router";
+import {environement} from "../../../Environement";
 
 // @ts-ignore
 @Component({
@@ -88,7 +89,7 @@ ngOnInit() {
       async (form) => {
         console.log("enter")
         console.log("value..............", form.value)
-        await this.http.post('http://localhost:8080/api/countries/create/countries', form.value).subscribe(
+        await this.http.post(environement+'/countries/create/countries', form.value).subscribe(
           (data) => {
             console.log(data)
 
