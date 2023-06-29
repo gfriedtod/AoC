@@ -18,7 +18,7 @@ export class CountriesViewPageComponent implements OnInit{
      this.route.data.subscribe(
      (data) =>{
        console.log(data['card'])
-      this.card = data['card'].splice(0,14)
+      this.card = data['card']
        this.loades= true
      }
    )

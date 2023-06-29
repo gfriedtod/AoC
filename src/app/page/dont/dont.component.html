@@ -2,7 +2,8 @@
 
   <div class="space">
 
-    <app-boutton [stateview]="dont" (click)="Donate()"></app-boutton>
+<!--    <app-boutton [stateview]="dont" (click)="Donate()"></app-boutton>-->
+    <ngx-paypal [config]="payPalConfig"></ngx-paypal>
   </div>
   <div class="caroussel">
 

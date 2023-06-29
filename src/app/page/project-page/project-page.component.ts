@@ -8,7 +8,7 @@ import {MissionWork} from "./mission-project/MissionWork/MissionWork";
 import {CardProModel} from "../../component/card-pro/CardProModel/CardProModel";
 import {BouttonService} from "../../component/boutton/bouttonService/BouttonService";
 import {ActivatedRoute, Router} from "@angular/router";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {delay, map, Observable} from "rxjs";
 import {WorksModel} from "./model/WorksModel";
 import {PAUSE} from "@angular/cdk/keycodes";
@@ -52,7 +52,7 @@ export class ProjectPageComponent implements  OnInit {
   ngOnInit(): void {
 
     // @ts-ignore
-    this.Works =this.http.get( environement+'/works/'+this.route.snapshot.params['id'])
+    this.Works =this.http.get( environement+'/works/'+this.route.snapshot.params['id'] ,  )
 
     this.work = this.Works.pipe(
       map(
@@ -62,8 +62,8 @@ export class ProjectPageComponent implements  OnInit {
         }
       )
     )
-
-    this.http.get<ProjectModel[]>(environement+'/project/works/'+this.route.snapshot.params['id']).subscribe(
+    const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
+    this.http.get<ProjectModel[]>(environement+'/project/works/'+this.route.snapshot.params['id'],{headers: headers}).subscribe(
       res =>{
         this.cardPro = res
           this.subList = this.cardPro.slice( 0, this.number);

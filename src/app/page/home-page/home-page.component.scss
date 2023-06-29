@@ -196,7 +196,7 @@ app-card-project-presentation{
     font-size: 25px;
     width: 50%;
   }
-  .mat-card-content{
+  .mat-card-content {
     position: relative;
     height: 100%;
 
@@ -206,15 +206,14 @@ app-card-project-presentation{
     transition: ease-in-out 3s;
 
 
-
-
-    img{
+    .img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 30%;
+      height: 100%;
 
     }
-
   }
+
 }
 
-.mat-card-content:hover{
-  transform: translateX(100%);
-}

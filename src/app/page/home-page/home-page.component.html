@@ -18,29 +18,30 @@
 
 
    <div class="list-card">
-     <app-card-presentations [cardModel]="cardIdentity"></app-card-presentations>
-     <app-card-presentations [cardModel]="cardMission"></app-card-presentations>
-     <app-card-presentations [cardModel]="cardVision"></app-card-presentations>
-     <app-card-presentations [cardModel]="cardObjectif"></app-card-presentations>
+     <app-card-presentations (click)="leave(1)" [cardModel]="cardIdentity"></app-card-presentations>
+     <app-card-presentations (click)="leave(2)"  [cardModel]="cardMission"></app-card-presentations>
+     <app-card-presentations (click)="leave(3)"  [cardModel]="cardVision"></app-card-presentations>
+     <app-card-presentations (click)="leave(4)"  [cardModel]="cardObjectif"></app-card-presentations>
 
    </div>
 
   <div class="content">
-    <div  *ngIf="i==1" class="mat-card-content flex justify-center">
+    <div  @fade *ngIf="i==1" class="mat-card-content flex justify-center">
       <h1 class="title present">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur expedita ipsam iste iusto nemo odit quo sint unde ut.</h1>
-      <img class="" src="assets/mission-detail.gif" alt="">
+      <div class="img"  [ngStyle]="{backgroundImage:'url(assets/identity-description.gif)'}"></div>
     </div>
-    <div *ngIf="i==2" class="mat-card-content flex justify-center">
+    <div @fade *ngIf="i==2" class="mat-card-content flex justify-center">
       <h1 class="title present">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem deleniti earum laborum modi perspiciatis, qui rem repellat. Asperiores atque consequuntur corporis dolor esse quaerat quibusdam vero. Amet asperiores doloremque dolores expedita harum magni omnis quam, reprehenderit sunt, ullam ut, vel voluptatem. Expedita facilis laudantium modi odit, perferendis sint sunt.</h1>
-      <img class="" src="assets/mission-detail.gif" alt="">
+      <div class="img" [ngStyle]="{backgroundImage:'url(assets/mission-detail.gif)'}"></div>
+
     </div>
-    <div *ngIf="i==3" class="mat-card-content flex justify-center">
+    <div @fade *ngIf="i==3" class="mat-card-content flex justify-center">
       <h1 class="present title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur expedita ipsam iste iusto nemo odit quo sint unde ut.</h1>
-      <img class="" src="assets/mission-detail.gif" alt="">
+        <div class="img" [ngStyle]="{backgroundImage:'url(assets/vision-detail.gif)'}"></div>
     </div>
-    <div *ngIf="i==4" class="mat-card-content flex justify-center">
+    <div @fade *ngIf="i==4" class="mat-card-content flex justify-center">
       <h1 class="present title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur expedita ipsam iste iusto nemo odit quo sint unde ut.</h1>
-      <img class="" src="assets/mission-detail.gif" alt="">
+       <div class="img" [ngStyle]="{backgroundImage:'url(assets/objectif-detail.gif)'}"></div>
     </div>
   </div>
 

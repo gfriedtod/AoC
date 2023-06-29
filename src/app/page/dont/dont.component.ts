@@ -4,8 +4,8 @@ import {animate, keyframes, style, transition, trigger} from "@angular/animation
 import {BouttonService} from "../../component/boutton/bouttonService/BouttonService";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ProjectModel} from "../../model/ProjectModel";
-import  { PayPalScriptService} from "ngx-paypal";
-
+import {ICreateOrderRequest, IPayPalConfig, PayPalScriptService} from "ngx-paypal";
+import { PayPalScriptQueryParameters } from '@paypal/paypal-js';
 
 
 @Component({
@@ -13,7 +13,7 @@ import  { PayPalScriptService} from "ngx-paypal";
   templateUrl: './dont.component.html',
   styleUrls: ['./dont.component.scss'],
   animations: [
-    trigger( 'don', [
+    trigger( 'dont', [
        transition( ':enter', [
          animate( '1s', keyframes([
            style({
@@ -43,17 +43,19 @@ export class DontComponent implements OnInit{
   dont: BouttonService = new BouttonService('Dont',false);
    impact: ChronoModel = new ChronoModel('Impact','','',',','');
   LocalApport: ChronoModel = new ChronoModel('Contexte','',',','','');
+  private showSuccess: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private scriptService: PayPalScriptService
+
   ) {
   }
 ngOnInit() {
   this.i =1
   this.data = history.state.projectData;
   console.log("my data is here ",this.data)
+  this.initConfig()
 
   this.chrono.description= this.data.objectif
   this.chrono.imageAvatar = this.data.image1
@@ -73,6 +75,8 @@ ngOnInit() {
 
 
   }
+  public payPalConfig?: IPayPalConfig;
+
 
   Goright() {
     if(this.i <= this.max+1){
@@ -97,5 +101,71 @@ ngOnInit() {
     // })
 
 
+
+
   }
+
+  private initConfig(): void {
+    this.payPalConfig = {
+      currency: 'EUR',
+      clientId: 'sb',
+      createOrderOnClient: (data) => <ICreateOrderRequest>{
+        intent: 'CAPTURE',
+        purchase_units: [
+          {
+            amount: {
+              currency_code: 'EUR',
+              value: '9.99',
+              breakdown: {
+                item_total: {
+                  currency_code: 'EUR',
+                  value: '9.99'
+                }
+              }
+            },
+            items: [
+              {
+                name: 'Enterprise Subscription',
+                quantity: '1',
+                category: 'DIGITAL_GOODS',
+                unit_amount: {
+                  currency_code: 'EUR',
+                  value: '9.99',
+                },
+              }
+            ]
+          }
+        ]
+      },
+      advanced: {
+        commit: 'true'
+      },
+      style: {
+        label: 'paypal',
+        layout: 'vertical'
+      },
+      onApprove: (data, actions) => {
+        console.log('onApprove - transaction was approved, but not authorized', data, actions);
+        // @ts-ignore
+        actions.order.get().then(
+          (details :any)  => {
+          console.log('onApprove - you can get full order details inside onApprove: ', details);
+        });
+      },
+      onClientAuthorization: (data) => {
+        console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
+        this.showSuccess = true;
+      },
+      onCancel: (data, actions) => {
+        console.log('OnCancel', data, actions);
+      },
+      onError: err => {
+        console.log('OnError', err);
+      },
+      onClick: (data, actions) => {
+        console.log('onClick', data, actions);
+      },
+    };
+  }
+
 }

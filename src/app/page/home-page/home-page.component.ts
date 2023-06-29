@@ -6,16 +6,29 @@ import {CardProModel} from "../../component/card-pro/CardProModel/CardProModel";
 import {
   CardProjectPresentationModel
 } from "../../component/card-project-presentation/CardProjectPresentationModel/CardProjectPresentationModel";
-import {trigger} from "@angular/animations";
+import {animate, keyframes, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss', "./home-page2.scss"],
   animations: [
-    trigger('fade', [
-
+    trigger( 'fade', [
+      transition( ':enter', [
+        animate( '1s', keyframes([
+          style({
+            opacity: 0,
+            transform: 'translateX(-100%)',
+            offset: 0
+          }),
+          style({
+            opacity: 1,
+            transform: 'translateX(0)',
+            offset: 1
+          })
+        ]))
       ])
+    ])
   ]
 })
 export class HomePageComponent implements  OnInit{
@@ -29,7 +42,7 @@ export class HomePageComponent implements  OnInit{
   cardsProject2: any;
 
   cardPro! : CardProModel
-  i: number = 2;
+  i: number = 1;
   ngOnInit(): void {
 
     this.cardMission = new CardModel("mission.gif", "Mission")
@@ -42,5 +55,11 @@ export class HomePageComponent implements  OnInit{
     this.cardsProject2 =new CardProjectPresentationModel('/assets/countries.gif', 'Ou somme nous ?', '')
 
   //  this.cardPro = new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont')
+  }
+
+  leave(number: number) {
+
+    this.i = number
+
   }
 }
