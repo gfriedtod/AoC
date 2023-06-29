@@ -142,6 +142,8 @@ export class WorkDirectorManageComponent  implements OnInit {
     this.service.uploadImages( this.ListFile , 'work-director-manage', this.form).subscribe(
       (data) => {
         if (data.invalid) {
+          console.log("invalid .....")
+          console.log(this.form.value)
           console.log(this.form.invalid)
           return;
         }

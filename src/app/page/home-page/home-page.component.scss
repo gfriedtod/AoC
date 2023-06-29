@@ -115,13 +115,19 @@ app-card-presentations{
 
 .list-cardv2{
 
-  background-image: url("/assets/grid-pattern.jpeg");
+  background-image: url("/assets/pao.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
 
   display: flex;
-  width: 80%;
+  width: 50%;
   height: 600px;
   align-self: center;
   margin-bottom: 80px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
   app-countries-presentations{
     width: 100%;
     height: 500px;
@@ -217,3 +223,8 @@ app-card-project-presentation{
 
 }
 
+.circl{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}

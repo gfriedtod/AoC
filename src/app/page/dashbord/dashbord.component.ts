@@ -15,6 +15,7 @@ import {UserModel, UserServiceService} from "../../service/UserService/user-serv
 import {AddUserFormComponent} from "../../component/add-user-form/add-user-form.component";
 import {PageEvent} from "@angular/material/paginator";
 import {MatButtonToggleChange} from "@angular/material/button-toggle";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-dashbord',
@@ -39,8 +40,11 @@ export class DashbordComponent  implements OnInit{
   loaded: boolean = true;
  dataSource!: UserModel[];
   statut!: FormGroup;
+  // @ts-ignore
+  card3: TestCardModel = new TestCardModel('Province', 'red', null);
+
   constructor(private  dial: MatDialog , private  userService: UserServiceService,
-              private  fb : FormBuilder, private http : HttpClient
+              private  fb : FormBuilder, private http : HttpClient, private router: Router
 
   ) {}
 
@@ -103,5 +107,9 @@ export class DashbordComponent  implements OnInit{
   onToggle($event: MatButtonToggleChange) {
     console.log("you toggle me " , $event)
 
+  }
+
+  navigate() {
+    this.router.navigateByUrl('work-director')
   }
 }

@@ -6,7 +6,7 @@
 <div class="grid-card">
   <app-test-card  id="card1" [TestCardModel]="card"></app-test-card>
   <app-test-card id="card2" [TestCardModel]="card2"></app-test-card>
-  <app-test-card id="card3"  [TestCardModel]="card"></app-test-card>
+  <app-test-card (click)="navigate()" id="card3"  [TestCardModel]="card3"></app-test-card>
 </div>
 
   <div class="zone"><app-boutton [stateview]="dialog" (click)="openDialog()" ></app-boutton></div>

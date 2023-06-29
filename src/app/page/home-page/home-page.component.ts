@@ -7,6 +7,11 @@ import {
   CardProjectPresentationModel
 } from "../../component/card-project-presentation/CardProjectPresentationModel/CardProjectPresentationModel";
 import {animate, keyframes, style, transition, trigger} from "@angular/animations";
+import {CountriePageService} from "../../service/COuntriePageService/countrie-page.service";
+import {HttpClient} from "@angular/common/http";
+import {environement} from "../../../Environement";
+import {CountriesMangeModel} from "../../component/countries-manage-card/model/CountriesMangeModel";
+import {CountriePageModel} from "../countries-page/model/CountriePageModel";
 
 @Component({
   selector: 'app-home-page',
@@ -40,9 +45,16 @@ export class HomePageComponent implements  OnInit{
   cardsProject!: CardProjectPresentationModel
   cardsProject1: any;
   cardsProject2: any;
+  loades :boolean = false
 
   cardPro! : CardProModel
   i: number = 1;
+  pays!: CountriePageModel[];
+  constructor(
+    private countryService : CountriePageService,
+    private http : HttpClient
+  ) {
+  }
   ngOnInit(): void {
 
     this.cardMission = new CardModel("mission.gif", "Mission")
@@ -53,6 +65,7 @@ export class HomePageComponent implements  OnInit{
 
     this.cardsProject1 =new CardProjectPresentationModel('/assets/about-us.gif', ' Qui somme nous ?', '')
     this.cardsProject2 =new CardProjectPresentationModel('/assets/countries.gif', 'Ou somme nous ?', '')
+
 
   //  this.cardPro = new CardProModel('assets/building4.jpg', "Pro" ,'Doual,18 pres du pont')
   }

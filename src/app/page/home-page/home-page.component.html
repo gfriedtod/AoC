@@ -61,20 +61,22 @@
   <app-card-project-presentation [cardPresentation]="cardsProject2" ></app-card-project-presentation>
 
 <h1 class="title">Nous intervenons dans plusieur pays tels que :</h1>
-<!--  <div class="list-cardv2">-->
+  <div  class="list-cardv2">
 <!--    <app-countries-presentations></app-countries-presentations>-->
 <!--    <app-countries-presentations></app-countries-presentations>-->
 <!--    <app-countries-presentations></app-countries-presentations>-->
 <!--    <app-countries-presentations></app-countries-presentations>-->
 
-<!--  </div>-->
+
+  </div>
+
 
   <div class="title">
 
 <app-card-project-presentation [cardPresentation]="cardsProject" ></app-card-project-presentation>
   </div>
 
-  <div class="project">
+  <div class="project" *ngIf="loades">
 <div class="head">
   <div class="introduction">
     <h2>com on.</h2>
@@ -88,7 +90,7 @@
 
 </div>
 
-<div class="list-v4">
+<div  class="list-v4">
 <!--  <app-card-pro [cardPresentation]="cardPro"></app-card-pro>-->
 <!--  <app-card-pro [cardPresentation]="cardPro"></app-card-pro>-->
 <!--  <app-card-pro [cardPresentation]="cardPro"></app-card-pro>-->
@@ -98,7 +100,9 @@
 
 
 
+
   </div>
+  <app-loader *ngIf="!loades"></app-loader>
 
 </main>
 

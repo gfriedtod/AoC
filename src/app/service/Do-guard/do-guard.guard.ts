@@ -17,7 +17,7 @@ export class doGuardGuard implements CanActivate {
   }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     // @ts-ignore
-    if(this.userService.Do){
+    if(this.userService.Do || this.userService.admin ){
       return true
     }else{
       this.router.navigateByUrl('login')
